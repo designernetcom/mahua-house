@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Explore all rooms and cottages at Mahua House — six unique forest accommodations from eco rooms to luxury suites in the heart of Bhopal's forest.">
+    <meta name="keywords" content="Mahua House Rooms, Forest Resort Rooms Bhopal, Eco Cottage, Nature Suite, Luxury Forest Room, Bamboo Nest, Treetop Loft">
+    <title>Rooms &amp; Cottages | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           ROOMS PAGE — STYLES   prefix: rm-
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        /* ---- Utilities ---- */
+        .rm-section       { padding: 90px 0; }
+        .rm-section-alt   { background: #E7EEEE; }
+        .rm-section-dark  { background: #033631; }
+        .rm-section-cream { background: #faf8f3; }
+
+        .rm-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .rm-label-light { color: rgba(218,165,32,0.9); }
+
+        .rm-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .rm-heading-light { color: #ffffff; }
+        .rm-heading em { font-style: normal; color: #DAA520; }
+
+        .rm-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .rm-divider.centered { justify-content: center; }
+        .rm-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .rm-divider i { font-size: 9px; }
+
+        .rm-body { font-size: 15px; color: rgba(3,54,49,0.6); line-height: 1.85; margin-bottom: 0; }
+        .rm-body-light { color: rgba(255,255,255,0.65); }
+
+        .rm-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .rm-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .rm-btn-primary:hover { background:transparent; color:#033631; }
+        .rm-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .rm-btn-gold:hover { background:transparent; color:#DAA520; }
+        .rm-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.5); }
+        .rm-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .rm-btn-outline-dark { background:transparent; color:#033631; border-color:rgba(3,54,49,0.4); }
+        .rm-btn-outline-dark:hover { background:#033631; color:#fff; border-color:#033631; }
+        .rm-btn-sm { padding: 10px 22px; font-size: 13px; }
+
+        /* ---- Breadcrumb ---- */
+        .rm-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 20px;
+            display: flex; gap: 8px; align-items: center;
+            font-size: 13px; color: rgba(255,255,255,0.65);
+        }
+        .rm-breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
+        .rm-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .rm-breadcrumb a:hover { color: #DAA520; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .rm-hero {
+            position: relative; height: 600px;
+            background: linear-gradient(135deg, rgba(3,54,49,0.88) 0%, rgba(3,54,49,0.5) 60%, rgba(0,0,0,0.2) 100%),
+                        url('assets/images/room/room-1.jpg') center/cover no-repeat;
+            display: flex; align-items: center;
+        }
+        .rm-hero-content { position: relative; z-index: 2; }
+        .rm-hero h1 {
+            font-size: clamp(36px, 5.5vw, 66px); font-weight: 800;
+            line-height: 1.05; margin-bottom: 18px; color: #fff;
+        }
+        .rm-hero h1 em { font-style: normal; color: #DAA520; }
+        .rm-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 540px; margin-bottom: 32px; }
+        .rm-hero-shape { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3; line-height: 0; }
+        .rm-hero-shape img { width: 100%; }
+
+        .rm-hero-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+        .rm-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+            padding: 8px 18px; font-size: 13px; font-weight: 600; color: #fff;
+        }
+        .rm-hero-pill i { color: #DAA520; }
+
+        /* ============================================================
+           BOOKING BAR
+           ============================================================ */
+        .rm-booking-bar {
+            background: #033631; border-radius: 20px; padding: 30px 36px;
+            display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+            box-shadow: 0 8px 48px rgba(3,54,49,0.25);
+            position: relative; z-index: 10; margin-top: -60px;
+        }
+        .rm-bb-field { flex: 1; min-width: 160px; }
+        .rm-bb-label {
+            display: block; font-size: 10px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: rgba(255,255,255,0.45); margin-bottom: 6px;
+        }
+        .rm-bb-field input,
+        .rm-bb-field select {
+            width: 100%; background: transparent; border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+            color: #fff; font-size: 15px; font-weight: 600;
+            padding: 8px 0; outline: none; font-family: inherit;
+        }
+        .rm-bb-field input::placeholder { color: rgba(255,255,255,0.4); }
+        .rm-bb-field select option { color: #033631; background: #fff; }
+        .rm-bb-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+
+        /* ============================================================
+           FILTER TABS
+           ============================================================ */
+        .rm-filters {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            margin-bottom: 40px; justify-content: center;
+        }
+        .rm-filter-btn {
+            padding: 10px 24px; border-radius: 100px;
+            border: 1.5px solid rgba(3,54,49,0.15);
+            background: #fff; color: rgba(3,54,49,0.65);
+            font-size: 13px; font-weight: 600; cursor: pointer;
+            transition: all 0.25s ease; text-decoration: none;
+        }
+        .rm-filter-btn:hover,
+        .rm-filter-btn.active {
+            background: #033631; color: #fff; border-color: #033631;
+        }
+
+        /* ============================================================
+           FEATURED SUITE (full-width split)
+           ============================================================ */
+        .rm-featured {
+            display: grid; grid-template-columns: 55% 45%;
+            border-radius: 24px; overflow: hidden;
+            box-shadow: 0 12px 60px rgba(3,54,49,0.15);
+        }
+        .rm-featured-imgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 4px;
+        }
+        .rm-featured-imgs .rfi { overflow: hidden; position: relative; }
+        .rm-featured-imgs .rfi img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-featured-imgs .rfi:hover img { transform: scale(1.06); }
+        .rm-featured-imgs .rfi-main { grid-row: 1 / 3; }
+        .rm-featured-content {
+            background: #fff; padding: 52px 48px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .rm-price-tag {
+            display: inline-flex; align-items: baseline; gap: 4px;
+            margin-bottom: 28px;
+        }
+        .rm-price-tag .curr { font-size: 20px; color: #033631; font-weight: 700; }
+        .rm-price-tag .amt  { font-size: 44px; color: #033631; font-weight: 800; line-height: 1; }
+        .rm-price-tag .per  { font-size: 13px; color: rgba(3,54,49,0.5); font-weight: 500; }
+        .rm-amenity-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 12px; margin: 20px 0 28px;
+        }
+        .rm-amenity-item {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 13px; color: rgba(3,54,49,0.7); font-weight: 500;
+        }
+        .rm-amenity-item i { color: #DAA520; width: 16px; }
+        .rm-featured-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(218,165,32,0.12); color: #a07a00;
+            border-radius: 100px; padding: 6px 16px;
+            font-size: 11px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 16px;
+        }
+
+        /* ============================================================
+           ROOM CARD (grid)
+           ============================================================ */
+        .rm-card {
+            background: #fff; border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.06);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .rm-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 56px rgba(3,54,49,0.13);
+        }
+
+        /* Image area */
+        .rm-card-img {
+            position: relative; height: 240px; overflow: hidden;
+        }
+        .rm-card-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-card:hover .rm-card-img img { transform: scale(1.06); }
+
+        .rm-card-badges {
+            position: absolute; top: 14px; left: 14px;
+            display: flex; gap: 6px; flex-wrap: wrap;
+        }
+        .rm-badge {
+            font-size: 10px; font-weight: 700; letter-spacing: 1px;
+            text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
+        }
+        .rm-badge-gold  { background: #DAA520; color: #033631; }
+        .rm-badge-green { background: #033631; color: #fff; }
+        .rm-badge-white { background: #fff; color: #033631; }
+        .rm-badge-eco   { background: #2d8c5e; color: #fff; }
+
+        .rm-card-price {
+            position: absolute; bottom: 0; right: 0;
+            background: linear-gradient(135deg, #033631, #055a50);
+            color: #fff; padding: 10px 18px 10px 22px;
+            border-radius: 16px 0 0 0;
+        }
+        .rm-card-price .from { font-size: 10px; color: rgba(255,255,255,0.6); display: block; }
+        .rm-card-price .amount { font-size: 20px; font-weight: 800; color: #DAA520; line-height: 1; }
+        .rm-card-price .night { font-size: 10px; color: rgba(255,255,255,0.6); }
+
+        /* Body area */
+        .rm-card-body { padding: 26px 28px 30px; flex: 1; display: flex; flex-direction: column; }
+        .rm-card-type { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #DAA520; margin-bottom: 6px; display: block; }
+        .rm-card-title { font-size: 21px; font-weight: 700; color: #033631; margin-bottom: 10px; }
+        .rm-card-desc { font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.75; margin-bottom: 18px; flex: 1; }
+
+        .rm-card-specs {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+        }
+        .rm-spec {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #E7EEEE; border-radius: 100px;
+            padding: 6px 14px; font-size: 12px; font-weight: 600; color: #033631;
+        }
+        .rm-spec i { color: #DAA520; font-size: 11px; }
+
+        .rm-card-amenities {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
+        }
+        .rm-amenity-tag {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 12px; color: rgba(3,54,49,0.65);
+            border: 1px solid rgba(3,54,49,0.1); border-radius: 6px;
+            padding: 5px 10px;
+        }
+        .rm-amenity-tag i { color: #DAA520; font-size: 10px; }
+
+        .rm-card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 12px; padding-top: 18px; border-top: 1px solid rgba(3,54,49,0.08);
+            flex-wrap: wrap;
+        }
+        .rm-card-capacity {
+            font-size: 13px; color: rgba(3,54,49,0.6); font-weight: 600;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .rm-card-capacity i { color: #DAA520; }
+
+        /* ============================================================
+           ROOM DETAIL ROW (alternating full-width sections)
+           ============================================================ */
+        .rm-detail-row {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 0; border-radius: 24px; overflow: hidden;
+            box-shadow: 0 8px 40px rgba(3,54,49,0.1);
+            margin-bottom: 32px;
+        }
+        .rm-detail-row.reverse { direction: rtl; }
+        .rm-detail-row.reverse > * { direction: ltr; }
+
+        .rm-detail-img {
+            position: relative; overflow: hidden; min-height: 420px;
+        }
+        .rm-detail-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-detail-row:hover .rm-detail-img img { transform: scale(1.04); }
+        .rm-detail-img-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(3,54,49,0.4) 0%, transparent 50%);
+        }
+        .rm-detail-img-badge {
+            position: absolute; top: 20px; left: 20px;
+            display: flex; gap: 8px; flex-wrap: wrap;
+        }
+        .rm-detail-img-price {
+            position: absolute; bottom: 20px; left: 20px;
+        }
+        .rm-detail-img-price .dp-from { font-size: 11px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 2px; }
+        .rm-detail-img-price .dp-amount { font-size: 28px; font-weight: 800; color: #DAA520; line-height: 1; }
+        .rm-detail-img-price .dp-per { font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 4px; }
+
+        .rm-detail-content {
+            background: #fff; padding: 50px 48px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .rm-detail-features {
+            list-style: none; padding: 0; margin: 0 0 24px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .rm-detail-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: rgba(3,54,49,0.7); line-height: 1.5;
+        }
+        .rm-detail-features li i { color: #DAA520; margin-top: 3px; font-size: 11px; flex-shrink: 0; }
+        .rm-detail-specs {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;
+        }
+
+        /* ============================================================
+           COMPARISON TABLE
+           ============================================================ */
+        .rm-compare-table {
+            width: 100%; border-collapse: collapse; font-size: 14px;
+        }
+        .rm-compare-table thead tr { background: #033631; color: #fff; }
+        .rm-compare-table thead th {
+            padding: 16px 18px; text-align: left;
+            font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+        }
+        .rm-compare-table thead th:first-child { border-radius: 12px 0 0 0; }
+        .rm-compare-table thead th:last-child  { border-radius: 0 12px 0 0; }
+        .rm-compare-table tbody tr { border-bottom: 1px solid rgba(3,54,49,0.07); transition: background 0.2s; }
+        .rm-compare-table tbody tr:hover { background: #E7EEEE; }
+        .rm-compare-table tbody tr:last-child { border-bottom: none; }
+        .rm-compare-table td { padding: 14px 18px; color: rgba(3,54,49,0.7); vertical-align: middle; }
+        .rm-compare-table td:first-child { font-weight: 700; color: #033631; }
+        .rm-compare-table .rc-price { color: #DAA520; font-weight: 800; font-size: 16px; }
+        .rm-compare-table .rc-check { color: #2d8c5e; font-size: 14px; }
+        .rm-compare-table .rc-cross { color: rgba(3,54,49,0.2); font-size: 12px; }
+
+        /* ============================================================
+           AMENITIES ICONS SECTION
+           ============================================================ */
+        .rm-amenity-block {
+            background: #fff; border-radius: 18px; padding: 36px 28px;
+            text-align: center; border: 1px solid rgba(3,54,49,0.07);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.05);
+            transition: transform 0.3s, box-shadow 0.3s; height: 100%;
+        }
+        .rm-amenity-block:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 44px rgba(3,54,49,0.11);
+        }
+        .rm-amenity-block-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(3,54,49,0.07);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px; transition: background 0.3s;
+        }
+        .rm-amenity-block-icon i { font-size: 24px; color: #033631; transition: color 0.3s; }
+        .rm-amenity-block:hover .rm-amenity-block-icon { background: #033631; }
+        .rm-amenity-block:hover .rm-amenity-block-icon i { color: #DAA520; }
+        .rm-amenity-block h5 { font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 8px; }
+        .rm-amenity-block p { font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.65; margin: 0; }
+
+        /* ============================================================
+           POLICIES STRIP
+           ============================================================ */
+        .rm-policy-card {
+            background: #fff; border-radius: 16px; padding: 28px 24px;
+            border-left: 4px solid #DAA520; height: 100%;
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
+        }
+        .rm-policy-card h5 {
+            font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .rm-policy-card h5 i { color: #DAA520; }
+        .rm-policy-list { list-style: none; padding: 0; margin: 0; }
+        .rm-policy-list li {
+            font-size: 13px; color: rgba(3,54,49,0.65);
+            padding: 5px 0; border-bottom: 1px solid rgba(3,54,49,0.06);
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .rm-policy-list li:last-child { border-bottom: none; }
+        .rm-policy-list li i { color: #DAA520; font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+        .rm-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #055a50 100%);
+            border-radius: 24px; padding: 70px 50px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .rm-cta-box::before {
+            content: ''; position: absolute;
+            top: -80px; right: -80px; width: 300px; height: 300px;
+            border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .rm-cta-box::after {
+            content: ''; position: absolute;
+            bottom: -60px; left: -60px; width: 220px; height: 220px;
+            border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1199px) {
+            .rm-featured { grid-template-columns: 1fr 1fr; }
+            .rm-featured-content { padding: 40px 36px; }
+        }
+        @media (max-width: 991px) {
+            .rm-featured { grid-template-columns: 1fr; }
+            .rm-featured-imgs { grid-template-rows: 200px 200px; }
+            .rm-featured-imgs .rfi-main { grid-row: auto; }
+            .rm-detail-row { grid-template-columns: 1fr; }
+            .rm-detail-row.reverse { direction: ltr; }
+            .rm-detail-img { min-height: 280px; }
+            .rm-detail-content { padding: 36px 32px; }
+            .rm-booking-bar { padding: 24px 20px; }
+            .rm-bb-divider { display: none; }
+        }
+        @media (max-width: 767px) {
+            .rm-amenity-grid { grid-template-columns: 1fr; }
+            .rm-cta-box { padding: 50px 28px; }
+        }
+        @media (max-width: 575px) {
+            .rm-hero h1 { font-size: 32px; }
+            .rm-price-tag .amt { font-size: 34px; }
+            .rm-booking-bar { margin-top: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="rm-hero">
+            <div class="container rm-hero-content">
+                <ul class="rm-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Rooms &amp; Cottages</li>
+                </ul>
+                <span class="rm-label wow fadeInUp" data-wow-delay=".2s">Forest Accommodations</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    Sleep Inside<br><em>the Forest</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Six unique rooms and cottages — each designed with natural materials, earthy tones and thoughtful details that connect you to the land outside your window.
+                </p>
+                <div class="rm-hero-pills wow fadeInUp" data-wow-delay=".45s">
+                    <span class="rm-hero-pill"><i class="fa-solid fa-bed"></i> 6 Room Types</span>
+                    <span class="rm-hero-pill"><i class="fa-solid fa-utensils"></i> Breakfast Included</span>
+                    <span class="rm-hero-pill"><i class="fa-solid fa-person-swimming"></i> Pool Access</span>
+                    <span class="rm-hero-pill"><i class="fa-solid fa-tree"></i> Forest Views</span>
+                </div>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
+                    <a href="#rooms" class="rm-btn rm-btn-gold">Explore Rooms</a>
+                    <a href="booking.html" class="rm-btn rm-btn-outline">Check Availability</a>
+                </div>
+            </div>
+            <div class="rm-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             BOOKING BAR
+             ============================================================ -->
+   
+
+
+        <!-- ============================================================
+             FEATURED — MAHUA SUITE
+             ============================================================ -->
+        <section class="rm-section" style="padding-top:30px;">
+            <div class="container">
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-7">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">Signature Accommodation</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Our Most <em>Loved Suite</em></h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                        <a href="#rooms" class="rm-btn rm-btn-outline-dark rm-btn-sm">View All Rooms</a>
+                    </div>
+                </div>
+
+                <div class="rm-featured wow fadeInUp" data-wow-delay=".3s">
+                    <div class="rm-featured-imgs">
+                        <div class="rfi rfi-main">
+                            <img src="assets/images/room/room-3.jpg" alt="Mahua Suite Main">
+                        </div>
+                        <div class="rfi">
+                            <img src="assets/images/room/room-5.jpg" alt="Mahua Suite Bath">
+                        </div>
+                        <div class="rfi">
+                            <img src="assets/images/about/18.jpeg" alt="Mahua Suite Verandah">
+                        </div>
+                    </div>
+                    <div class="rm-featured-content">
+                        <div class="rm-featured-badge"><i class="fa-solid fa-crown"></i> Signature Suite</div>
+                        <span class="rm-label">Most Loved</span>
+                        <h2 class="rm-heading" style="font-size:34px;">The Mahua Suite</h2>
+                        <div class="rm-divider"><span></span><i class="fa-solid fa-leaf"></i><span></span></div>
+                        <p class="rm-body mb-0">Our crown jewel — a spacious forest suite with floor-to-ceiling windows framing a private view of the Mahua tree canopy. Featuring a king-size four-poster bed, freestanding soaking tub, private verandah, and curated forest artefacts. A sanctuary within a sanctuary.</p>
+                        <div class="rm-amenity-grid">
+                            <div class="rm-amenity-item"><i class="fa-solid fa-bed"></i> King Four-poster Bed</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-bath"></i> Freestanding Soaking Tub</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-couch"></i> Private Forest Verandah</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-wifi"></i> High-speed Wi-Fi</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-snowflake"></i> Climate Control</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-martini-glass"></i> Welcome Minibar</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-tv"></i> Smart TV + OTT</div>
+                            <div class="rm-amenity-item"><i class="fa-solid fa-utensils"></i> In-room Dining</div>
+                        </div>
+                        <div class="rm-price-tag">
+                            <span class="curr">₹</span>
+                            <span class="amt">8,500</span>
+                            <span class="per">/ night · incl. breakfast</span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="booking.html" class="rm-btn rm-btn-primary">Book This Suite</a>
+                            <a href="contact-us.html" class="rm-btn rm-btn-gold">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ALL ROOMS — DETAILED GRID
+             ============================================================ -->
+        <section class="rm-section rm-section-alt" id="rooms">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">All Accommodations</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Choose Your <em>Forest Retreat</em></h2>
+                        <div class="rm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="rm-body wow fadeInUp" data-wow-delay=".35s">Every room is a window into the forest — designed with natural materials, earthy tones and thoughtful details that connect you to the land.</p>
+                    </div>
+                </div>
+
+                <!-- Filter -->
+                <div class="rm-filters wow fadeInUp" data-wow-delay=".3s">
+                    <a href="#" class="rm-filter-btn active" data-filter="all">All Rooms</a>
+                    <a href="#" class="rm-filter-btn" data-filter="forest">Forest Rooms</a>
+                    <a href="#" class="rm-filter-btn" data-filter="cottage">Cottages</a>
+                    <a href="#" class="rm-filter-btn" data-filter="suite">Suites</a>
+                    <a href="#" class="rm-filter-btn" data-filter="family">Family</a>
+                    <a href="#" class="rm-filter-btn" data-filter="eco">Eco</a>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- 1. Forest View Room -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s" data-category="forest">
+                        <div class="rm-card">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-2.jpg" alt="Forest View Room">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-green">Forest Room</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹3,500</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Standard Room</span>
+                                <h4 class="rm-card-title">Forest View Room</h4>
+                                <p class="rm-card-desc">Cosy and comfortable with a private garden-facing window. Warm wooden interiors, soft lighting, and the forest soundtrack just outside. Ideal for solo travellers and couples seeking a peaceful retreat.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 280 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 1–2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-eye"></i> Garden View</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> Queen Bed</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-shower"></i> En Suite Bath</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-mug-hot"></i> Tea/Coffee</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-user"></i> 1–2 Guests</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-primary rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Teak Wood Cottage -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s" data-category="cottage">
+                        <div class="rm-card">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-4.jpg" alt="Teak Wood Cottage">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-gold">Popular</span>
+                                    <span class="rm-badge rm-badge-green">Cottage</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹5,200</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Private Cottage</span>
+                                <h4 class="rm-card-title">Teak Wood Cottage</h4>
+                                <p class="rm-card-desc">A standalone cottage built with reclaimed teak wood, featuring a private sit-out verandah with sweeping forest views. Rich natural interiors, hand-crafted furniture, and absolute seclusion.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 420 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-tree"></i> Forest View</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> King Bed</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-chair"></i> Private Verandah</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bath"></i> Rain Shower</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-primary rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Mahua Suite -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-category="suite">
+                        <div class="rm-card" style="border-color:#DAA520;">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-5.jpg" alt="Mahua Suite">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-gold">Signature</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹8,500</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Luxury Suite</span>
+                                <h4 class="rm-card-title">The Mahua Suite</h4>
+                                <p class="rm-card-desc">Our flagship suite with panoramic canopy views, a four-poster king bed, freestanding soaking tub and private verandah. The ultimate forest indulgence for discerning travellers.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 650 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-crown"></i> Panoramic View</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> 4-poster King</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bath"></i> Soaking Tub</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-martini-glass"></i> Minibar</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-couch"></i> Verandah</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-utensils"></i> In-room Dining</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-gold rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Forest Family Cabin -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s" data-category="family">
+                        <div class="rm-card">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-6.jpg" alt="Forest Family Cabin">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-green">Family</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹7,000</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Family Cabin</span>
+                                <h4 class="rm-card-title">Forest Family Cabin</h4>
+                                <p class="rm-card-desc">Spacious two-room cabin perfect for families. Includes a king room, twin bunk area for children, a shared living space and a large forest-facing deck ideal for morning birding.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 580 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 2+2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-children"></i> Kids Friendly</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> King + Bunk Beds</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-door-open"></i> Living Area</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-person-hiking"></i> Deck</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-people-roof"></i> 2 Adults + 2 Kids</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-primary rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Bamboo Nest Room -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s" data-category="eco forest">
+                        <div class="rm-card">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-7.jpg" alt="Bamboo Nest Room">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-eco">Eco Room</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹4,200</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Eco Room</span>
+                                <h4 class="rm-card-title">Bamboo Nest Room</h4>
+                                <p class="rm-card-desc">Built entirely from locally sourced bamboo with earthy clay walls. Fully solar-powered, with organic toiletries, a private garden courtyard and a natural ethos that makes every stay feel meaningful.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 320 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-solar-panel"></i> Solar Power</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> Queen Bed</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-solar-panel"></i> Solar Power</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-leaf"></i> Eco Toiletries</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-seedling"></i> Garden</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-fan"></i> Ceiling Fan</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-primary rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Treetop Loft -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-category="suite forest">
+                        <div class="rm-card">
+                            <div class="rm-card-img">
+                                <img src="assets/images/room/room-8.jpg" alt="Treetop Loft">
+                                <div class="rm-card-badges">
+                                    <span class="rm-badge rm-badge-gold">Premium</span>
+                                </div>
+                                <div class="rm-card-price">
+                                    <span class="from">from</span>
+                                    <span class="amount">₹6,500</span>
+                                    <span class="night">/night</span>
+                                </div>
+                            </div>
+                            <div class="rm-card-body">
+                                <span class="rm-card-type">Premium Room</span>
+                                <h4 class="rm-card-title">Treetop Loft Room</h4>
+                                <p class="rm-card-desc">Elevated on a raised platform within the canopy, this loft room offers unobstructed treetop views, a king bed and a panoramic private balcony where you can watch the forest wake up at dawn.</p>
+                                <div class="rm-card-specs">
+                                    <span class="rm-spec"><i class="fa-solid fa-expand"></i> 480 sq ft</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-users"></i> 2 Guests</span>
+                                    <span class="rm-spec"><i class="fa-solid fa-binoculars"></i> Treetop View</span>
+                                </div>
+                                <div class="rm-card-amenities">
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-bed"></i> King Bed</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-binoculars"></i> Canopy View</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-couch"></i> Private Balcony</span>
+                                    <span class="rm-amenity-tag"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                                </div>
+                                <div class="rm-card-footer">
+                                    <span class="rm-card-capacity"><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                                    <div class="d-flex gap-2">
+                                        <a href="contact-us.html" class="rm-btn rm-btn-outline-dark rm-btn-sm">Enquire</a>
+                                        <a href="booking.html" class="rm-btn rm-btn-primary rm-btn-sm">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ROOM DETAIL ROWS — alternating split layout
+             ============================================================ -->
+        <section class="rm-section rm-section-cream">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">Room Details</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Inside Each <em>Room</em></h2>
+                        <div class="rm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-door-open"></i><span></span></div>
+                    </div>
+                </div>
+
+                <!-- Teak Cottage detail -->
+                <div class="rm-detail-row wow fadeInUp" data-wow-delay=".2s">
+                    <div class="rm-detail-img">
+                        <img src="assets/images/room/room-4.jpg" alt="Teak Wood Cottage">
+                        <div class="rm-detail-img-overlay"></div>
+                        <div class="rm-detail-img-badge">
+                            <span class="rm-badge rm-badge-gold">Popular</span>
+                            <span class="rm-badge rm-badge-green">Cottage</span>
+                        </div>
+                        <div class="rm-detail-img-price">
+                            <span class="dp-from">from</span>
+                            <span class="dp-amount">₹5,200</span>
+                            <span class="dp-per">/night</span>
+                        </div>
+                    </div>
+                    <div class="rm-detail-content">
+                        <span class="rm-label">Private Cottage</span>
+                        <h3 class="rm-heading" style="font-size:30px;">Teak Wood Cottage</h3>
+                        <div class="rm-divider"><span></span><i class="fa-solid fa-tree"></i><span></span></div>
+                        <p class="rm-body mb-4">A standalone cottage built entirely with reclaimed teak wood. The warm natural grain of the walls, the scent of the timber, and the private sit-out verandah with sweeping forest views make this our most requested room for romantic getaways and anniversary stays.</p>
+                        <ul class="rm-detail-features">
+                            <li><i class="fa-solid fa-check"></i> King-size bed with premium forest linen</li>
+                            <li><i class="fa-solid fa-check"></i> Private sit-out verandah facing the forest</li>
+                            <li><i class="fa-solid fa-check"></i> Open rain shower with forest-view window</li>
+                            <li><i class="fa-solid fa-check"></i> Handcrafted teak furniture throughout</li>
+                            <li><i class="fa-solid fa-check"></i> Welcome basket with local honey and herbs</li>
+                            <li><i class="fa-solid fa-check"></i> Air conditioning + ceiling fan</li>
+                        </ul>
+                        <div class="rm-detail-specs">
+                            <span class="rm-spec"><i class="fa-solid fa-expand"></i> 420 sq ft</span>
+                            <span class="rm-spec"><i class="fa-solid fa-users"></i> Up to 2</span>
+                            <span class="rm-spec"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                            <span class="rm-spec"><i class="fa-solid fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="booking.html" class="rm-btn rm-btn-primary">Book This Cottage</a>
+                            <a href="contact-us.html" class="rm-btn rm-btn-gold">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treetop Loft detail (reversed) -->
+                <div class="rm-detail-row reverse wow fadeInUp" data-wow-delay=".2s">
+                    <div class="rm-detail-img">
+                        <img src="assets/images/room/room-8.jpg" alt="Treetop Loft">
+                        <div class="rm-detail-img-overlay"></div>
+                        <div class="rm-detail-img-badge">
+                            <span class="rm-badge rm-badge-gold">Premium</span>
+                        </div>
+                        <div class="rm-detail-img-price">
+                            <span class="dp-from">from</span>
+                            <span class="dp-amount">₹6,500</span>
+                            <span class="dp-per">/night</span>
+                        </div>
+                    </div>
+                    <div class="rm-detail-content">
+                        <span class="rm-label">Premium Room</span>
+                        <h3 class="rm-heading" style="font-size:30px;">Treetop Loft Room</h3>
+                        <div class="rm-divider"><span></span><i class="fa-solid fa-binoculars"></i><span></span></div>
+                        <p class="rm-body mb-4">Elevated on a raised teak platform within the Mahua canopy, this unique loft room offers unobstructed treetop views from every angle. Wake up to birdsong at eye-level with the forest. A private balcony wraps around the entire room for 270-degree forest immersion.</p>
+                        <ul class="rm-detail-features">
+                            <li><i class="fa-solid fa-check"></i> King-size bed facing the canopy</li>
+                            <li><i class="fa-solid fa-check"></i> 270° panoramic private balcony</li>
+                            <li><i class="fa-solid fa-check"></i> Floor-to-ceiling forest-view windows</li>
+                            <li><i class="fa-solid fa-check"></i> Telescope for birdwatching provided</li>
+                            <li><i class="fa-solid fa-check"></i> Smart TV + OTT streaming</li>
+                            <li><i class="fa-solid fa-check"></i> Air conditioning + ceiling fan</li>
+                        </ul>
+                        <div class="rm-detail-specs">
+                            <span class="rm-spec"><i class="fa-solid fa-expand"></i> 480 sq ft</span>
+                            <span class="rm-spec"><i class="fa-solid fa-users"></i> Up to 2</span>
+                            <span class="rm-spec"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                            <span class="rm-spec"><i class="fa-solid fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="booking.html" class="rm-btn rm-btn-primary">Book This Room</a>
+                            <a href="contact-us.html" class="rm-btn rm-btn-gold">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Cabin detail -->
+                <div class="rm-detail-row wow fadeInUp" data-wow-delay=".2s">
+                    <div class="rm-detail-img">
+                        <img src="assets/images/room/room-6.jpg" alt="Forest Family Cabin">
+                        <div class="rm-detail-img-overlay"></div>
+                        <div class="rm-detail-img-badge">
+                            <span class="rm-badge rm-badge-green">Family</span>
+                        </div>
+                        <div class="rm-detail-img-price">
+                            <span class="dp-from">from</span>
+                            <span class="dp-amount">₹7,000</span>
+                            <span class="dp-per">/night</span>
+                        </div>
+                    </div>
+                    <div class="rm-detail-content">
+                        <span class="rm-label">Family Cabin</span>
+                        <h3 class="rm-heading" style="font-size:30px;">Forest Family Cabin</h3>
+                        <div class="rm-divider"><span></span><i class="fa-solid fa-people-roof"></i><span></span></div>
+                        <p class="rm-body mb-4">Designed for families who want to experience the forest together. A two-room cabin with a king bedroom for parents and a separate bunk area for children, connected by a cosy shared living space. The large forest deck is perfect for morning birdwatching as a family.</p>
+                        <ul class="rm-detail-features">
+                            <li><i class="fa-solid fa-check"></i> 1 King bedroom + 1 Kids bunk room</li>
+                            <li><i class="fa-solid fa-check"></i> Shared living area with sofa seating</li>
+                            <li><i class="fa-solid fa-check"></i> Large forest-facing deck</li>
+                            <li><i class="fa-solid fa-check"></i> Child-safe design with low furniture</li>
+                            <li><i class="fa-solid fa-check"></i> Kids welcome kit (colouring book, nature guide)</li>
+                            <li><i class="fa-solid fa-check"></i> Two separate bathrooms</li>
+                        </ul>
+                        <div class="rm-detail-specs">
+                            <span class="rm-spec"><i class="fa-solid fa-expand"></i> 580 sq ft</span>
+                            <span class="rm-spec"><i class="fa-solid fa-users"></i> 2+2 Guests</span>
+                            <span class="rm-spec"><i class="fa-solid fa-wifi"></i> Wi-Fi</span>
+                            <span class="rm-spec"><i class="fa-solid fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="booking.html" class="rm-btn rm-btn-primary">Book This Cabin</a>
+                            <a href="contact-us.html" class="rm-btn rm-btn-gold">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             COMPARISON TABLE
+             ============================================================ -->
+        <section class="rm-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">At a Glance</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Compare All <em>Rooms</em></h2>
+                        <div class="rm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-table"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="wow fadeInUp" data-wow-delay=".3s" style="overflow-x:auto; border-radius:16px; box-shadow:0 4px 32px rgba(3,54,49,0.1);">
+                    <table class="rm-compare-table">
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>Size</th>
+                                <th>Guests</th>
+                                <th>Price/Night</th>
+                                <th>AC</th>
+                                <th>Pool</th>
+                                <th>Verandah</th>
+                                <th>Breakfast</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Forest View Room</td>
+                                <td>280 sq ft</td>
+                                <td>1–2</td>
+                                <td class="rc-price">₹3,500</td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-xmark rc-cross"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Bamboo Nest Room</td>
+                                <td>320 sq ft</td>
+                                <td>1–2</td>
+                                <td class="rc-price">₹4,200</td>
+                                <td><i class="fa-solid fa-xmark rc-cross"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Teak Wood Cottage</td>
+                                <td>420 sq ft</td>
+                                <td>2</td>
+                                <td class="rc-price">₹5,200</td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Treetop Loft Room</td>
+                                <td>480 sq ft</td>
+                                <td>2</td>
+                                <td class="rc-price">₹6,500</td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Forest Family Cabin</td>
+                                <td>580 sq ft</td>
+                                <td>2+2</td>
+                                <td class="rc-price">₹7,000</td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                            <tr style="background:rgba(218,165,32,0.05);">
+                                <td><strong style="color:#DAA520;">The Mahua Suite ★</strong></td>
+                                <td>650 sq ft</td>
+                                <td>2</td>
+                                <td class="rc-price">₹8,500</td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                                <td><i class="fa-solid fa-check rc-check"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size:13px;color:rgba(3,54,49,0.5);margin-top:14px;text-align:center;">All prices are per night and include breakfast for all guests. Pool access included for all room types.</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             RESORT AMENITIES
+             ============================================================ -->
+        <section class="rm-section rm-section-alt">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">Included for All Guests</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Resort <em>Amenities</em></h2>
+                        <div class="rm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="rm-body wow fadeInUp" data-wow-delay=".35s">Every staying guest has full access to everything Mahua House has to offer.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                            <h5>Forest Pool</h5>
+                            <p>Natural-edge swimming pool open daily 7 AM–7 PM. Towels and changing rooms included.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <h5>Breakfast Included</h5>
+                            <p>Farm-to-table breakfast for all guests, served on the open verandah from 7:30–10 AM.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-binoculars"></i></div>
+                            <h5>Birdwatching</h5>
+                            <p>Guided dawn birdwatching with our naturalist. Binoculars and field guide provided.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                            <h5>Nature Trails</h5>
+                            <p>Guided forest walks through the Samardha Reserve every morning and evening.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <h5>Campfire Evenings</h5>
+                            <p>Nightly campfire with folk music, chai and snacks. The most memorable part of every stay.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                            <h5>Yoga &amp; Fitness</h5>
+                            <p>Open-air yoga at sunrise and a fitness zone for guests. Sessions led by a certified instructor.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-spa"></i></div>
+                            <h5>Spa (Add-on)</h5>
+                            <p>Ayurvedic spa treatments available as add-on. Book in advance for session slots.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="rm-amenity-block">
+                            <div class="rm-amenity-block-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+                            <h5>Airport Transfer</h5>
+                            <p>Complimentary resort shuttle from Bhopal station or airport for 3+ night stays.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             POLICIES
+             ============================================================ -->
+        <section class="rm-section rm-section-cream">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="rm-label wow fadeInUp" data-wow-delay=".1s">Good to Know</span>
+                        <h2 class="rm-heading wow fadeInUp" data-wow-delay=".2s">Stay <em>Policies</em></h2>
+                        <div class="rm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-circle-info"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="rm-policy-card">
+                            <h5><i class="fa-solid fa-clock"></i> Check-in / Out</h5>
+                            <ul class="rm-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Check-in from 2:00 PM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Check-out by 11:00 AM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Early check-in on request</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Late checkout may be available</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> 24-hr reception for staying guests</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="rm-policy-card">
+                            <h5><i class="fa-solid fa-ban"></i> Cancellations</h5>
+                            <ul class="rm-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Free cancellation 7+ days prior</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> 50% charge within 3–7 days</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> No-show: 100% charge</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Peak season — special policy</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Rescheduling always welcome</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="rm-policy-card">
+                            <h5><i class="fa-solid fa-children"></i> Children &amp; Pets</h5>
+                            <ul class="rm-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Children of all ages welcome</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Under 5 stay free</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Ages 5–12 at 50% adult rate</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Pet-friendly (request in advance)</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Baby cot on request</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="rm-policy-card">
+                            <h5><i class="fa-solid fa-circle-info"></i> General Rules</h5>
+                            <ul class="rm-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Non-smoking in all rooms</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Quiet hours after 10 PM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Plastic-free resort</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Campfire by 10 PM only</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Forest trail safety rules apply</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA
+             ============================================================ -->
+        <section class="rm-section">
+            <div class="container">
+                <div class="rm-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="rm-label rm-label-light">Ready to Book?</span>
+                        <h2 class="rm-heading rm-heading-light" style="margin-bottom:14px;">
+                            Your Forest Room is <em>Waiting</em>
+                        </h2>
+                        <p class="rm-body rm-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Check availability, choose your room and book directly for the best rates. All rooms include breakfast and full resort access. We look forward to welcoming you.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="booking.html" class="rm-btn rm-btn-gold">Check Availability</a>
+                            <a href="stay.html" class="rm-btn rm-btn-outline">More About Stay</a>
+                            <a href="contact-us.html" class="rm-btn rm-btn-outline">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House offers six unique forest rooms and cottages — from eco bamboo nests to signature suites — all surrounded by 3.5 acres of natural woodland.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Stay Info</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Our Rooms</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Forest View Room</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Teak Cottage</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Mahua Suite</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Family Cabin</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Treetop Loft</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    // Filter tabs
+    document.querySelectorAll('.rm-filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.rm-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            var filter = this.getAttribute('data-filter');
+            document.querySelectorAll('[data-category]').forEach(function(card) {
+                var col = card.closest('[class*="col-"]');
+                if (!col) col = card;
+                if (filter === 'all' || card.getAttribute('data-category').indexOf(filter) !== -1) {
+                    col.style.display = '';
+                } else {
+                    col.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

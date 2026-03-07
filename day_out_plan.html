@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Spend a perfect day at Mahua House — forest walks, pool access, Ayurvedic spa, farm dining and sunset campfires without an overnight stay. Bhopal's best day-out experience.">
+    <meta name="keywords" content="Day Out Plan Bhopal, Forest Day Trip, Day Visit Mahua House, One Day Forest Experience, Picnic Resort Bhopal">
+    <title>Day Out Plan | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           DAY OUT PLAN PAGE — STYLES
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        /* ---- Utilities ---- */
+        .dp-section       { padding: 90px 0; }
+        .dp-section-alt   { background: #E7EEEE; }
+        .dp-section-dark  { background: #033631; }
+        .dp-section-cream { background: #faf8f3; }
+
+        .dp-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .dp-label-light { color: rgba(218,165,32,0.9); }
+
+        .dp-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .dp-heading-light { color: #ffffff; }
+        .dp-heading em { font-style: normal; color: #DAA520; }
+
+        .dp-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .dp-divider.centered { justify-content: center; }
+        .dp-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .dp-divider i { font-size: 9px; }
+
+        .dp-body {
+            font-size: 15px; color: rgba(3,54,49,0.6);
+            line-height: 1.85; margin-bottom: 0;
+        }
+        .dp-body-light { color: rgba(255,255,255,0.62); }
+
+        .dp-btn {
+            display: inline-block; padding: 13px 30px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .dp-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .dp-btn-primary:hover { background:transparent; color:#033631; }
+        .dp-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .dp-btn-gold:hover { background:transparent; color:#DAA520; }
+        .dp-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.45); }
+        .dp-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .dp-btn-sm { padding: 10px 22px; font-size: 13px; }
+
+        /* ---- Breadcrumb ---- */
+        .dp-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 20px;
+            display: flex; gap: 8px; align-items: center;
+            font-size: 13px; color: rgba(255,255,255,0.65);
+        }
+        .dp-breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
+        .dp-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .dp-breadcrumb a:hover { color: #DAA520; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .dp-hero {
+            position: relative; height: 620px;
+            background: linear-gradient(135deg, rgba(3,54,49,0.82) 0%, rgba(3,54,49,0.45) 60%, rgba(0,0,0,0.25) 100%),
+                        url('assets/images/about/3.jpeg') center/cover no-repeat;
+            display: flex; align-items: center;
+        }
+        .dp-hero-content { position: relative; z-index: 2; color: #fff; }
+        .dp-hero h1 {
+            font-size: clamp(36px, 5vw, 64px); font-weight: 800;
+            line-height: 1.1; margin-bottom: 18px; color: #fff;
+        }
+        .dp-hero h1 em { font-style: normal; color: #DAA520; }
+        .dp-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.78);
+            max-width: 560px; margin-bottom: 32px;
+        }
+        .dp-hero-shape { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3; line-height: 0; }
+        .dp-hero-shape img { width: 100%; }
+
+        /* ---- Info Pills ---- */
+        .dp-hero-pills {
+            display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;
+        }
+        .dp-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+            padding: 8px 18px; font-size: 13px; font-weight: 600; color: #fff;
+        }
+        .dp-hero-pill i { color: #DAA520; }
+
+        /* ============================================================
+           WHAT'S INCLUDED CARDS
+           ============================================================ */
+        .dp-include-card {
+            background: #fff; border-radius: 20px; padding: 36px 28px;
+            text-align: center; height: 100%;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.06);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .dp-include-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 56px rgba(3,54,49,0.13);
+        }
+        .dp-include-icon {
+            width: 70px; height: 70px; border-radius: 50%;
+            background: rgba(3,54,49,0.07);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; transition: background 0.3s;
+        }
+        .dp-include-icon i { font-size: 26px; color: #033631; transition: color 0.3s; }
+        .dp-include-card:hover .dp-include-icon { background: #033631; }
+        .dp-include-card:hover .dp-include-icon i { color: #DAA520; }
+        .dp-include-title {
+            font-size: 17px; font-weight: 700; color: #033631; margin-bottom: 10px;
+        }
+        .dp-include-text {
+            font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.7; margin: 0;
+        }
+
+        /* ============================================================
+           TIMELINE (Day Schedule)
+           ============================================================ */
+        .dp-timeline { position: relative; padding-left: 0; }
+        .dp-timeline::before {
+            content: '';
+            position: absolute; left: 38px; top: 0; bottom: 0;
+            width: 2px; background: linear-gradient(to bottom, #DAA520, rgba(218,165,32,0.1));
+        }
+        .dp-tl-item {
+            display: flex; align-items: flex-start; gap: 24px;
+            margin-bottom: 36px; position: relative;
+        }
+        .dp-tl-item:last-child { margin-bottom: 0; }
+        .dp-tl-dot {
+            width: 78px; height: 78px; flex-shrink: 0;
+            border-radius: 50%; background: #033631;
+            border: 3px solid #DAA520;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            position: relative; z-index: 1;
+        }
+        .dp-tl-dot i { font-size: 22px; color: #DAA520; margin-bottom: 2px; }
+        .dp-tl-time {
+            font-size: 10px; color: rgba(255,255,255,0.7);
+            font-weight: 700; letter-spacing: 0.5px; text-align: center;
+            line-height: 1;
+        }
+        .dp-tl-content { padding-top: 14px; flex: 1; }
+        .dp-tl-title {
+            font-size: 18px; font-weight: 700; color: #033631; margin-bottom: 8px;
+        }
+        .dp-tl-text {
+            font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.75; margin: 0;
+        }
+        .dp-tl-tag {
+            display: inline-block; margin-top: 10px;
+            background: #E7EEEE; border-radius: 100px;
+            padding: 4px 14px; font-size: 12px; font-weight: 600;
+            color: #033631;
+        }
+        .dp-tl-tag.gold { background: rgba(218,165,32,0.15); color: #a07a00; }
+
+        /* ============================================================
+           PACKAGES
+           ============================================================ */
+        .dp-pkg-card {
+            background: #fff; border-radius: 24px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.1);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .dp-pkg-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(3,54,49,0.14);
+        }
+        .dp-pkg-card.featured {
+            border-color: #DAA520;
+            box-shadow: 0 8px 40px rgba(218,165,32,0.2);
+        }
+        .dp-pkg-header {
+            padding: 32px 32px 28px; background: #033631; position: relative;
+        }
+        .dp-pkg-header.gold { background: linear-gradient(135deg, #b8860b 0%, #DAA520 100%); }
+        .dp-pkg-badge {
+            position: absolute; top: 16px; right: 20px;
+            background: #DAA520; color: #033631;
+            font-size: 10px; font-weight: 800; letter-spacing: 2px;
+            text-transform: uppercase; padding: 5px 14px; border-radius: 100px;
+        }
+        .dp-pkg-badge.white { background: #fff; color: #033631; }
+        .dp-pkg-name {
+            font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px;
+        }
+        .dp-pkg-tagline { font-size: 13px; color: rgba(255,255,255,0.65); margin: 0; }
+        .dp-pkg-price {
+            font-size: 38px; font-weight: 800; color: #DAA520;
+            line-height: 1; margin-top: 18px;
+        }
+        .dp-pkg-price.white-price { color: #fff; }
+        .dp-pkg-price span { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.6); }
+        .dp-pkg-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+        .dp-pkg-list {
+            list-style: none; padding: 0; margin: 0 0 28px; flex: 1;
+            display: flex; flex-direction: column; gap: 12px;
+        }
+        .dp-pkg-list li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: rgba(3,54,49,0.7); line-height: 1.5;
+        }
+        .dp-pkg-list li i { color: #DAA520; margin-top: 2px; font-size: 12px; flex-shrink: 0; }
+        .dp-pkg-list li.muted { opacity: 0.4; }
+        .dp-pkg-list li.muted i { color: rgba(3,54,49,0.3); }
+
+        /* ============================================================
+           ACTIVITIES SHOWCASE
+           ============================================================ */
+        .dp-activity-card {
+            position: relative; border-radius: 20px; overflow: hidden;
+            height: 280px; cursor: pointer;
+        }
+        .dp-activity-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .dp-activity-card:hover img { transform: scale(1.07); }
+        .dp-activity-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(3,54,49,0.88) 0%, rgba(3,54,49,0.1) 60%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 24px 22px; transition: background 0.3s;
+        }
+        .dp-activity-card:hover .dp-activity-overlay {
+            background: linear-gradient(to top, rgba(3,54,49,0.92) 0%, rgba(3,54,49,0.3) 60%);
+        }
+        .dp-activity-icon {
+            width: 46px; height: 46px; border-radius: 12px;
+            background: rgba(218,165,32,0.2);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 12px; font-size: 18px; color: #DAA520;
+        }
+        .dp-activity-title {
+            font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px;
+        }
+        .dp-activity-text {
+            font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6;
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .dp-activity-card:hover .dp-activity-text { max-height: 100px; }
+
+        /* ============================================================
+           GALLERY STRIP
+           ============================================================ */
+        .dp-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 10px; border-radius: 20px; overflow: hidden;
+        }
+        .dp-gallery .dg { position: relative; overflow: hidden; }
+        .dp-gallery .dg img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .dp-gallery .dg:hover img { transform: scale(1.07); }
+        .dp-gallery .dg-wide { grid-column: span 2; }
+        .dp-gallery .dg-tall { grid-row: span 2; }
+
+        /* ============================================================
+           BOOKING BAR
+           ============================================================ */
+        .dp-book-bar {
+            background: #033631; border-radius: 20px; padding: 36px 40px;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 24px; flex-wrap: wrap;
+            box-shadow: 0 8px 40px rgba(3,54,49,0.2);
+            position: relative; z-index: 10;
+            margin-top: -60px;
+        }
+        .dp-book-field { flex: 1; min-width: 180px; }
+        .dp-book-label {
+            display: block; font-size: 11px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: rgba(255,255,255,0.5); margin-bottom: 6px;
+        }
+        .dp-book-field input,
+        .dp-book-field select {
+            width: 100%; background: transparent; border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            color: #fff; font-size: 15px; font-weight: 600;
+            padding: 8px 0; outline: none; font-family: inherit;
+        }
+        .dp-book-field input::placeholder { color: rgba(255,255,255,0.45); }
+        .dp-book-field select option { color: #033631; background: #fff; }
+        .dp-book-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.12); }
+
+        /* ============================================================
+           FAQ
+           ============================================================ */
+        .dp-faq-item {
+            border-bottom: 1px solid rgba(3,54,49,0.1); overflow: hidden;
+        }
+        .dp-faq-q {
+            width: 100%; background: none; border: none; text-align: left;
+            padding: 20px 0; display: flex; align-items: center;
+            justify-content: space-between; gap: 16px; cursor: pointer;
+            font-size: 16px; font-weight: 600; color: #033631; font-family: inherit;
+        }
+        .dp-faq-q .dp-faq-icon {
+            width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+            background: #E7EEEE; display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .dp-faq-q .dp-faq-icon i { font-size: 12px; color: #033631; }
+        .dp-faq-q.active .dp-faq-icon { background: #DAA520; transform: rotate(45deg); }
+        .dp-faq-q.active .dp-faq-icon i { color: #033631; }
+        .dp-faq-a {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .dp-faq-a.open { max-height: 200px; }
+        .dp-faq-a p {
+            font-size: 14px; color: rgba(3,54,49,0.65);
+            line-height: 1.8; padding-bottom: 18px; margin: 0;
+        }
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+        .dp-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #055a50 100%);
+            border-radius: 24px; padding: 70px 50px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .dp-cta-box::before {
+            content: ''; position: absolute;
+            top: -80px; right: -80px; width: 280px; height: 280px;
+            border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .dp-cta-box::after {
+            content: ''; position: absolute;
+            bottom: -60px; left: -60px; width: 200px; height: 200px;
+            border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 991px) {
+            .dp-timeline::before { left: 34px; }
+            .dp-book-bar { padding: 28px 24px; }
+            .dp-book-divider { display: none; }
+            .dp-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 180px); }
+            .dp-gallery .dg-wide { grid-column: span 1; }
+            .dp-gallery .dg-tall { grid-row: span 1; }
+        }
+        @media (max-width: 767px) {
+            .dp-timeline::before { display: none; }
+            .dp-tl-dot { width: 60px; height: 60px; }
+            .dp-tl-dot i { font-size: 18px; }
+            .dp-gallery { grid-template-columns: 1fr; grid-template-rows: repeat(6, 180px); }
+            .dp-cta-box { padding: 50px 28px; }
+            .dp-book-bar { margin-top: 0; border-radius: 0; }
+        }
+        @media (max-width: 575px) {
+            .dp-hero h1 { font-size: 32px; }
+            .dp-cta-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box"><div class="logo">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure></a>
+                                </div></div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About</a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="#">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="stay.html">Room</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="dp-hero">
+            <div class="container dp-hero-content">
+                <ul class="dp-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Day Out Plan</li>
+                </ul>
+                <span class="dp-label wow fadeInUp" data-wow-delay=".2s">Forest Day Experience</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    One Day.<br><em>A Forest Full</em> of Memories.
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    You don't need to stay overnight to experience the magic of Mahua House. Our Day Out Plans give you a full day of forest immersion — birdwatching, pool, Ayurvedic spa, farm dining, guided nature trails, and a campfire sunset.
+                </p>
+                <div class="dp-hero-pills wow fadeInUp" data-wow-delay=".45s">
+                    <span class="dp-hero-pill"><i class="fa-solid fa-sun"></i> 8 AM – 8 PM</span>
+                    <span class="dp-hero-pill"><i class="fa-solid fa-users"></i> Individuals &amp; Groups</span>
+                    <span class="dp-hero-pill"><i class="fa-solid fa-utensils"></i> Meals Included</span>
+                    <span class="dp-hero-pill"><i class="fa-solid fa-person-swimming"></i> Pool Access</span>
+                </div>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
+                    <a href="#packages" class="dp-btn dp-btn-gold">View Packages</a>
+                    <a href="#book" class="dp-btn dp-btn-outline">Book Your Day</a>
+                </div>
+            </div>
+            <div class="dp-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             QUICK BOOKING BAR
+             ============================================================ -->
+        <div style="position:relative; z-index:10; margin-bottom:60px;" id="book">
+            <div class="container">
+                <div class="dp-book-bar wow fadeInUp" data-wow-delay=".3s">
+                    <div class="dp-book-field">
+                        <span class="dp-book-label">Visit Date</span>
+                        <input type="date">
+                    </div>
+                    <div class="dp-book-divider"></div>
+                    <div class="dp-book-field">
+                        <span class="dp-book-label">Number of Guests</span>
+                        <select>
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3–5 People</option>
+                            <option>6–10 People</option>
+                            <option>10–20 People</option>
+                            <option>20+ People</option>
+                        </select>
+                    </div>
+                    <div class="dp-book-divider"></div>
+                    <div class="dp-book-field">
+                        <span class="dp-book-label">Plan Type</span>
+                        <select>
+                            <option>Forest Essentials (Half Day)</option>
+                            <option>Forest Full Day</option>
+                            <option>Forest Premium (With Spa)</option>
+                        </select>
+                    </div>
+                    <div class="dp-book-divider"></div>
+                    <div style="flex-shrink:0;">
+                        <a href="contact-us.html" class="dp-btn dp-btn-gold">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             WHAT'S INCLUDED
+             ============================================================ -->
+        <section class="dp-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="dp-label wow fadeInUp" data-wow-delay=".1s">The Experience</span>
+                        <h2 class="dp-heading wow fadeInUp" data-wow-delay=".2s">Everything Your Day <em>Includes</em></h2>
+                        <div class="dp-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="dp-body wow fadeInUp" data-wow-delay=".35s">Every Day Out Plan at Mahua House is carefully curated for maximum immersion and minimum stress — just show up and let the forest do the rest.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-binoculars"></i></div>
+                            <h5 class="dp-include-title">Birdwatching</h5>
+                            <p class="dp-include-text">Guided morning birdwatching with our resident naturalist. 150+ species recorded.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                            <h5 class="dp-include-title">Forest Trail</h5>
+                            <p class="dp-include-text">A guided walk through the Samardha forest — medicinal plants, wildlife tracks, fresh air.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                            <h5 class="dp-include-title">Pool Access</h5>
+                            <p class="dp-include-text">Full access to our natural-edge forest swimming pool with towels provided.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".35s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <h5 class="dp-include-title">Farm Dining</h5>
+                            <p class="dp-include-text">A farm-to-table lunch and evening snacks with locally sourced, seasonal produce.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-spa"></i></div>
+                            <h5 class="dp-include-title">Ayurveda Spa</h5>
+                            <p class="dp-include-text">30-min Ayurvedic wellness session (in Premium plan). Certified therapists, forest spa setting.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay=".45s">
+                        <div class="dp-include-card">
+                            <div class="dp-include-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <h5 class="dp-include-title">Sunset Campfire</h5>
+                            <p class="dp-include-text">End your day around the forest campfire with folk music, chai, and fresh air under the stars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             SCHEDULE TIMELINE
+             ============================================================ -->
+        <section class="dp-section dp-section-alt">
+            <div class="container">
+                <div class="row align-items-start g-5">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                        <span class="dp-label">Your Day</span>
+                        <h2 class="dp-heading">A Day in the <em>Forest</em></h2>
+                        <div class="dp-divider"><span></span><i class="fa-solid fa-sun"></i><span></span></div>
+                        <p class="dp-body mb-4">
+                            Every moment at Mahua House is designed to dissolve the tension of city life and replace it with something simple and real — birdsong at dawn, warm food at noon, forest light at dusk.
+                        </p>
+                        <p class="dp-body mb-4">
+                            Our Day Out schedule is flexible — arrive by 8 AM to catch the birdwatching, or come later and start with a forest trail. Our team will build the day around you.
+                        </p>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+                            <span style="display:inline-flex;align-items:center;gap:7px;background:#033631;color:#fff;border-radius:100px;padding:8px 18px;font-size:13px;font-weight:600;">
+                                <i class="fa-solid fa-clock" style="color:#DAA520;"></i> 8 AM to 8 PM
+                            </span>
+                            <span style="display:inline-flex;align-items:center;gap:7px;background:#033631;color:#fff;border-radius:100px;padding:8px 18px;font-size:13px;font-weight:600;">
+                                <i class="fa-solid fa-car" style="color:#DAA520;"></i> 45 min from Bhopal
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                        <div class="dp-timeline">
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-binoculars"></i>
+                                    <span class="dp-tl-time">8:00 AM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Welcome &amp; Birdwatching Walk</h5>
+                                    <p class="dp-tl-text">Arrive to a warm welcome and herbal tea. Join our naturalist for a guided dawn birdwatching session through the forest — peacocks, Indian rollers, kingfishers, and the chorus of the morning.</p>
+                                    <span class="dp-tl-tag">Guided Walk · 60 min</span>
+                                </div>
+                            </div>
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-bowl-food"></i>
+                                    <span class="dp-tl-time">9:30 AM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Forest Breakfast</h5>
+                                    <p class="dp-tl-text">A leisurely open-air breakfast in the heart of the property. Seasonal fruits, poha or parathas, local honey, and freshly brewed tea or filter coffee. Served on the verandah as the forest wakes up.</p>
+                                    <span class="dp-tl-tag">Inclusive · Farm to Table</span>
+                                </div>
+                            </div>
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-person-hiking"></i>
+                                    <span class="dp-tl-time">11:00 AM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Guided Nature Trail</h5>
+                                    <p class="dp-tl-text">Explore the Samardha forest on foot. Our guide will introduce you to medicinal plants, point out wildlife signs, and share the rich ecology of one of Bhopal's most pristine forest reserves.</p>
+                                    <span class="dp-tl-tag">2 km Walk · 90 min</span>
+                                </div>
+                            </div>
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-person-swimming"></i>
+                                    <span class="dp-tl-time">1:00 PM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Lunch &amp; Pool Time</h5>
+                                    <p class="dp-tl-text">A farm-to-table lunch followed by an afternoon at the natural-edge forest pool. Towels and changing rooms provided. Float, swim, or simply lie back and watch the trees sway.</p>
+                                    <span class="dp-tl-tag gold">Lunch Inclusive · Pool Open 1–5 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-spa"></i>
+                                    <span class="dp-tl-time">3:30 PM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Ayurveda &amp; Wellness</h5>
+                                    <p class="dp-tl-text">A 30-minute Ayurvedic relaxation massage in our forest spa (Premium plan). Or simply relax in a hammock with a book, take a yoga session, or explore the property at your own pace.</p>
+                                    <span class="dp-tl-tag gold">Premium Plan Only</span>
+                                </div>
+                            </div>
+
+                            <div class="dp-tl-item">
+                                <div class="dp-tl-dot">
+                                    <i class="fa-solid fa-fire-flame-curved"></i>
+                                    <span class="dp-tl-time">6:30 PM</span>
+                                </div>
+                                <div class="dp-tl-content">
+                                    <h5 class="dp-tl-title">Sunset Campfire &amp; Farewell</h5>
+                                    <p class="dp-tl-text">As the forest turns golden, gather around the campfire for chai, snacks, folk music, and stories. The perfect end to a day spent entirely in nature. Depart refreshed, recharged, and already planning your return.</p>
+                                    <span class="dp-tl-tag">Snacks Inclusive · Departure by 8 PM</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ACTIVITIES SHOWCASE
+             ============================================================ -->
+        <section class="dp-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="dp-label wow fadeInUp" data-wow-delay=".1s">Activities</span>
+                        <h2 class="dp-heading wow fadeInUp" data-wow-delay=".2s">What You Can <em>Do Here</em></h2>
+                        <div class="dp-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-leaf"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/about/10.jpeg" alt="Birdwatching">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-binoculars"></i></div>
+                                <h4 class="dp-activity-title">Birdwatching</h4>
+                                <p class="dp-activity-text">150+ bird species recorded. Early morning guided sessions with binoculars provided by our resident naturalist.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/about/18.jpeg" alt="Forest Trek">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                                <h4 class="dp-activity-title">Nature Trails</h4>
+                                <p class="dp-activity-text">Guided walks through the Samardha Reserved Forest. Learn about flora, fauna, medicinal plants and forest ecology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/services/swimming-pool.jpg" alt="Swimming Pool">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                                <h4 class="dp-activity-title">Forest Pool</h4>
+                                <p class="dp-activity-text">A stunning natural-edge pool surrounded by teak trees. Open to day guests between 1 PM and 5 PM with towels provided.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/services/spa-massage-1.jpg" alt="Ayurveda Spa">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-spa"></i></div>
+                                <h4 class="dp-activity-title">Ayurveda Spa</h4>
+                                <p class="dp-activity-text">Traditional Ayurvedic massages and wellness treatments. Available as an add-on or included in the Premium plan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/about/28.jpeg" alt="Farm Dining">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-utensils"></i></div>
+                                <h4 class="dp-activity-title">Farm Dining</h4>
+                                <p class="dp-activity-text">Breakfast, lunch, and evening snacks prepared with seasonal, locally sourced produce. Dining under the forest canopy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="dp-activity-card">
+                            <img src="assets/images/about/45.jpeg" alt="Campfire">
+                            <div class="dp-activity-overlay">
+                                <div class="dp-activity-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                                <h4 class="dp-activity-title">Campfire Evening</h4>
+                                <p class="dp-activity-text">Folk music, chai and stories around the forest campfire. The most memorable part of every visit to Mahua House.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             PACKAGES
+             ============================================================ -->
+        <section class="dp-section dp-section-cream" id="packages">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="dp-label wow fadeInUp" data-wow-delay=".1s">Day Out Plans</span>
+                        <h2 class="dp-heading wow fadeInUp" data-wow-delay=".2s">Choose Your <em>Day</em></h2>
+                        <div class="dp-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="dp-body wow fadeInUp" data-wow-delay=".35s">Three tailored day experiences — from a quick forest refresh to a full luxury immersion. All prices per person.</p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Forest Essentials -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="dp-pkg-card">
+                            <div class="dp-pkg-header">
+                                <h3 class="dp-pkg-name">Forest Essentials</h3>
+                                <p class="dp-pkg-tagline">Half-day nature immersion</p>
+                                <div class="dp-pkg-price">&#8377;1,499 <span>/ person</span></div>
+                            </div>
+                            <div class="dp-pkg-body">
+                                <ul class="dp-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Arrival 8 AM – Departure 2 PM</li>
+                                    <li><i class="fa-solid fa-check"></i> Guided birdwatching session</li>
+                                    <li><i class="fa-solid fa-check"></i> Guided nature trail walk</li>
+                                    <li><i class="fa-solid fa-check"></i> Farm breakfast included</li>
+                                    <li><i class="fa-solid fa-check"></i> Welcome herbal tea</li>
+                                    <li class="muted"><i class="fa-solid fa-xmark"></i> Pool access not included</li>
+                                    <li class="muted"><i class="fa-solid fa-xmark"></i> Lunch not included</li>
+                                    <li class="muted"><i class="fa-solid fa-xmark"></i> Spa not included</li>
+                                </ul>
+                                <a href="contact-us.html" class="dp-btn dp-btn-primary" style="width:100%;text-align:center;">Book This Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forest Full Day -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="dp-pkg-card featured">
+                            <div class="dp-pkg-header gold">
+                                <span class="dp-pkg-badge white">Most Popular</span>
+                                <h3 class="dp-pkg-name">Forest Full Day</h3>
+                                <p class="dp-pkg-tagline">Complete forest day experience</p>
+                                <div class="dp-pkg-price white-price">&#8377;2,999 <span>/ person</span></div>
+                            </div>
+                            <div class="dp-pkg-body">
+                                <ul class="dp-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Arrival 8 AM – Departure 8 PM</li>
+                                    <li><i class="fa-solid fa-check"></i> Guided birdwatching session</li>
+                                    <li><i class="fa-solid fa-check"></i> Guided nature trail walk</li>
+                                    <li><i class="fa-solid fa-check"></i> Farm breakfast + lunch</li>
+                                    <li><i class="fa-solid fa-check"></i> Full pool access (1–5 PM)</li>
+                                    <li><i class="fa-solid fa-check"></i> Evening chai &amp; snacks</li>
+                                    <li><i class="fa-solid fa-check"></i> Sunset campfire session</li>
+                                    <li class="muted"><i class="fa-solid fa-xmark"></i> Spa session not included</li>
+                                </ul>
+                                <a href="contact-us.html" class="dp-btn dp-btn-gold" style="width:100%;text-align:center;">Book This Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forest Premium -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="dp-pkg-card">
+                            <div class="dp-pkg-header">
+                                <span class="dp-pkg-badge">With Spa</span>
+                                <h3 class="dp-pkg-name">Forest Premium</h3>
+                                <p class="dp-pkg-tagline">Full day + Ayurvedic wellness</p>
+                                <div class="dp-pkg-price">&#8377;4,499 <span>/ person</span></div>
+                            </div>
+                            <div class="dp-pkg-body">
+                                <ul class="dp-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Arrival 8 AM – Departure 8 PM</li>
+                                    <li><i class="fa-solid fa-check"></i> Everything in Full Day plan</li>
+                                    <li><i class="fa-solid fa-check"></i> 30-min Ayurvedic spa session</li>
+                                    <li><i class="fa-solid fa-check"></i> Forest yoga session (morning)</li>
+                                    <li><i class="fa-solid fa-check"></i> Premium farm lunch menu</li>
+                                    <li><i class="fa-solid fa-check"></i> Personalised naturalist guide</li>
+                                    <li><i class="fa-solid fa-check"></i> Welcome gift (forest honey + herbs)</li>
+                                    <li><i class="fa-solid fa-check"></i> Priority booking &amp; seating</li>
+                                </ul>
+                                <a href="contact-us.html" class="dp-btn dp-btn-primary" style="width:100%;text-align:center;">Book This Plan</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Group Note -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-8">
+                        <div style="background:#033631;border-radius:16px;padding:28px 36px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;" class="wow fadeInUp" data-wow-delay=".4s">
+                            <div style="font-size:32px;color:#DAA520;"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <p style="color:#fff;font-weight:700;font-size:16px;margin-bottom:4px;">Group &amp; Corporate Bookings</p>
+                                <p style="color:rgba(255,255,255,0.65);font-size:14px;margin:0;">Groups of 10+ get 15% off all plans. Corporate day retreats with team-building activities and dedicated coordinator. Contact us for custom group pricing.</p>
+                            </div>
+                            <a href="contact-us.html" class="dp-btn dp-btn-gold dp-btn-sm" style="margin-left:auto;flex-shrink:0;">Get Group Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             GALLERY
+             ============================================================ -->
+        <section class="dp-section dp-section-alt">
+            <div class="container">
+                <div class="row align-items-end mb-4">
+                    <div class="col-lg-7">
+                        <span class="dp-label wow fadeInUp" data-wow-delay=".1s">Photo Gallery</span>
+                        <h2 class="dp-heading wow fadeInUp" data-wow-delay=".2s">A Day <em>Through the Lens</em></h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                        <a href="#book" class="dp-btn dp-btn-primary">Book Your Day</a>
+                    </div>
+                </div>
+                <div class="dp-gallery wow fadeInUp" data-wow-delay=".3s">
+                    <div class="dg dg-tall">
+                        <img src="assets/images/about/14.jpeg" alt="Forest Walk">
+                    </div>
+                    <div class="dg dg-wide">
+                        <img src="assets/images/about/22.jpeg" alt="Campfire">
+                    </div>
+                    <div class="dg">
+                        <img src="assets/images/services/swimming-pool.jpg" alt="Pool">
+                    </div>
+                    <div class="dg">
+                        <img src="assets/images/about/30.jpeg" alt="Dining">
+                    </div>
+                    <div class="dg">
+                        <img src="assets/images/services/spa-massage-1.jpg" alt="Spa">
+                    </div>
+                    <div class="dg">
+                        <img src="assets/images/about/38.jpeg" alt="Nature">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             FAQ
+             ============================================================ -->
+        <section class="dp-section">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                        <span class="dp-label">Common Questions</span>
+                        <h2 class="dp-heading">Day Out <em>FAQs</em></h2>
+                        <div class="dp-divider"><span></span><i class="fa-solid fa-circle-question"></i><span></span></div>
+                        <p class="dp-body mb-4">Have a question about visiting Mahua House for the day? Find quick answers below or reach out to our team directly.</p>
+                        <div style="display:flex;flex-direction:column;gap:12px;">
+                            <a href="tel:+919425651754" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#033631;font-weight:600;font-size:14px;">
+                                <span style="width:40px;height:40px;background:#E7EEEE;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#DAA520;font-size:16px;flex-shrink:0;"><i class="fa-solid fa-phone-volume"></i></span>
+                                +91 9425651754
+                            </a>
+                            <a href="mailto:mahuahouse17@gmail.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#033631;font-weight:600;font-size:14px;">
+                                <span style="width:40px;height:40px;background:#E7EEEE;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#DAA520;font-size:16px;flex-shrink:0;"><i class="fa-solid fa-envelope"></i></span>
+                                mahuahouse17@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                        <div id="dp-faq">
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    Do I need to pre-book a Day Out Plan?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Yes, advance booking is strongly recommended — especially on weekends and public holidays when our day visit slots fill up quickly. We recommend booking at least 2–3 days in advance. You can call, WhatsApp, or fill in our contact form to book.</p>
+                                </div>
+                            </div>
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    How far is Mahua House from Bhopal?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Mahua House is located in Haripura, adjacent to the Samardha Reserved Forest — approximately 25 km from Bhopal city centre. The drive takes around 40–50 minutes via Raisen Road. We can arrange a pickup from Bhopal on request.</p>
+                                </div>
+                            </div>
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    What should I bring for the day?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Wear comfortable, light clothing and closed shoes for the nature trail. Bring a change of clothes if you plan to use the pool. Sunscreen, a hat, and insect repellent are recommended. We provide towels, binoculars, and all activity equipment.</p>
+                                </div>
+                            </div>
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    Can children join the Day Out Plan?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Absolutely! Mahua House is wonderfully suited for children. Kids under 5 are free, and children between 5–12 are charged at 50% of the adult rate. We have child-safe pool areas and the nature trail is suitable for all ages.</p>
+                                </div>
+                            </div>
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    Is the spa available as an add-on for non-Premium plans?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Yes — the Ayurvedic spa session (30 min) can be added to the Forest Essentials or Forest Full Day plans for an additional ₹800 per person, subject to availability. Please inform us at the time of booking so we can schedule your slot.</p>
+                                </div>
+                            </div>
+
+                            <div class="dp-faq-item">
+                                <button class="dp-faq-q">
+                                    What is the cancellation policy for Day Out Plans?
+                                    <span class="dp-faq-icon"><i class="fa-solid fa-plus"></i></span>
+                                </button>
+                                <div class="dp-faq-a">
+                                    <p>Cancellations made 48+ hours in advance receive a full refund. Cancellations within 24–48 hours will receive a 50% refund or a free reschedule. No-shows or same-day cancellations are non-refundable. Rescheduling is always welcome with advance notice.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA
+             ============================================================ -->
+        <section class="dp-section">
+            <div class="container">
+                <div class="dp-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="dp-label dp-label-light">Ready for Your Forest Day?</span>
+                        <h2 class="dp-heading dp-heading-light" style="margin-bottom:14px;">
+                            Book Your Day Out <em>Today</em>
+                        </h2>
+                        <p class="dp-body dp-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Escape the city for a day. Breathe the forest. Return renewed. Our Day Out Plans are available on all days — book now and secure your slot.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="contact-us.html" class="dp-btn dp-btn-gold">Book Now</a>
+                            <a href="tel:+919425651754" class="dp-btn dp-btn-outline">Call Us: +91 9425651754</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland. Day visits, overnight stays, and private events.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Rooms &amp; Stay</a></li>
+                                        <li><a href="spaces.html"><i class="fa-solid fa-chevron-right"></i> Spaces</a></li>
+                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Day Out Plans</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="#packages"><i class="fa-solid fa-chevron-right"></i> Forest Essentials</a></li>
+                                        <li><a href="#packages"><i class="fa-solid fa-chevron-right"></i> Forest Full Day</a></li>
+                                        <li><a href="#packages"><i class="fa-solid fa-chevron-right"></i> Forest Premium</a></li>
+                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Group Bookings</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    document.querySelectorAll('.dp-faq-q').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var answer = this.nextElementSibling;
+            var isOpen = answer.classList.contains('open');
+            // close all
+            document.querySelectorAll('.dp-faq-a').forEach(function(a) { a.classList.remove('open'); });
+            document.querySelectorAll('.dp-faq-q').forEach(function(q) { q.classList.remove('active'); });
+            // open clicked
+            if (!isOpen) {
+                answer.classList.add('open');
+                this.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Watch video tours of Mahua House — explore our forest rooms, event spaces, nature trails, pool, spa and dining through our property walkthrough videos.">
+    <meta name="keywords" content="Mahua House Video Tour, Forest Resort Bhopal Video, Eco Resort Walkthrough, Nature Resort Video Bhopal">
+    <title>Video Tours | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           VIDEO TOURS PAGE — STYLES
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        /* ---- Utilities ---- */
+        .vt-section       { padding: 90px 0; }
+        .vt-section-alt   { background: #E7EEEE; }
+        .vt-section-dark  { background: #033631; }
+        .vt-section-cream { background: #faf8f3; }
+
+        .vt-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .vt-label-light { color: rgba(218,165,32,0.9); }
+
+        .vt-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .vt-heading-light { color: #ffffff; }
+        .vt-heading em { font-style: normal; color: #DAA520; }
+
+        .vt-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .vt-divider.centered { justify-content: center; }
+        .vt-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .vt-divider i { font-size: 9px; }
+
+        .vt-body {
+            font-size: 15px; color: rgba(3,54,49,0.6);
+            line-height: 1.85; margin-bottom: 0;
+        }
+        .vt-body-light { color: rgba(255,255,255,0.62); }
+
+        .vt-btn {
+            display: inline-block; padding: 13px 30px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .vt-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .vt-btn-primary:hover { background:transparent; color:#033631; }
+        .vt-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .vt-btn-gold:hover { background:transparent; color:#DAA520; }
+        .vt-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.45); }
+        .vt-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+
+        /* ---- Breadcrumb ---- */
+        .vt-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 20px;
+            display: flex; gap: 8px; align-items: center;
+            font-size: 13px; color: rgba(255,255,255,0.65);
+        }
+        .vt-breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
+        .vt-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .vt-breadcrumb a:hover { color: #DAA520; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .vt-hero {
+            position: relative; height: 560px;
+            background: linear-gradient(135deg, rgba(3,54,49,0.92) 0%, rgba(3,54,49,0.6) 55%, rgba(0,0,0,0.3) 100%),
+                        url('assets/images/video/video-1.jpg') center/cover no-repeat;
+            display: flex; align-items: center;
+        }
+        .vt-hero-content { position: relative; z-index: 2; color: #fff; }
+        .vt-hero h1 {
+            font-size: clamp(36px, 5vw, 60px); font-weight: 800;
+            line-height: 1.1; margin-bottom: 18px; color: #fff;
+        }
+        .vt-hero h1 em { font-style: normal; color: #DAA520; }
+        .vt-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.78);
+            max-width: 540px; margin-bottom: 32px;
+        }
+        .vt-hero-shape { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3; line-height: 0; }
+        .vt-hero-shape img { width: 100%; }
+
+        /* ---- Hero play pills ---- */
+        .vt-hero-meta {
+            display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px;
+        }
+        .vt-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+            padding: 8px 20px; font-size: 13px; font-weight: 600; color: #fff;
+        }
+        .vt-hero-pill i { color: #DAA520; }
+
+        /* ============================================================
+           FEATURED PLAYER + PLAYLIST
+           ============================================================ */
+        .vt-player-section { padding: 80px 0 60px; background: #fff; }
+
+        .vt-player-wrap {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        /* Main iframe */
+        .vt-main-player {
+            position: relative; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 12px 60px rgba(3,54,49,0.18);
+            background: #000;
+        }
+        .vt-main-player-ratio {
+            position: relative; padding-top: 56.25%; /* 16:9 */
+        }
+        .vt-main-player-ratio iframe {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%; border: none;
+        }
+        .vt-main-player-info {
+            padding: 20px 24px 24px;
+            background: #fff;
+            border: 1px solid rgba(3,54,49,0.08);
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+        }
+        .vt-main-player-title {
+            font-size: 18px; font-weight: 700; color: #033631; margin-bottom: 6px;
+        }
+        .vt-main-player-desc {
+            font-size: 14px; color: rgba(3,54,49,0.6); margin: 0;
+        }
+        .vt-now-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(218,165,32,0.15); color: #a07a00;
+            border-radius: 100px; padding: 4px 12px;
+            font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; margin-bottom: 10px;
+        }
+        .vt-now-badge i { font-size: 8px; color: #DAA520; animation: blink 1.2s infinite; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+        /* Playlist sidebar */
+        .vt-playlist {
+            background: #033631; border-radius: 20px; overflow: hidden;
+        }
+        .vt-playlist-header {
+            padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .vt-playlist-header h4 {
+            font-size: 14px; font-weight: 700; color: #fff; margin: 0;
+            letter-spacing: 0.5px;
+        }
+        .vt-playlist-header span {
+            font-size: 12px; color: rgba(255,255,255,0.4);
+        }
+        .vt-playlist-scroll {
+            max-height: 480px; overflow-y: auto;
+        }
+        .vt-playlist-scroll::-webkit-scrollbar { width: 4px; }
+        .vt-playlist-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+        .vt-playlist-scroll::-webkit-scrollbar-thumb { background: rgba(218,165,32,0.4); border-radius: 2px; }
+
+        .vt-pl-item {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 16px; cursor: pointer;
+            transition: background 0.25s;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+        .vt-pl-item:last-child { border-bottom: none; }
+        .vt-pl-item:hover { background: rgba(255,255,255,0.06); }
+        .vt-pl-item.active { background: rgba(218,165,32,0.12); }
+
+        .vt-pl-thumb {
+            position: relative; width: 80px; height: 52px;
+            border-radius: 8px; overflow: hidden; flex-shrink: 0;
+        }
+        .vt-pl-thumb img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .vt-pl-thumb-overlay {
+            position: absolute; inset: 0;
+            background: rgba(3,54,49,0.4);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.25s;
+        }
+        .vt-pl-item:hover .vt-pl-thumb-overlay,
+        .vt-pl-item.active .vt-pl-thumb-overlay { opacity: 1; }
+        .vt-pl-thumb-overlay i { color: #fff; font-size: 14px; }
+
+        .vt-pl-active-bar {
+            position: absolute; left: 0; top: 0; bottom: 0;
+            width: 3px; background: #DAA520;
+            display: none;
+        }
+        .vt-pl-item.active .vt-pl-active-bar { display: block; }
+
+        .vt-pl-info { flex: 1; min-width: 0; }
+        .vt-pl-title {
+            font-size: 13px; font-weight: 600; color: #fff;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            margin-bottom: 4px; display: block;
+        }
+        .vt-pl-item.active .vt-pl-title { color: #DAA520; }
+        .vt-pl-sub {
+            font-size: 11px; color: rgba(255,255,255,0.4); display: block;
+        }
+        .vt-pl-num {
+            font-size: 12px; color: rgba(255,255,255,0.25);
+            font-weight: 700; flex-shrink: 0; width: 20px; text-align: right;
+        }
+        .vt-pl-item.active .vt-pl-num { color: #DAA520; }
+
+
+        /* ============================================================
+           VIDEO GRID
+           ============================================================ */
+        .vt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .vt-vid-card {
+            border-radius: 18px; overflow: hidden;
+            background: #fff; border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+        }
+        .vt-vid-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(3,54,49,0.14);
+        }
+        .vt-vid-card.active-card {
+            border-color: #DAA520;
+            box-shadow: 0 8px 40px rgba(218,165,32,0.25);
+        }
+        .vt-vid-thumb {
+            position: relative; padding-top: 56.25%; overflow: hidden;
+        }
+        .vt-vid-thumb img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .vt-vid-card:hover .vt-vid-thumb img { transform: scale(1.05); }
+        .vt-vid-play {
+            position: absolute; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(3,54,49,0.35);
+            transition: background 0.3s;
+        }
+        .vt-vid-card:hover .vt-vid-play { background: rgba(3,54,49,0.55); }
+        .vt-vid-play-btn {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #DAA520; color: #033631;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; transition: transform 0.3s ease;
+            padding-left: 4px;
+        }
+        .vt-vid-card:hover .vt-vid-play-btn { transform: scale(1.1); }
+        .vt-vid-num {
+            position: absolute; top: 12px; left: 12px;
+            background: rgba(3,54,49,0.75); color: #DAA520;
+            font-size: 11px; font-weight: 700; padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .vt-vid-body { padding: 18px 20px 22px; }
+        .vt-vid-tag {
+            font-size: 10px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: #DAA520; margin-bottom: 6px;
+            display: block;
+        }
+        .vt-vid-title {
+            font-size: 15px; font-weight: 700; color: #033631;
+            margin-bottom: 8px; line-height: 1.4;
+        }
+        .vt-vid-desc {
+            font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.65; margin: 0;
+        }
+
+
+        /* ============================================================
+           SUBSCRIBE STRIP
+           ============================================================ */
+        .vt-yt-strip {
+            background: linear-gradient(135deg, #033631 0%, #044d43 100%);
+            border-radius: 20px; padding: 48px 50px;
+            display: flex; align-items: center;
+            justify-content: space-between; gap: 32px; flex-wrap: wrap;
+        }
+        .vt-yt-strip-icon {
+            font-size: 52px; color: #ff0000; flex-shrink: 0;
+        }
+        .vt-yt-strip-text { flex: 1; }
+        .vt-yt-strip-text h3 {
+            font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px;
+        }
+        .vt-yt-strip-text p {
+            font-size: 14px; color: rgba(255,255,255,0.62); margin: 0;
+        }
+
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+        .vt-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #055a50 100%);
+            border-radius: 24px; padding: 70px 50px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .vt-cta-box::before {
+            content: ''; position: absolute;
+            top: -80px; right: -80px; width: 280px; height: 280px;
+            border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .vt-cta-box::after {
+            content: ''; position: absolute;
+            bottom: -60px; left: -60px; width: 200px; height: 200px;
+            border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1199px) {
+            .vt-player-wrap { grid-template-columns: 1fr 300px; }
+        }
+        @media (max-width: 991px) {
+            .vt-player-wrap { grid-template-columns: 1fr; }
+            .vt-playlist { display: none; }
+            .vt-grid { grid-template-columns: repeat(2, 1fr); }
+            .vt-yt-strip { padding: 36px 30px; }
+        }
+        @media (max-width: 767px) {
+            .vt-grid { grid-template-columns: 1fr; }
+            .vt-cta-box { padding: 50px 28px; }
+            .vt-yt-strip { flex-direction: column; text-align: center; }
+            .vt-yt-strip-icon { font-size: 40px; }
+        }
+        @media (max-width: 575px) {
+            .vt-hero h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="vt-hero">
+            <div class="container vt-hero-content">
+                <ul class="vt-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Video Tours</li>
+                </ul>
+                <span class="vt-label wow fadeInUp" data-wow-delay=".2s">See it Before You Visit</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    Tour Mahua House<br><em>From Your Screen</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Walk through our forest rooms, event spaces, nature trails, and dining — right from your screen. Seven video tours to help you feel the magic before you arrive.
+                </p>
+                <div class="vt-hero-meta wow fadeInUp" data-wow-delay=".45s">
+                    <span class="vt-hero-pill"><i class="fa-brands fa-youtube"></i> 7 Videos</span>
+                    <span class="vt-hero-pill"><i class="fa-solid fa-tree"></i> Forest &amp; Property</span>
+                    <span class="vt-hero-pill"><i class="fa-solid fa-bed"></i> Rooms &amp; Spaces</span>
+                    <span class="vt-hero-pill"><i class="fa-solid fa-play"></i> Watch Now, Free</span>
+                </div>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
+                    <a href="#player" class="vt-btn vt-btn-gold">Watch Featured Tour</a>
+                    <a href="#all-videos" class="vt-btn vt-btn-outline">Browse All Videos</a>
+                </div>
+            </div>
+            <div class="vt-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             FEATURED PLAYER + PLAYLIST
+             ============================================================ -->
+        <section class="vt-player-section" id="player">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <span class="vt-label wow fadeInUp" data-wow-delay=".1s">Now Playing</span>
+                        <h2 class="vt-heading wow fadeInUp" data-wow-delay=".2s">Featured <em>Video Tour</em></h2>
+                        <div class="vt-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-play"></i><span></span></div>
+                    </div>
+                </div>
+
+                <div class="vt-player-wrap wow fadeInUp" data-wow-delay=".2s">
+                    <!-- Main Player -->
+                    <div>
+                        <div class="vt-main-player">
+                            <div class="vt-main-player-ratio">
+                                <iframe
+                                    id="vt-featured-iframe"
+                                    src="https://www.youtube.com/embed/7uSIYukB8Rc?rel=0&modestbranding=1"
+                                    title="Mahua House Video Tour"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="vt-main-player-info">
+                                <div class="vt-now-badge"><i class="fa-solid fa-circle"></i> Now Playing</div>
+                                <h3 class="vt-main-player-title" id="vt-featured-title">Mahua House — Forest Resort Tour</h3>
+                                <p class="vt-main-player-desc" id="vt-featured-desc">A complete walkthrough of Mahua House — explore our forest property, boutique rooms, event spaces, pool and dining in this cinematic tour.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Playlist Sidebar -->
+                    <div class="vt-playlist">
+                        <div class="vt-playlist-header">
+                            <h4><i class="fa-solid fa-list" style="color:#DAA520;margin-right:8px;"></i> All Videos</h4>
+                            <span>7 videos</span>
+                        </div>
+                        <div class="vt-playlist-scroll">
+
+                            <div class="vt-pl-item active" onclick="loadVideo('7uSIYukB8Rc','Mahua House — Forest Resort Tour','A complete walkthrough of Mahua House — explore our forest property, boutique rooms, event spaces, pool and dining in this cinematic tour.',0)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/7uSIYukB8Rc/mqdefault.jpg" alt="Tour 1">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Forest Resort Tour</span>
+                                    <span class="vt-pl-sub">Full Property Walkthrough</span>
+                                </div>
+                                <span class="vt-pl-num">01</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('rwhINypv3iA','The Forest at Mahua House','Walk through the lush forest trails of Mahua House — ancient teak trees, wildlife sounds, and the soul of the Samardha Reserve.',1)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/rwhINypv3iA/mqdefault.jpg" alt="Tour 2">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">The Forest</span>
+                                    <span class="vt-pl-sub">Nature &amp; Trail Tour</span>
+                                </div>
+                                <span class="vt-pl-num">02</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('WrXg_3Cut5I','Rooms &amp; Cottages Tour','Step inside our boutique forest rooms — from the cosy Forest View Room to the indulgent Mahua Suite with its soaking tub and verandah views.',2)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/WrXg_3Cut5I/mqdefault.jpg" alt="Tour 3">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Rooms &amp; Cottages</span>
+                                    <span class="vt-pl-sub">Accommodation Tour</span>
+                                </div>
+                                <span class="vt-pl-num">03</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('SA82LSz298s','Events &amp; Wedding Spaces','See our six unique event spaces — from the Grand Forest Lawn to the Campfire Amphitheatre — all set against a stunning forest backdrop.',3)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/SA82LSz298s/mqdefault.jpg" alt="Tour 4">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Events &amp; Spaces</span>
+                                    <span class="vt-pl-sub">Wedding &amp; Event Venues</span>
+                                </div>
+                                <span class="vt-pl-num">04</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('IRPjxyezpRM','Pool, Spa &amp; Wellness','Discover our natural-edge forest pool, Ayurvedic spa, yoga lawn and wellness offerings at Mahua House.',4)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/IRPjxyezpRM/mqdefault.jpg" alt="Tour 5">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Pool, Spa &amp; Wellness</span>
+                                    <span class="vt-pl-sub">Leisure &amp; Relaxation</span>
+                                </div>
+                                <span class="vt-pl-num">05</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('c3Yvjs8Pcik','Farm Dining Experience','From the kitchen garden to your table — a look at our farm-to-table dining philosophy, seasonal menus, and open-air restaurant at Mahua House.',5)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/c3Yvjs8Pcik/mqdefault.jpg" alt="Tour 6">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Farm Dining</span>
+                                    <span class="vt-pl-sub">Food &amp; Restaurant</span>
+                                </div>
+                                <span class="vt-pl-num">06</span>
+                            </div>
+
+                            <div class="vt-pl-item" onclick="loadVideo('xGBvIRKJbbA','Sunset &amp; Campfire Evening','Experience the magic of a Mahua House evening — golden hour in the forest, folk music, and the warmth of the campfire under open stars.',6)">
+                                <div class="vt-pl-active-bar"></div>
+                                <div class="vt-pl-thumb">
+                                    <img src="https://img.youtube.com/vi/xGBvIRKJbbA/mqdefault.jpg" alt="Tour 7">
+                                    <div class="vt-pl-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                                </div>
+                                <div class="vt-pl-info">
+                                    <span class="vt-pl-title">Sunset &amp; Campfire</span>
+                                    <span class="vt-pl-sub">Evening Experience</span>
+                                </div>
+                                <span class="vt-pl-num">07</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ALL VIDEOS GRID
+             ============================================================ -->
+        <section class="vt-section vt-section-cream" id="all-videos">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="vt-label wow fadeInUp" data-wow-delay=".1s">All Tours</span>
+                        <h2 class="vt-heading wow fadeInUp" data-wow-delay=".2s">Browse <em>Every Video</em></h2>
+                        <div class="vt-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-brands fa-youtube"></i><span></span></div>
+                        <p class="vt-body wow fadeInUp" data-wow-delay=".35s">Click any video to load it in the featured player above.</p>
+                    </div>
+                </div>
+
+                <div class="vt-grid">
+
+                    <div class="vt-vid-card active-card wow fadeInUp" data-wow-delay=".2s" id="vt-card-0"
+                         onclick="loadVideo('7uSIYukB8Rc','Mahua House — Forest Resort Tour','A complete walkthrough of Mahua House — explore our forest property, boutique rooms, event spaces, pool and dining in this cinematic tour.',0); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/7uSIYukB8Rc/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/7uSIYukB8Rc/hqdefault.jpg'"
+                                 alt="Forest Resort Tour">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">01</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Full Property Tour</span>
+                            <h4 class="vt-vid-title">Mahua House — Forest Resort Tour</h4>
+                            <p class="vt-vid-desc">A complete cinematic walkthrough of the property — forest, rooms, event spaces, pool and dining all in one video.</p>
+                        </div>
+                    </div>
+
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".3s" id="vt-card-1"
+                         onclick="loadVideo('rwhINypv3iA','The Forest at Mahua House','Walk through the lush forest trails of Mahua House — ancient teak trees, wildlife sounds, and the soul of the Samardha Reserve.',1); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/rwhINypv3iA/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/rwhINypv3iA/hqdefault.jpg'"
+                                 alt="The Forest">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">02</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Nature &amp; Trail Tour</span>
+                            <h4 class="vt-vid-title">The Forest at Mahua House</h4>
+                            <p class="vt-vid-desc">Walk through ancient teak trees, hear the wildlife, and feel the soul of the Samardha Reserved Forest.</p>
+                        </div>
+                    </div>
+
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".4s" id="vt-card-2"
+                         onclick="loadVideo('WrXg_3Cut5I','Rooms &amp; Cottages Tour','Step inside our boutique forest rooms — from the cosy Forest View Room to the indulgent Mahua Suite with its soaking tub and verandah views.',2); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/WrXg_3Cut5I/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/WrXg_3Cut5I/hqdefault.jpg'"
+                                 alt="Rooms and Cottages">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">03</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Accommodation Tour</span>
+                            <h4 class="vt-vid-title">Rooms &amp; Cottages Tour</h4>
+                            <p class="vt-vid-desc">Inside our six boutique rooms — Forest View, Teak Cottage, Mahua Suite, Family Cabin, Bamboo Nest and Treetop Loft.</p>
+                        </div>
+                    </div>
+
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".2s" id="vt-card-3"
+                         onclick="loadVideo('SA82LSz298s','Events &amp; Wedding Spaces','See our six unique event spaces — from the Grand Forest Lawn to the Campfire Amphitheatre — all set against a stunning forest backdrop.',3); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/SA82LSz298s/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/SA82LSz298s/hqdefault.jpg'"
+                                 alt="Events and Spaces">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">04</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Wedding &amp; Event Venues</span>
+                            <h4 class="vt-vid-title">Events &amp; Wedding Spaces</h4>
+                            <p class="vt-vid-desc">Our six stunning forest venues — Grand Lawn, Forest Clearing, Amphitheatre, Teak Pavilion, Poolside Deck and Boardroom.</p>
+                        </div>
+                    </div>
+
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".3s" id="vt-card-4"
+                         onclick="loadVideo('IRPjxyezpRM','Pool, Spa &amp; Wellness','Discover our natural-edge forest pool, Ayurvedic spa, yoga lawn and wellness offerings at Mahua House.',4); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/IRPjxyezpRM/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/IRPjxyezpRM/hqdefault.jpg'"
+                                 alt="Pool and Spa">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">05</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Leisure &amp; Relaxation</span>
+                            <h4 class="vt-vid-title">Pool, Spa &amp; Wellness</h4>
+                            <p class="vt-vid-desc">Our natural-edge forest pool, Ayurvedic spa, yoga lawn and all wellness experiences at Mahua House.</p>
+                        </div>
+                    </div>
+
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".4s" id="vt-card-5"
+                         onclick="loadVideo('c3Yvjs8Pcik','Farm Dining Experience','From the kitchen garden to your table — a look at our farm-to-table dining philosophy, seasonal menus, and open-air restaurant.',5); scrollToPlayer();">
+                        <div class="vt-vid-thumb">
+                            <img src="https://img.youtube.com/vi/c3Yvjs8Pcik/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/c3Yvjs8Pcik/hqdefault.jpg'"
+                                 alt="Farm Dining">
+                            <div class="vt-vid-play"><div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div></div>
+                            <span class="vt-vid-num">06</span>
+                        </div>
+                        <div class="vt-vid-body">
+                            <span class="vt-vid-tag">Food &amp; Restaurant</span>
+                            <h4 class="vt-vid-title">Farm Dining Experience</h4>
+                            <p class="vt-vid-desc">From kitchen garden to table — our farm-to-table dining philosophy, seasonal menus and open-air restaurant.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 7 — wide card -->
+                    <div class="vt-vid-card wow fadeInUp" data-wow-delay=".2s" id="vt-card-6"
+                         onclick="loadVideo('xGBvIRKJbbA','Sunset &amp; Campfire Evening','Experience the magic of a Mahua House evening — golden hour in the forest, folk music, and the warmth of the campfire under open stars.',6); scrollToPlayer();"
+                         style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; max-width: 900px; margin: 0 auto;">
+                        <div class="vt-vid-thumb" style="padding-top:0; height: 100%; min-height: 240px; border-radius: 0; position:relative;">
+                            <img src="https://img.youtube.com/vi/xGBvIRKJbbA/maxresdefault.jpg"
+                                 onerror="this.src='https://img.youtube.com/vi/xGBvIRKJbbA/hqdefault.jpg'"
+                                 alt="Sunset and Campfire" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                            <div class="vt-vid-play">
+                                <div class="vt-vid-play-btn"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <span class="vt-vid-num">07</span>
+                        </div>
+                        <div class="vt-vid-body" style="display:flex;flex-direction:column;justify-content:center;padding:36px 36px;">
+                            <span class="vt-vid-tag">Evening Experience</span>
+                            <h4 class="vt-vid-title" style="font-size:20px;">Sunset &amp; Campfire Evening at Mahua House</h4>
+                            <p class="vt-vid-desc">Folk music, chai and stories around the forest campfire. The most memorable hour of every visit to Mahua House.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             YOUTUBE SUBSCRIBE STRIP
+             ============================================================ -->
+        <section class="vt-section">
+            <div class="container">
+                <div class="vt-yt-strip wow fadeInUp" data-wow-delay=".2s">
+                    <div class="vt-yt-strip-icon"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="vt-yt-strip-text">
+                        <h3>Subscribe to Our YouTube Channel</h3>
+                        <p>New videos every month — forest diaries, guest experiences, seasonal highlights, wildlife sightings and more from Mahua House. Subscribe to stay connected to the forest.</p>
+                    </div>
+                    <a href="https://www.youtube.com/@mahuahouse" target="_blank" rel="noopener" class="vt-btn vt-btn-gold" style="flex-shrink:0;">
+                        <i class="fa-brands fa-youtube" style="margin-right:8px;"></i> Subscribe on YouTube
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA
+             ============================================================ -->
+        <section class="vt-section">
+            <div class="container">
+                <div class="vt-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="vt-label vt-label-light">Ready to Experience It in Person?</span>
+                        <h2 class="vt-heading vt-heading-light" style="margin-bottom:14px;">
+                            The Screen Can't Do It <em>Justice</em>
+                        </h2>
+                        <p class="vt-body vt-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            The videos give you a glimpse — but the smell of the forest, the sound of birds at dawn, and the stillness of the evening can only be felt in person. Book your visit today.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="stay.html" class="vt-btn vt-btn-gold">Book a Stay</a>
+                            <a href="day_out_plan.html" class="vt-btn vt-btn-outline">Day Out Plan</a>
+                            <a href="contact-us.html" class="vt-btn vt-btn-outline">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland. Watch our video tours and plan your visit today.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Rooms &amp; Stay</a></li>
+                                        <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Video Tours</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="#vt-card-0"><i class="fa-solid fa-chevron-right"></i> Full Resort Tour</a></li>
+                                        <li><a href="#vt-card-1"><i class="fa-solid fa-chevron-right"></i> The Forest</a></li>
+                                        <li><a href="#vt-card-2"><i class="fa-solid fa-chevron-right"></i> Rooms &amp; Cottages</a></li>
+                                        <li><a href="#vt-card-3"><i class="fa-solid fa-chevron-right"></i> Events &amp; Spaces</a></li>
+                                        <li><a href="#vt-card-6"><i class="fa-solid fa-chevron-right"></i> Sunset &amp; Campfire</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    var currentIndex = 0;
+
+    function loadVideo(videoId, title, desc, index) {
+        var iframe = document.getElementById('vt-featured-iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+
+        document.getElementById('vt-featured-title').textContent = title.replace(/&amp;/g, '&');
+        document.getElementById('vt-featured-desc').textContent = desc.replace(/&amp;/g, '&');
+
+        document.querySelectorAll('.vt-pl-item').forEach(function(item, i) {
+            item.classList.toggle('active', i === index);
+        });
+
+        for (var i = 0; i < 7; i++) {
+            var card = document.getElementById('vt-card-' + i);
+            if (card) card.classList.toggle('active-card', i === index);
+        }
+
+        currentIndex = index;
+    }
+
+    function scrollToPlayer() {
+        var player = document.getElementById('player');
+        if (player) {
+            var offset = player.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+    }
+</script>
+
+</body>
+</html>

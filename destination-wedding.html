@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Plan your dream destination wedding at Mahua House — a serene forest retreat in Bhopal surrounded by nature.">
+    <meta name="keywords" content="Destination Wedding, Mahua House, Forest Wedding, Bhopal Wedding Venue">
+    <!-- page title -->
+    <title>Destination Wedding | Mahua House</title>
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- magnific css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- page styles -->
+    <style>
+        /* =============================================
+           DESTINATION WEDDING PAGE — INLINE STYLES
+           ============================================= */
+
+        /* ---- Hero Banner ---- */
+        .dw-hero {
+            position: relative;
+            height: 560px;
+            background: url('assets/images/about/1.jpeg') center center / cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+        }
+        .dw-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.45) 0%, rgba(3,54,49,0.75) 100%);
+        }
+        .dw-hero-content {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 70px;
+            width: 100%;
+        }
+        .dw-hero-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #DAA520;
+            margin-bottom: 14px;
+        }
+        .dw-hero h1 {
+            font-size: clamp(36px, 5vw, 68px);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .dw-hero h1 em {
+            font-style: italic;
+            color: #DAA520;
+        }
+        .dw-hero p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.8);
+            max-width: 540px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .dw-hero-shape {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            z-index: 2;
+            line-height: 0;
+        }
+        .dw-hero-shape img { width: 100%; }
+
+        /* breadcrumb nav */
+        .dw-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        .dw-breadcrumb li { font-size: 14px; color: rgba(255,255,255,0.6); }
+        .dw-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .dw-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+
+        /* ---- Section shared ---- */
+        .dw-section { padding: 90px 0; }
+        .dw-section-alt { background: #E7EEEE; }
+        .dw-section-dark { background: #033631; }
+
+        .dw-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #DAA520;
+            margin-bottom: 14px;
+        }
+        .dw-label-light { color: rgba(218,165,32,0.9); }
+
+        .dw-heading {
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 700;
+            color: #033631;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .dw-heading-light { color: #ffffff; }
+        .dw-heading em { font-style: normal; color: #DAA520; }
+
+        .dw-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #DAA520;
+            margin-bottom: 24px;
+        }
+        .dw-divider span {
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: #DAA520;
+        }
+        .dw-divider i { font-size: 9px; }
+
+        .dw-body-text {
+            font-size: 15px;
+            color: rgba(3,54,49,0.6);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        .dw-body-text-light {
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* ---- Intro / About Section ---- */
+        .dw-intro-image-wrap {
+            position: relative;
+        }
+        .dw-intro-image-wrap .img-main {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .dw-intro-image-wrap .img-badge {
+            position: absolute;
+            bottom: -24px;
+            right: -20px;
+            width: 160px;
+            height: 160px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            box-shadow: 0 12px 40px rgba(3,54,49,0.2);
+        }
+        .dw-intro-image-wrap .dw-years-badge {
+            position: absolute;
+            top: 24px;
+            left: -20px;
+            background: #DAA520;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 18px 22px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(218,165,32,0.4);
+        }
+        .dw-years-badge .num {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1;
+            display: block;
+        }
+        .dw-years-badge .txt {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        .dw-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 28px 0 36px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+        }
+        .dw-checklist li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #033631;
+        }
+        .dw-checklist li i {
+            width: 22px;
+            height: 22px;
+            min-width: 22px;
+            border-radius: 50%;
+            background: #DAA520;
+            color: #033631;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+        }
+
+        /* ---- Why Choose Cards ---- */
+        .dw-why-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 1px solid rgba(3,54,49,0.1);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.06);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+            height: 100%;
+        }
+        .dw-why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(3,54,49,0.14);
+            background: #033631;
+        }
+        .dw-why-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(3,54,49,0.07);
+            border: 1px solid rgba(3,54,49,0.15);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            transition: background 0.35s ease, border-color 0.35s ease;
+        }
+        .dw-why-icon i {
+            font-size: 28px;
+            color: #033631;
+            transition: color 0.35s ease;
+        }
+        .dw-why-card:hover .dw-why-icon {
+            background: #DAA520;
+            border-color: #DAA520;
+        }
+        .dw-why-card:hover .dw-why-icon i { color: #033631; }
+        .dw-why-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #033631;
+            margin-bottom: 12px;
+            transition: color 0.35s ease;
+        }
+        .dw-why-card:hover .dw-why-title { color: #DAA520; }
+        .dw-why-text {
+            font-size: 14px;
+            color: rgba(3,54,49,0.55);
+            line-height: 1.7;
+            margin: 0;
+            transition: color 0.35s ease;
+        }
+        .dw-why-card:hover .dw-why-text { color: rgba(255,255,255,0.65); }
+
+        /* ---- Packages ---- */
+        .dw-pkg-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.1);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .dw-pkg-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(3,54,49,0.14);
+        }
+        .dw-pkg-header {
+            background: #033631;
+            padding: 32px 28px 26px;
+            text-align: center;
+            position: relative;
+        }
+        .dw-pkg-header.featured { background: #DAA520; }
+        .dw-pkg-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255,255,255,0.2);
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 100px;
+        }
+        .dw-pkg-name {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 10px;
+        }
+        .dw-pkg-price {
+            font-size: 38px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .dw-pkg-price span { font-size: 16px; font-weight: 400; opacity: 0.7; }
+        .dw-pkg-sub {
+            font-size: 12px;
+            color: rgba(255,255,255,0.55);
+        }
+        .dw-pkg-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .dw-pkg-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px;
+            flex: 1;
+        }
+        .dw-pkg-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(3,54,49,0.65);
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(3,54,49,0.07);
+        }
+        .dw-pkg-list li:last-child { border-bottom: none; }
+        .dw-pkg-list li i {
+            color: #DAA520;
+            font-size: 13px;
+            min-width: 16px;
+        }
+        .dw-pkg-list li.disabled { color: rgba(3,54,49,0.3); }
+        .dw-pkg-list li.disabled i { color: rgba(3,54,49,0.2); }
+        .dw-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .dw-btn-primary {
+            background: #033631;
+            color: #ffffff;
+            border: 2px solid #033631;
+        }
+        .dw-btn-primary:hover {
+            background: transparent;
+            color: #033631;
+        }
+        .dw-btn-gold {
+            background: #DAA520;
+            color: #033631;
+            border: 2px solid #DAA520;
+        }
+        .dw-btn-gold:hover {
+            background: transparent;
+            color: #DAA520;
+        }
+        .dw-btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .dw-btn-outline:hover {
+            background: #DAA520;
+            color: #033631;
+            border-color: #DAA520;
+        }
+
+        /* ---- Gallery ---- */
+        .dw-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 240px 240px;
+            gap: 12px;
+        }
+        .dw-gallery-grid .dw-gitem {
+            overflow: hidden;
+            border-radius: 14px;
+            position: relative;
+        }
+        .dw-gallery-grid .dw-gitem:first-child {
+            grid-row: span 2;
+        }
+        .dw-gallery-grid .dw-gitem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .dw-gallery-grid .dw-gitem:hover img { transform: scale(1.07); }
+        .dw-gallery-grid .dw-gitem .dw-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(3,54,49,0.4);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dw-gallery-grid .dw-gitem:hover .dw-overlay { opacity: 1; }
+        .dw-overlay i { font-size: 28px; color: #DAA520; }
+
+        /* ---- Timeline / Process ---- */
+        .dw-timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        .dw-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #DAA520, rgba(218,165,32,0.1));
+        }
+        .dw-timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .dw-timeline-item:last-child { margin-bottom: 0; }
+        .dw-timeline-dot {
+            position: absolute;
+            left: -40px;
+            top: 4px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #DAA520;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #033631;
+            font-size: 13px;
+            font-weight: 800;
+            box-shadow: 0 0 0 4px rgba(218,165,32,0.2);
+        }
+        .dw-timeline-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .dw-timeline-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ---- Testimonials strip ---- */
+        .dw-testi-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
+            height: 100%;
+        }
+        .dw-testi-stars { color: #DAA520; font-size: 13px; margin-bottom: 14px; }
+        .dw-testi-text {
+            font-size: 14px;
+            color: rgba(3,54,49,0.65);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .dw-testi-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .dw-testi-author img {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #DAA520;
+        }
+        .dw-testi-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #033631;
+            margin: 0;
+        }
+        .dw-testi-location {
+            font-size: 12px;
+            color: rgba(3,54,49,0.45);
+            margin: 0;
+        }
+
+        /* ---- Inquiry CTA ---- */
+        .dw-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #07554D 100%);
+            border-radius: 24px;
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .dw-cta-box::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(218,165,32,0.1);
+            pointer-events: none;
+        }
+        .dw-cta-box::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 220px; height: 220px;
+            border-radius: 50%;
+            background: rgba(218,165,32,0.07);
+            pointer-events: none;
+        }
+        .dw-inquiry-form .form-control {
+            border: 1px solid rgba(3,54,49,0.15);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 14px;
+            color: #033631;
+            background: #ffffff;
+        }
+        .dw-inquiry-form .form-control:focus {
+            border-color: #DAA520;
+            box-shadow: 0 0 0 3px rgba(218,165,32,0.15);
+            outline: none;
+        }
+        .dw-inquiry-form select.form-control { appearance: none; }
+        .dw-inquiry-form textarea.form-control { resize: none; }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 991px) {
+            .dw-hero { height: 420px; }
+            .dw-section { padding: 70px 0; }
+            .dw-intro-image-wrap .img-badge { display: none; }
+            .dw-intro-image-wrap .dw-years-badge { left: 12px; }
+            .dw-cta-box { padding: 40px 28px; }
+            .dw-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 200px 200px 200px;
+            }
+            .dw-gallery-grid .dw-gitem:first-child { grid-row: span 1; }
+        }
+        @media (max-width: 575px) {
+            .dw-hero h1 { font-size: 32px; }
+            .dw-checklist { grid-template-columns: 1fr; }
+            .dw-gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- page wrapper start -->
+    <div class="page-wrapper">
+
+        <!-- back to top start -->
+        <button id="back-top" class="back-to-top" aria-label="back to top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+        <!-- back to top end -->
+
+        <!-- offcanvas sidebar start -->
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar" aria-labelledby="offcanvas-sidebar">
+            <div class="offcanvas-header">
+                <div class="offcanvas-logo">
+                    <figure>
+                        <img src="assets/images/logo/Mahua-House.png" alt="offcanvas logo">
+                    </figure>
+                </div>
+                <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="mobile-menu"></div>
+                <div class="offcanvas-contact">
+                    <div class="widget widget-contact">
+                        <div class="widget-title">
+                            <h3 class="line-anime">Contact Info</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="offcanvas-cta-item">
+                                <div class="offcanvas-cta-list">
+                                    <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                                </div>
+                                <div class="offcanvas-cta-list">
+                                    <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                                </div>
+                                <div class="offcanvas-cta-list">
+                                    <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                    <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-button-wapper">
+                    <a href="booking.html" class="theme-button style-1" aria-label="Book Now">Book Now</a>
+                </div>
+                <div class="offcanvas-social">
+                    <div class="widget widget-social-media">
+                        <div class="widget-content">
+                            <ul class="social-icon">
+                                <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- offcanvas sidebar end -->
+
+        <!-- header start -->
+        <header class="header header-2">
+            <!-- header top start -->
+            <div class="header-top d-none d-xl-block">
+                <div class="container-fluid">
+                    <div class="row justify-content-center justify-content-lg-between align-items-center">
+                        <div class="col-auto">
+                            <div class="header-top-left">
+                                <div class="header-contact-info">
+                                    <ul>
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="header-top-right">
+                                <div class="header-social-icon">
+                                    <ul>
+                                        <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top end -->
+
+            <!-- header lower start -->
+            <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- header lower end -->
+        </header>
+        <!-- header end -->
+
+        <!-- main start -->
+        <main class="main">
+
+            <!-- ===== HERO BANNER ===== -->
+            <section class="dw-hero">
+                <div class="container dw-hero-content">
+                    <ul class="dw-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Destination Wedding</li>
+                    </ul>
+                    <span class="dw-hero-label wow fadeInUp" data-wow-delay=".2s">Your Dream Awaits</span>
+                    <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                        A <em>Forest Wedding</em><br>Like No Other
+                    </h1>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">
+                        Say "I do" beneath a canopy of ancient Mahua trees at Bhopal's most enchanting eco-retreat.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
+                        <a href="#inquiry" class="dw-btn dw-btn-gold">Plan Your Wedding</a>
+                        <a href="#packages" class="dw-btn dw-btn-outline">View Packages</a>
+                    </div>
+                </div>
+                <div class="dw-hero-shape">
+                    <img src="assets/images/shape/shape-bottom-white.png" alt="shape">
+                </div>
+            </section>
+            <!-- ===== HERO BANNER END ===== -->
+
+
+            <!-- ===== INTRO SECTION ===== -->
+            <section class="dw-section">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <!-- image column -->
+                        <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="dw-intro-image-wrap">
+                                <div class="dw-years-badge">
+                                    <span class="num">10+</span>
+                                    <span class="txt">Years of<br>Weddings</span>
+                                </div>
+                                <img src="assets/images/about/5.jpeg" alt="Wedding at Mahua House" class="img-main">
+                                <img src="assets/images/about/8.jpeg" alt="Wedding detail" class="img-badge">
+                            </div>
+                        </div>
+                        <!-- content column -->
+                        <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                            <span class="dw-label">About Our Venue</span>
+                            <h2 class="dw-heading">Where Nature Becomes Your <em>Wedding Backdrop</em></h2>
+                            <div class="dw-divider"><span></span><i class="fa-solid fa-heart"></i><span></span></div>
+                            <p class="dw-body-text mb-3">
+                                Nestled within 3.5 acres of pristine Bhopal forest, Mahua House is the destination wedding venue you've always imagined but never thought possible. Ancient Mahua and Teak trees frame every photograph. The forest air carries the scent of wildflowers. Stars fill the night sky without a city light in sight.
+                            </p>
+                            <p class="dw-body-text">
+                                We work with you from the first call to the last dance — coordinating every detail so you can be fully present for the most important day of your life.
+                            </p>
+                            <ul class="dw-checklist">
+                                <li><i class="fa-solid fa-check"></i> Forest Ceremony Lawns</li>
+                                <li><i class="fa-solid fa-check"></i> Customised Decor</li>
+                                <li><i class="fa-solid fa-check"></i> In-house Catering</li>
+                                <li><i class="fa-solid fa-check"></i> Luxury Accommodation</li>
+                                <li><i class="fa-solid fa-check"></i> Dedicated Coordinator</li>
+                                <li><i class="fa-solid fa-check"></i> Photography Spots</li>
+                            </ul>
+                            <a href="#inquiry" class="dw-btn dw-btn-primary">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== INTRO SECTION END ===== -->
+
+
+            <!-- ===== WHY CHOOSE US ===== -->
+            <section class="dw-section dw-section-alt">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <span class="dw-label wow fadeInUp" data-wow-delay=".1s">Why Mahua House</span>
+                            <h2 class="dw-heading wow fadeInUp" data-wow-delay=".2s">Everything You Need for a <em>Perfect Day</em></h2>
+                            <div class="dw-divider justify-content-center wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-2">
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="dw-why-card">
+                                <div class="dw-why-icon"><i class="fa-solid fa-tree"></i></div>
+                                <h4 class="dw-why-title">Forest Setting</h4>
+                                <p class="dw-why-text">Exchange vows beneath ancient trees in a 3.5-acre natural forest reserve — a backdrop unlike any banquet hall.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="dw-why-card">
+                                <div class="dw-why-icon"><i class="fa-solid fa-utensils"></i></div>
+                                <h4 class="dw-why-title">Exquisite Cuisine</h4>
+                                <p class="dw-why-text">Farm-to-table menus crafted by our in-house chefs — from traditional Indian feasts to contemporary fusion spreads.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="dw-why-card">
+                                <div class="dw-why-icon"><i class="fa-solid fa-bed"></i></div>
+                                <h4 class="dw-why-title">Exclusive Stay</h4>
+                                <p class="dw-why-text">Block the entire resort for your wedding party. Boutique rooms and cottages ensure every guest sleeps in comfort.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="dw-why-card">
+                                <div class="dw-why-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <h4 class="dw-why-title">Full Planning</h4>
+                                <p class="dw-why-text">A dedicated wedding coordinator manages your decor, music, catering and timeline — so you don't have to.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== WHY CHOOSE US END ===== -->
+
+
+            <!-- ===== GALLERY ===== -->
+            <section class="dw-section">
+                <div class="container">
+                    <div class="row align-items-end mb-40">
+                        <div class="col-lg-7">
+                            <span class="dw-label wow fadeInUp" data-wow-delay=".1s">Wedding Gallery</span>
+                            <h2 class="dw-heading wow fadeInUp" data-wow-delay=".2s">Moments Captured in Our <em>Forest</em></h2>
+                        </div>
+                        <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                            <a href="#inquiry" class="dw-btn dw-btn-primary">Book a Site Visit</a>
+                        </div>
+                    </div>
+                    <div class="dw-gallery-grid wow fadeInUp" data-wow-delay=".3s">
+                        <div class="dw-gitem">
+                            <img src="assets/images/about/12.jpeg" alt="Wedding venue">
+                            <div class="dw-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <div class="dw-gitem">
+                            <img src="assets/images/about/15.jpeg" alt="Wedding ceremony">
+                            <div class="dw-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <div class="dw-gitem">
+                            <img src="assets/images/about/20.jpeg" alt="Wedding decor">
+                            <div class="dw-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <div class="dw-gitem">
+                            <img src="assets/images/about/25.jpeg" alt="Forest setting">
+                            <div class="dw-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <div class="dw-gitem">
+                            <img src="assets/images/about/30.jpeg" alt="Wedding reception">
+                            <div class="dw-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== GALLERY END ===== -->
+
+
+            <!-- ===== PACKAGES ===== -->
+            <section class="dw-section dw-section-alt" id="packages">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <span class="dw-label wow fadeInUp" data-wow-delay=".1s">Wedding Packages</span>
+                            <h2 class="dw-heading wow fadeInUp" data-wow-delay=".2s">Choose Your <em>Perfect Package</em></h2>
+                            <div class="dw-divider justify-content-center wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                            <p class="dw-body-text wow fadeInUp" data-wow-delay=".4s">All packages include a dedicated coordinator, venue access, and basic decor. Customisation available.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 mt-3 justify-content-center">
+
+                        <!-- Package 1 -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="dw-pkg-card">
+                                <div class="dw-pkg-header">
+                                    <div class="dw-pkg-name">Forest Essentials</div>
+                                    <div class="dw-pkg-price">₹1.5L <span>onwards</span></div>
+                                    <div class="dw-pkg-sub">Up to 50 Guests</div>
+                                </div>
+                                <div class="dw-pkg-body">
+                                    <ul class="dw-pkg-list">
+                                        <li><i class="fa-solid fa-check"></i> Forest lawn ceremony space</li>
+                                        <li><i class="fa-solid fa-check"></i> Basic floral decor</li>
+                                        <li><i class="fa-solid fa-check"></i> Welcome dinner (1 evening)</li>
+                                        <li><i class="fa-solid fa-check"></i> 5 Rooms for 2 nights</li>
+                                        <li><i class="fa-solid fa-check"></i> Dedicated coordinator</li>
+                                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Photography package</li>
+                                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Live entertainment</li>
+                                    </ul>
+                                    <a href="#inquiry" class="dw-btn dw-btn-primary d-block">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 2 (Featured) -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="dw-pkg-card">
+                                <div class="dw-pkg-header featured">
+                                    <div class="dw-pkg-badge">Most Popular</div>
+                                    <div class="dw-pkg-name">Royal Forest</div>
+                                    <div class="dw-pkg-price">₹3.5L <span>onwards</span></div>
+                                    <div class="dw-pkg-sub">Up to 150 Guests</div>
+                                </div>
+                                <div class="dw-pkg-body">
+                                    <ul class="dw-pkg-list">
+                                        <li><i class="fa-solid fa-check"></i> Premium ceremony & reception lawn</li>
+                                        <li><i class="fa-solid fa-check"></i> Premium floral & lighting decor</li>
+                                        <li><i class="fa-solid fa-check"></i> Mehendi, sangeet & wedding dinner</li>
+                                        <li><i class="fa-solid fa-check"></i> 10 Rooms for 3 nights</li>
+                                        <li><i class="fa-solid fa-check"></i> Senior coordinator + team</li>
+                                        <li><i class="fa-solid fa-check"></i> Photography package</li>
+                                        <li class="disabled"><i class="fa-solid fa-xmark"></i> Live entertainment</li>
+                                    </ul>
+                                    <a href="#inquiry" class="dw-btn dw-btn-gold d-block">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Package 3 -->
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="dw-pkg-card">
+                                <div class="dw-pkg-header">
+                                    <div class="dw-pkg-name">Grand Mahua</div>
+                                    <div class="dw-pkg-price">₹7L <span>onwards</span></div>
+                                    <div class="dw-pkg-sub">Up to 300 Guests</div>
+                                </div>
+                                <div class="dw-pkg-body">
+                                    <ul class="dw-pkg-list">
+                                        <li><i class="fa-solid fa-check"></i> Full resort exclusive buyout</li>
+                                        <li><i class="fa-solid fa-check"></i> Bespoke theme & luxury decor</li>
+                                        <li><i class="fa-solid fa-check"></i> All 4 wedding functions</li>
+                                        <li><i class="fa-solid fa-check"></i> All rooms for 4 nights</li>
+                                        <li><i class="fa-solid fa-check"></i> Full coordination team</li>
+                                        <li><i class="fa-solid fa-check"></i> Photography + videography</li>
+                                        <li><i class="fa-solid fa-check"></i> Live music & entertainment</li>
+                                    </ul>
+                                    <a href="#inquiry" class="dw-btn dw-btn-primary d-block">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- ===== PACKAGES END ===== -->
+
+
+            <!-- ===== PLANNING PROCESS ===== -->
+            <section class="dw-section dw-section-dark">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                            <span class="dw-label dw-label-light">How It Works</span>
+                            <h2 class="dw-heading dw-heading-light">From First Call to <em>First Dance</em></h2>
+                            <div class="dw-divider"><span></span><i class="fa-solid fa-heart"></i><span></span></div>
+                            <p class="dw-body-text dw-body-text-light mb-4">
+                                We believe planning your wedding should feel as magical as the day itself. Our streamlined process keeps everything stress-free and transparent.
+                            </p>
+                            <a href="#inquiry" class="dw-btn dw-btn-gold">Start Planning</a>
+                        </div>
+                        <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                            <div class="dw-timeline">
+                                <div class="dw-timeline-item">
+                                    <div class="dw-timeline-dot">1</div>
+                                    <h4 class="dw-timeline-title">Initial Inquiry &amp; Consultation</h4>
+                                    <p class="dw-timeline-text">Fill out our enquiry form or call us. We'll schedule a free consultation to understand your vision, guest count, and dates.</p>
+                                </div>
+                                <div class="dw-timeline-item">
+                                    <div class="dw-timeline-dot">2</div>
+                                    <h4 class="dw-timeline-title">Site Visit &amp; Package Selection</h4>
+                                    <p class="dw-timeline-text">Visit Mahua House to walk the spaces, meet the team, and select the package that fits your dream and budget.</p>
+                                </div>
+                                <div class="dw-timeline-item">
+                                    <div class="dw-timeline-dot">3</div>
+                                    <h4 class="dw-timeline-title">Planning &amp; Customisation</h4>
+                                    <p class="dw-timeline-text">Work with our coordinator to customise decor, menus, entertainment, and timelines. We handle every vendor and detail.</p>
+                                </div>
+                                <div class="dw-timeline-item">
+                                    <div class="dw-timeline-dot">4</div>
+                                    <h4 class="dw-timeline-title">Your Perfect Wedding Day</h4>
+                                    <p class="dw-timeline-text">Arrive, relax, and be present. Our team takes care of everything from set-up to the last goodbye — you just celebrate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== PLANNING PROCESS END ===== -->
+
+
+            <!-- ===== TESTIMONIALS ===== -->
+            <section class="dw-section">
+                <div class="container">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-lg-7 text-center">
+                            <span class="dw-label wow fadeInUp" data-wow-delay=".1s">Couple Stories</span>
+                            <h2 class="dw-heading wow fadeInUp" data-wow-delay=".2s">What Our <em>Couples Say</em></h2>
+                            <div class="dw-divider justify-content-center wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="dw-testi-card">
+                                <div class="dw-testi-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="dw-testi-text">"Our wedding at Mahua House was beyond anything we could have dreamed. The forest setting was ethereal and the team thought of every single detail. Our guests are still talking about it!"</p>
+                                <div class="dw-testi-author">
+                                    <img src="assets/images/avatar/avatar-1.jpg" alt="Priya & Rohan">
+                                    <div>
+                                        <p class="dw-testi-name">Priya &amp; Rohan Sharma</p>
+                                        <p class="dw-testi-location">Mumbai, November 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="dw-testi-card">
+                                <div class="dw-testi-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="dw-testi-text">"We wanted something intimate, unique, and connected to nature. Mahua House delivered on every front. The forest ceremony under the Mahua trees was absolutely magical."</p>
+                                <div class="dw-testi-author">
+                                    <img src="assets/images/avatar/avatar-3.jpg" alt="Aarav & Kavya">
+                                    <div>
+                                        <p class="dw-testi-name">Aarav &amp; Kavya Mehta</p>
+                                        <p class="dw-testi-location">Delhi, February 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="dw-testi-card">
+                                <div class="dw-testi-stars">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <p class="dw-testi-text">"From the first site visit to the last dance, the team at Mahua House was exceptional. The food was incredible, the décor was stunning, and the forest atmosphere was unforgettable."</p>
+                                <div class="dw-testi-author">
+                                    <img src="assets/images/avatar/avatar-5.jpg" alt="Sneha & Vikram">
+                                    <div>
+                                        <p class="dw-testi-name">Sneha &amp; Vikram Joshi</p>
+                                        <p class="dw-testi-location">Bhopal, January 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== TESTIMONIALS END ===== -->
+
+
+            <!-- ===== INQUIRY FORM ===== -->
+            <section class="dw-section dw-section-alt" id="inquiry">
+                <div class="container">
+                    <div class="dw-cta-box">
+                        <div class="row align-items-center g-5 position-relative" style="z-index:1">
+                            <!-- left text -->
+                            <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                                <span class="dw-label dw-label-light">Get In Touch</span>
+                                <h2 class="dw-heading dw-heading-light">Start Planning Your <em>Dream Wedding</em></h2>
+                                <div class="dw-divider"><span></span><i class="fa-solid fa-heart"></i><span></span></div>
+                                <p class="dw-body-text dw-body-text-light mb-4">
+                                    Tell us about your dream day. Our wedding team will get back to you within 24 hours with availability and a tailored quote.
+                                </p>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div style="width:42px;height:42px;border-radius:50%;background:rgba(218,165,32,0.2);display:flex;align-items:center;justify-content:center;color:#DAA520;flex-shrink:0;">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <p style="font-size:11px;color:rgba(255,255,255,0.5);margin:0;letter-spacing:1px;text-transform:uppercase;">Call Us</p>
+                                            <p style="font-size:15px;font-weight:600;color:#fff;margin:0;">+91 9425651754</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div style="width:42px;height:42px;border-radius:50%;background:rgba(218,165,32,0.2);display:flex;align-items:center;justify-content:center;color:#DAA520;flex-shrink:0;">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <p style="font-size:11px;color:rgba(255,255,255,0.5);margin:0;letter-spacing:1px;text-transform:uppercase;">Email Us</p>
+                                            <p style="font-size:15px;font-weight:600;color:#fff;margin:0;">mahuahouse17@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- right form -->
+                            <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                                <div style="background:#fff;border-radius:20px;padding:40px 36px;box-shadow:0 20px 60px rgba(0,0,0,0.2);">
+                                    <h4 style="font-size:20px;font-weight:700;color:#033631;margin-bottom:24px;">Wedding Enquiry Form</h4>
+                                    <form class="dw-inquiry-form">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Bride's Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Groom's Name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="email" class="form-control" placeholder="Email Address" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" placeholder="Wedding Date">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-control">
+                                                    <option value="" disabled selected>Estimated Guests</option>
+                                                    <option>Up to 50</option>
+                                                    <option>51 – 100</option>
+                                                    <option>101 – 200</option>
+                                                    <option>200+</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <select class="form-control">
+                                                    <option value="" disabled selected>Preferred Package</option>
+                                                    <option>Forest Essentials</option>
+                                                    <option>Royal Forest</option>
+                                                    <option>Grand Mahua</option>
+                                                    <option>Custom / Not Sure Yet</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control" rows="4" placeholder="Tell us about your dream wedding..."></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="dw-btn dw-btn-gold w-100" style="border:none;cursor:pointer;font-size:15px;">
+                                                    <i class="fa-solid fa-paper-plane me-2"></i> Send Enquiry
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== INQUIRY FORM END ===== -->
+
+        </main>
+        <!-- main end -->
+
+
+        <!-- footer start -->
+        <footer class="footer footer-1">
+            <!-- footer bottom start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-widget-wrap">
+                        <div class="row justify-content-between">
+                            <div class="col-xl-4 col-lg-12">
+                                <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="footer-logo mb-20">
+                                        <a href="index.html">
+                                            <figure>
+                                                <img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland. The perfect destination for an unforgettable wedding celebration.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-4 col-sm-6">
+                                <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                    <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                    <div class="widget-link">
+                                        <ul class="link">
+                                            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                            <li><a href="destination-wedding.html"><i class="fa-solid fa-chevron-right"></i> Destination Wedding</a></li>
+                                            <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-4 col-sm-6">
+                                <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                    <h3 class="footer-widget-title line-anime">Explore</h3>
+                                    <div class="widget-link">
+                                        <ul class="link">
+                                            <li><a href="#packages"><i class="fa-solid fa-chevron-right"></i> Wedding Packages</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Rooms</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Restaurant</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-sm-6">
+                                <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                    <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                    <div class="widget-contact">
+                                        <ul class="contact-info">
+                                            <li>
+                                                <p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p>
+                                            </li>
+                                            <li>
+                                                <p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p>
+                                            </li>
+                                            <li>
+                                                <p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer bottom end -->
+
+            <!-- footer copyright start -->
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="footer-copyright-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                    <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-lg-end">
+                                <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                    <li><a class="line-effect" href="contact.html">Terms and Conditions</a></li>
+                                    <li><a class="line-effect" href="contact.html">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer copyright end -->
+        </footer>
+        <!-- footer end -->
+
+    </div>
+    <!-- page wrapper end -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery meanmenu js -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!-- swiper js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- wow Js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- validate js -->
+    <script src="assets/js/validate.min.js"></script>
+    <!-- ajax form Js -->
+    <script src="assets/js/ajax-form.js"></script>
+    <!-- SmoothScroll Js -->
+    <script src="assets/js/SmoothScroll.js"></script>
+    <!-- appear Js -->
+    <script src="assets/js/jquery.appear.js"></script>
+    <!-- magnific Js -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- syotimer Js -->
+    <script src="assets/js/jquery.syotimer.min.js"></script>
+    <!-- main Js -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

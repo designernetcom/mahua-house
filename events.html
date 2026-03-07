@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Host your dream event at Mahua House — weddings, corporate retreats, birthdays, anniversaries and more in a stunning forest setting near Bhopal.">
+    <meta name="keywords" content="Events Mahua House, Forest Event Venue Bhopal, Corporate Retreat, Wedding Venue, Birthday Party Forest">
+    <title>Events | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           EVENTS PAGE — STYLES
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        /* ---- Utilities ---- */
+        .ev-section       { padding: 90px 0; }
+        .ev-section-alt   { background: #E7EEEE; }
+        .ev-section-dark  { background: #033631; }
+        .ev-section-cream { background: #faf8f3; }
+
+        .ev-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .ev-label-light { color: rgba(218,165,32,0.9); }
+
+        .ev-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .ev-heading-light { color: #ffffff; }
+        .ev-heading em { font-style: normal; color: #DAA520; }
+
+        .ev-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .ev-divider.centered { justify-content: center; }
+        .ev-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .ev-divider i { font-size: 9px; }
+
+        .ev-body {
+            font-size: 15px; color: rgba(3,54,49,0.6);
+            line-height: 1.85; margin-bottom: 0;
+        }
+        .ev-body-light { color: rgba(255,255,255,0.62); }
+
+        .ev-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .ev-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .ev-btn-primary:hover { background:transparent; color:#033631; }
+        .ev-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .ev-btn-gold:hover { background:transparent; color:#DAA520; }
+        .ev-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.45); }
+        .ev-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .ev-btn-outline-green { background:transparent; color:#033631; border-color:rgba(3,54,49,0.35); }
+        .ev-btn-outline-green:hover { background:#033631; color:#fff; border-color:#033631; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .ev-hero {
+            position: relative; height: 580px;
+            background: url('assets/images/about/7.jpeg') center center / cover no-repeat;
+            display: flex; align-items: flex-end; overflow: hidden;
+        }
+        .ev-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.28) 0%, rgba(3,54,49,0.85) 100%);
+        }
+        .ev-hero-content {
+            position: relative; z-index: 2;
+            padding-bottom: 80px; width: 100%;
+        }
+        .ev-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .ev-breadcrumb li { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .ev-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .ev-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+        .ev-hero h1 {
+            font-size: clamp(38px, 5vw, 70px); font-weight: 800;
+            color: #fff; line-height: 1.1; margin-bottom: 18px;
+        }
+        .ev-hero h1 em { font-style: italic; color: #DAA520; }
+        .ev-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.75);
+            max-width: 540px; line-height: 1.75; margin-bottom: 30px;
+        }
+        .ev-hero-shape {
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; line-height: 0;
+        }
+        .ev-hero-shape img { width: 100%; }
+
+        /* Hero stat strip */
+        .ev-hero-stats {
+            display: flex; flex-wrap: wrap; gap: 0;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 14px; overflow: hidden;
+            max-width: 620px; margin-top: 32px;
+        }
+        .ev-hero-stat {
+            flex: 1; padding: 16px 22px;
+            border-right: 1px solid rgba(255,255,255,0.12);
+            text-align: center; min-width: 120px;
+        }
+        .ev-hero-stat:last-child { border-right: none; }
+        .ev-hero-stat .n { font-size: 26px; font-weight: 800; color: #DAA520; display: block; line-height: 1; }
+        .ev-hero-stat .l { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 1px; text-transform: uppercase; }
+
+        /* ============================================================
+           EVENT TYPES GRID
+           ============================================================ */
+        .ev-type-card {
+            position: relative; border-radius: 20px; overflow: hidden; height: 340px;
+        }
+        .ev-type-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+        .ev-type-card:hover img { transform: scale(1.08); }
+        .ev-type-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(3,54,49,0.92) 0%, rgba(3,54,49,0.3) 55%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 28px 26px; transition: background 0.4s ease;
+        }
+        .ev-type-card:hover .ev-type-overlay {
+            background: linear-gradient(to top, rgba(3,54,49,0.97) 0%, rgba(3,54,49,0.55) 60%, rgba(3,54,49,0.15) 100%);
+        }
+        .ev-type-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: rgba(218,165,32,0.2); border: 1px solid rgba(218,165,32,0.4);
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 20px; margin-bottom: 14px;
+            transition: background 0.3s ease;
+        }
+        .ev-type-card:hover .ev-type-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ev-type-title {
+            font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px;
+        }
+        .ev-type-desc {
+            font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65;
+            max-height: 0; overflow: hidden; opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+        }
+        .ev-type-card:hover .ev-type-desc { max-height: 80px; opacity: 1; }
+        .ev-type-tag {
+            display: inline-block; font-size: 10px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 8px;
+        }
+
+        /* ============================================================
+           WHY CHOOSE — FEATURE LIST
+           ============================================================ */
+        .ev-feature-item {
+            display: flex; align-items: flex-start; gap: 18px;
+            padding: 24px 0; border-bottom: 1px solid rgba(3,54,49,0.08);
+        }
+        .ev-feature-item:first-child { padding-top: 0; }
+        .ev-feature-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .ev-feature-icon {
+            width: 52px; height: 52px; min-width: 52px; border-radius: 14px;
+            background: rgba(3,54,49,0.07); border: 1px solid rgba(3,54,49,0.12);
+            display: flex; align-items: center; justify-content: center;
+            color: #033631; font-size: 20px; flex-shrink: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .ev-feature-item:hover .ev-feature-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ev-feature-title { font-size: 16px; font-weight: 700; color: #033631; margin-bottom: 5px; }
+        .ev-feature-text  { font-size: 14px; color: rgba(3,54,49,0.55); line-height: 1.7; margin: 0; }
+
+        /* ============================================================
+           VENUE SPACES
+           ============================================================ */
+        .ev-venue-card {
+            background: #fff; border-radius: 18px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            height: 100%;
+        }
+        .ev-venue-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(3,54,49,0.14); }
+        .ev-venue-img {
+            position: relative; height: 220px; overflow: hidden;
+        }
+        .ev-venue-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .ev-venue-card:hover .ev-venue-img img { transform: scale(1.06); }
+        .ev-venue-badge {
+            position: absolute; top: 14px; left: 14px;
+            background: #DAA520; color: #033631;
+            font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
+        }
+        .ev-venue-body { padding: 26px; }
+        .ev-venue-title { font-size: 18px; font-weight: 700; color: #033631; margin-bottom: 8px; }
+        .ev-venue-text  { font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.7; margin-bottom: 18px; }
+        .ev-venue-specs {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
+        }
+        .ev-venue-spec {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 12px; color: rgba(3,54,49,0.6); font-weight: 500;
+        }
+        .ev-venue-spec i { color: #DAA520; font-size: 11px; }
+
+        /* ============================================================
+           UPCOMING EVENTS CAROUSEL / CARDS
+           ============================================================ */
+        .ev-upcoming-card {
+            background: #fff; border-radius: 18px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
+            display: flex; gap: 0; height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ev-upcoming-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(3,54,49,0.12); }
+        .ev-upcoming-date {
+            background: #033631; min-width: 80px; display: flex;
+            flex-direction: column; align-items: center; justify-content: center;
+            padding: 20px 14px; flex-shrink: 0;
+        }
+        .ev-upcoming-date .day   { font-size: 36px; font-weight: 800; color: #DAA520; line-height: 1; }
+        .ev-upcoming-date .month { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+        .ev-upcoming-date .year  { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+        .ev-upcoming-info { padding: 20px 22px; flex: 1; }
+        .ev-upcoming-cat {
+            font-size: 10px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: #DAA520; margin-bottom: 6px;
+        }
+        .ev-upcoming-title { font-size: 16px; font-weight: 700; color: #033631; margin-bottom: 8px; }
+        .ev-upcoming-meta {
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .ev-upcoming-meta span {
+            font-size: 12px; color: rgba(3,54,49,0.5);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .ev-upcoming-meta i { color: #DAA520; font-size: 10px; width: 12px; }
+
+        /* ============================================================
+           GALLERY MASONRY-STYLE
+           ============================================================ */
+        .ev-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 220px 220px;
+            gap: 10px;
+        }
+        .ev-gallery-grid .eg { border-radius: 14px; overflow: hidden; position: relative; }
+        .ev-gallery-grid .eg-wide { grid-column: span 2; }
+        .ev-gallery-grid .eg img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .ev-gallery-grid .eg:hover img { transform: scale(1.07); }
+        .ev-gallery-grid .eg-overlay {
+            position: absolute; inset: 0;
+            background: rgba(3,54,49,0.4); opacity: 0;
+            transition: opacity 0.35s ease;
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 26px;
+        }
+        .ev-gallery-grid .eg:hover .eg-overlay { opacity: 1; }
+
+        /* ============================================================
+           PLANNING PROCESS — STEP CARDS
+           ============================================================ */
+        .ev-step-card {
+            text-align: center; padding: 36px 24px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px; height: 100%;
+            transition: background 0.35s ease, border-color 0.35s ease;
+            position: relative;
+        }
+        .ev-step-card:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(218,165,32,0.4);
+        }
+        .ev-step-num {
+            font-size: 60px; font-weight: 900; line-height: 1;
+            color: rgba(218,165,32,0.15); position: absolute;
+            top: 16px; right: 20px; font-family: Georgia, serif;
+        }
+        .ev-step-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(218,165,32,0.15); border: 1px solid rgba(218,165,32,0.3);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 24px; margin-bottom: 20px;
+            transition: background 0.35s ease;
+        }
+        .ev-step-card:hover .ev-step-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ev-step-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .ev-step-text  { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.75; margin: 0; }
+
+        /* connector arrow between steps */
+        .ev-step-arrow {
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(218,165,32,0.35); font-size: 22px; padding-top: 36px;
+        }
+
+        /* ============================================================
+           TESTIMONIALS
+           ============================================================ */
+        .ev-testi-card {
+            background: #fff; border-radius: 16px; padding: 30px;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06); height: 100%;
+        }
+        .ev-testi-quote { font-size: 44px; color: #DAA520; line-height: 0.7; font-family: Georgia, serif; margin-bottom: 16px; }
+        .ev-testi-stars { color: #DAA520; font-size: 12px; margin-bottom: 14px; display: flex; gap: 2px; }
+        .ev-testi-text  { font-size: 14px; color: rgba(3,54,49,0.65); line-height: 1.8; font-style: italic; margin-bottom: 22px; }
+        .ev-testi-author { display: flex; align-items: center; gap: 12px; }
+        .ev-testi-author img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid #DAA520; }
+        .ev-testi-name { font-size: 14px; font-weight: 700; color: #033631; margin: 0; }
+        .ev-testi-role { font-size: 12px; color: rgba(3,54,49,0.45); margin: 0; }
+
+        /* ============================================================
+           PRICING / PACKAGES
+           ============================================================ */
+        .ev-pkg-card {
+            background: #fff; border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.1);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease; height: 100%;
+            display: flex; flex-direction: column;
+        }
+        .ev-pkg-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(3,54,49,0.14); }
+        .ev-pkg-head { background: #033631; padding: 30px 28px; text-align: center; position: relative; }
+        .ev-pkg-head.gold { background: #DAA520; }
+        .ev-pkg-head .popular {
+            position: absolute; top: 14px; right: 14px;
+            background: rgba(255,255,255,0.2); color: #fff;
+            font-size: 10px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+        }
+        .ev-pkg-head .pkg-name  { font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 8px; }
+        .ev-pkg-head .pkg-price { font-size: 36px; font-weight: 800; color: #fff; line-height: 1; }
+        .ev-pkg-head .pkg-price span { font-size: 15px; font-weight: 400; opacity: 0.65; }
+        .ev-pkg-head .pkg-guests{ font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+        .ev-pkg-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+        .ev-pkg-list { list-style: none; padding: 0; margin: 0 0 26px; flex: 1; }
+        .ev-pkg-list li {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: rgba(3,54,49,0.65);
+            padding: 9px 0; border-bottom: 1px solid rgba(3,54,49,0.07);
+        }
+        .ev-pkg-list li:last-child { border-bottom: none; }
+        .ev-pkg-list li i { color: #DAA520; font-size: 12px; min-width: 14px; }
+        .ev-pkg-list li.off { color: rgba(3,54,49,0.28); }
+        .ev-pkg-list li.off i { color: rgba(3,54,49,0.2); }
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+        .ev-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #07554D 100%);
+            border-radius: 24px; padding: 70px 60px;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .ev-cta-box::before {
+            content: ''; position: absolute; top: -100px; right: -100px;
+            width: 350px; height: 350px; border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .ev-cta-box::after {
+            content: ''; position: absolute; bottom: -80px; left: -80px;
+            width: 260px; height: 260px; border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1199px) {
+            .ev-gallery-grid { grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px 200px 200px; }
+            .ev-gallery-grid .eg-wide { grid-column: span 1; }
+        }
+        @media (max-width: 991px) {
+            .ev-hero { height: 460px; }
+            .ev-section { padding: 70px 0; }
+            .ev-cta-box { padding: 50px 30px; }
+            .ev-upcoming-card { flex-direction: column; }
+            .ev-upcoming-date { flex-direction: row; gap: 12px; padding: 14px 20px; }
+        }
+        @media (max-width: 767px) {
+            .ev-gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 180px); }
+            .ev-hero-stats { max-width: 100%; }
+        }
+        @media (max-width: 575px) {
+            .ev-hero h1 { font-size: 32px; }
+            .ev-cta-box { padding: 40px 20px; }
+            .ev-gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6, 180px); }
+            .ev-step-arrow { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="ev-hero">
+            <div class="container ev-hero-content">
+                <ul class="ev-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Events</li>
+                </ul>
+                <span class="ev-label wow fadeInUp" data-wow-delay=".2s">Celebrate in the Forest</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    Unforgettable <em>Events</em><br>in Nature's Embrace
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    From intimate gatherings to grand celebrations — Mahua House provides a one-of-a-kind forest setting for every occasion that matters.
+                </p>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".45s">
+                    <a href="#enquire" class="ev-btn ev-btn-gold">Plan Your Event</a>
+                    <a href="#venues" class="ev-btn ev-btn-outline">Explore Venues</a>
+                </div>
+                <!-- stat strip -->
+                <div class="ev-hero-stats wow fadeInUp" data-wow-delay=".55s">
+                    <div class="ev-hero-stat"><span class="n">500<sup style="font-size:16px;">+</sup></span><span class="l">Events Hosted</span></div>
+                    <div class="ev-hero-stat"><span class="n">300</span><span class="l">Max Capacity</span></div>
+                    <div class="ev-hero-stat"><span class="n">3.5</span><span class="l">Acres of Venue</span></div>
+                    <div class="ev-hero-stat"><span class="n">4.9<sup style="font-size:14px;">★</sup></span><span class="l">Avg Rating</span></div>
+                </div>
+            </div>
+            <div class="ev-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             EVENT TYPES
+             ============================================================ -->
+        <section class="ev-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label wow fadeInUp" data-wow-delay=".1s">What We Host</span>
+                        <h2 class="ev-heading wow fadeInUp" data-wow-delay=".2s">Events for <em>Every Occasion</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ev-body wow fadeInUp" data-wow-delay=".4s">Whatever the celebration, our forest provides a backdrop that no banquet hall ever could.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/12.jpeg" alt="Destination Weddings">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Most Popular</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-heart"></i></div>
+                                <h4 class="ev-type-title">Destination Weddings</h4>
+                                <p class="ev-type-desc">Say "I do" beneath a canopy of ancient Mahua trees. Ceremonies, receptions, mehendi, sangeet — all under the stars.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/20.jpeg" alt="Corporate Retreats">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Business</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <h4 class="ev-type-title">Corporate Retreats</h4>
+                                <p class="ev-type-desc">Team building, strategy offsites, leadership workshops — inspire your team in nature away from the office routine.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/30.jpeg" alt="Birthday Celebrations">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Milestone</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                                <h4 class="ev-type-title">Birthday Celebrations</h4>
+                                <p class="ev-type-desc">Mark another year with a forest party unlike any other — themed setups, bonfires, and gourmet dining under open skies.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/40.jpeg" alt="Anniversary Celebrations">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Romance</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                                <h4 class="ev-type-title">Anniversary Celebrations</h4>
+                                <p class="ev-type-desc">Renew your vows or celebrate years together with an intimate candlelit evening in the heart of the forest.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/50.jpeg" alt="Family Gatherings">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Family</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-people-roof"></i></div>
+                                <h4 class="ev-type-title">Family Reunions</h4>
+                                <p class="ev-type-desc">Reconnect with family in the forest. Space for every generation — from campfire games to guided nature walks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".45s">
+                        <div class="ev-type-card">
+                            <img src="assets/images/about/60.jpeg" alt="Cultural Events">
+                            <div class="ev-type-overlay">
+                                <span class="ev-type-tag">Cultural</span>
+                                <div class="ev-type-icon"><i class="fa-solid fa-music"></i></div>
+                                <h4 class="ev-type-title">Cultural &amp; Music Events</h4>
+                                <p class="ev-type-desc">Folk concerts, art installations, Sufi evenings, and cultural fests — nature's amphitheatre like no other.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             WHY HOST HERE — FEATURE LIST + IMAGE
+             ============================================================ -->
+        <section class="ev-section ev-section-alt">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- image -->
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                        <div style="position:relative; border-radius:20px; overflow:hidden; height:520px;">
+                            <img src="assets/images/about/25.jpeg" alt="Event at Mahua House" style="width:100%;height:100%;object-fit:cover;">
+                            <!-- floating card -->
+                            <div style="position:absolute;bottom:24px;left:24px;right:24px;background:rgba(3,54,49,0.92);backdrop-filter:blur(8px);border-radius:14px;padding:20px 22px;display:flex;align-items:center;gap:16px;">
+                                <div style="width:48px;height:48px;border-radius:50%;background:#DAA520;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;color:#033631;">
+                                    <i class="fa-solid fa-trophy"></i>
+                                </div>
+                                <div>
+                                    <p style="font-size:16px;font-weight:700;color:#fff;margin:0;line-height:1.2;">500+ Events Delivered</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.5);margin:0;">Flawlessly executed since 2014</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- features -->
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                        <span class="ev-label">Why Host With Us</span>
+                        <h2 class="ev-heading">Every Event is a <em>Signature Experience</em></h2>
+                        <div class="ev-divider"><span></span><i class="fa-solid fa-star"></i><span></span></div>
+
+                        <div class="ev-feature-item">
+                            <div class="ev-feature-icon"><i class="fa-solid fa-tree"></i></div>
+                            <div>
+                                <h5 class="ev-feature-title">Breathtaking Natural Setting</h5>
+                                <p class="ev-feature-text">3.5 acres of pristine forest with ancient Mahua and Teak trees — a venue that creates awe the moment guests arrive. No decoration can match what nature provides here.</p>
+                            </div>
+                        </div>
+                        <div class="ev-feature-item">
+                            <div class="ev-feature-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <h5 class="ev-feature-title">Dedicated Event Coordinator</h5>
+                                <p class="ev-feature-text">Every booking comes with a personal coordinator who manages vendors, timelines, decor, catering, and logistics from start to finish — so you can be fully present.</p>
+                            </div>
+                        </div>
+                        <div class="ev-feature-item">
+                            <div class="ev-feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <div>
+                                <h5 class="ev-feature-title">Farm-to-Table Catering</h5>
+                                <p class="ev-feature-text">Our in-house kitchen crafts seasonal menus using local farm produce — from lavish multi-course dinners to casual barbecues. Vegetarian, vegan, and dietary-specific menus available.</p>
+                            </div>
+                        </div>
+                        <div class="ev-feature-item">
+                            <div class="ev-feature-icon"><i class="fa-solid fa-moon"></i></div>
+                            <div>
+                                <h5 class="ev-feature-title">On-site Accommodation</h5>
+                                <p class="ev-feature-text">Guests don't have to leave after the celebration. Our boutique rooms and forest cottages let the party extend into a full weekend, keeping the magic alive.</p>
+                            </div>
+                        </div>
+                        <div class="ev-feature-item">
+                            <div class="ev-feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div>
+                                <h5 class="ev-feature-title">Fully Customisable</h5>
+                                <p class="ev-feature-text">No two events at Mahua House look the same. We work with your vision — theme, decor, layout, activities — to create an event that is entirely, uniquely yours.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             VENUE SPACES
+             ============================================================ -->
+        <section class="ev-section" id="venues">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label wow fadeInUp" data-wow-delay=".1s">Our Spaces</span>
+                        <h2 class="ev-heading wow fadeInUp" data-wow-delay=".2s">Choose Your <em>Perfect Venue</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ev-body wow fadeInUp" data-wow-delay=".4s">Multiple versatile spaces — from open forest lawns to intimate candlelit clearings — to suit every event size and style.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/35.jpeg" alt="Grand Forest Lawn">
+                                <span class="ev-venue-badge">Outdoor</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">Grand Forest Lawn</h4>
+                                <p class="ev-venue-text">Our largest open-air space — a sprawling lawn bordered by ancient Mahua trees, perfect for weddings, large parties, and cultural events.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 300 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-sun"></i> Day &amp; Evening</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> ~5000 sq ft</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/45.jpeg" alt="Forest Clearing">
+                                <span class="ev-venue-badge">Intimate</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">The Forest Clearing</h4>
+                                <p class="ev-venue-text">A naturally enclosed clearing deep in the property — ideal for intimate ceremonies, vow renewals, private dinners, and yoga retreats.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 80 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-moon"></i> Evening Only</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> ~2000 sq ft</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/55.jpeg" alt="Campfire Amphitheatre">
+                                <span class="ev-venue-badge">Signature</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">Campfire Amphitheatre</h4>
+                                <p class="ev-venue-text">A circular open-air amphitheatre around a central fire pit — our most unique space, perfect for cultural events, folk performances, and corporate engagements.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 150 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-fire-flame-curved"></i> Evening Preferred</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> ~3500 sq ft</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/65.jpeg" alt="Teak Grove Pavilion">
+                                <span class="ev-venue-badge">Indoor / Outdoor</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">Teak Grove Pavilion</h4>
+                                <p class="ev-venue-text">A semi-open pavilion under a canopy of mature teak trees — great for corporate workshops, rehearsal dinners, and pre-event gatherings.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 60 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-sun"></i> All Day</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> ~1500 sq ft</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".35s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/75.jpeg" alt="Poolside Deck">
+                                <span class="ev-venue-badge">Premium</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">Poolside Deck</h4>
+                                <p class="ev-venue-text">An elegant deck beside the resort pool — ideal for cocktail parties, sundowners, product launches, and exclusive private dinners with ambient lighting.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 50 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-glass-martini-alt"></i> Evening Preferred</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> ~1200 sq ft</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".45s">
+                        <div class="ev-venue-card">
+                            <div class="ev-venue-img">
+                                <img src="assets/images/about/85.jpeg" alt="Full Resort Buyout">
+                                <span class="ev-venue-badge">Exclusive</span>
+                            </div>
+                            <div class="ev-venue-body">
+                                <h4 class="ev-venue-title">Full Resort Exclusive</h4>
+                                <p class="ev-venue-text">Take over the entire 3.5-acre property for your event — all venues, all rooms, all staff. The ultimate private forest experience for large groups.</p>
+                                <div class="ev-venue-specs">
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-users"></i> Up to 300 guests</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-lock"></i> Fully Private</span>
+                                    <span class="ev-venue-spec"><i class="fa-solid fa-expand"></i> Entire Property</span>
+                                </div>
+                                <a href="#enquire" class="ev-btn ev-btn-outline-green" style="font-size:13px;padding:10px 22px;">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             EVENT PACKAGES
+             ============================================================ -->
+        <section class="ev-section ev-section-dark">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label ev-label-light wow fadeInUp" data-wow-delay=".1s">Event Packages</span>
+                        <h2 class="ev-heading ev-heading-light wow fadeInUp" data-wow-delay=".2s">Simple, <em>Transparent Pricing</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ev-body ev-body-light wow fadeInUp" data-wow-delay=".4s">All packages include a dedicated coordinator, venue setup, and basic decor. Fully customisable on request.</p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ev-pkg-card">
+                            <div class="ev-pkg-head">
+                                <div class="pkg-name">Essentials</div>
+                                <div class="pkg-price">₹50K <span>onwards</span></div>
+                                <div class="pkg-guests">Up to 50 guests · Half Day</div>
+                            </div>
+                            <div class="ev-pkg-body">
+                                <ul class="ev-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Choice of one venue space</li>
+                                    <li><i class="fa-solid fa-check"></i> Basic floral &amp; table decor</li>
+                                    <li><i class="fa-solid fa-check"></i> Welcome drinks &amp; snacks</li>
+                                    <li><i class="fa-solid fa-check"></i> Dedicated event coordinator</li>
+                                    <li><i class="fa-solid fa-check"></i> Basic sound system</li>
+                                    <li class="off"><i class="fa-solid fa-xmark"></i> On-site accommodation</li>
+                                    <li class="off"><i class="fa-solid fa-xmark"></i> Full catering menu</li>
+                                    <li class="off"><i class="fa-solid fa-xmark"></i> Live entertainment</li>
+                                </ul>
+                                <a href="#enquire" class="ev-btn ev-btn-primary d-block text-center">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ev-pkg-card">
+                            <div class="ev-pkg-head gold">
+                                <span class="popular">Most Popular</span>
+                                <div class="pkg-name">Signature</div>
+                                <div class="pkg-price">₹1.5L <span>onwards</span></div>
+                                <div class="pkg-guests">Up to 150 guests · Full Day</div>
+                            </div>
+                            <div class="ev-pkg-body">
+                                <ul class="ev-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Two venue spaces included</li>
+                                    <li><i class="fa-solid fa-check"></i> Premium themed decor &amp; lighting</li>
+                                    <li><i class="fa-solid fa-check"></i> Full catering — 3 course meal</li>
+                                    <li><i class="fa-solid fa-check"></i> Senior event coordinator</li>
+                                    <li><i class="fa-solid fa-check"></i> Full AV &amp; sound system</li>
+                                    <li><i class="fa-solid fa-check"></i> 5 rooms for 1 night</li>
+                                    <li><i class="fa-solid fa-check"></i> Welcome &amp; farewell rituals</li>
+                                    <li class="off"><i class="fa-solid fa-xmark"></i> Live entertainment</li>
+                                </ul>
+                                <a href="#enquire" class="ev-btn ev-btn-gold d-block text-center">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ev-pkg-card">
+                            <div class="ev-pkg-head">
+                                <div class="pkg-name">Grand Forest</div>
+                                <div class="pkg-price">₹4L <span>onwards</span></div>
+                                <div class="pkg-guests">Up to 300 guests · Multi-day</div>
+                            </div>
+                            <div class="ev-pkg-body">
+                                <ul class="ev-pkg-list">
+                                    <li><i class="fa-solid fa-check"></i> Full resort exclusive buyout</li>
+                                    <li><i class="fa-solid fa-check"></i> Bespoke luxury decor theme</li>
+                                    <li><i class="fa-solid fa-check"></i> All meals — multiple functions</li>
+                                    <li><i class="fa-solid fa-check"></i> Full coordinator team</li>
+                                    <li><i class="fa-solid fa-check"></i> Premium AV &amp; stage setup</li>
+                                    <li><i class="fa-solid fa-check"></i> All rooms for 2+ nights</li>
+                                    <li><i class="fa-solid fa-check"></i> Photography &amp; videography</li>
+                                    <li><i class="fa-solid fa-check"></i> Live music &amp; entertainment</li>
+                                </ul>
+                                <a href="#enquire" class="ev-btn ev-btn-primary d-block text-center">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             GALLERY
+             ============================================================ -->
+        <section class="ev-section ev-section-cream">
+            <div class="container">
+                <div class="row align-items-end mb-4">
+                    <div class="col-lg-7">
+                        <span class="ev-label wow fadeInUp" data-wow-delay=".1s">Event Gallery</span>
+                        <h2 class="ev-heading wow fadeInUp" data-wow-delay=".2s">Moments from Our <em>Forest Events</em></h2>
+                    </div>
+                    <div class="col-lg-5 text-lg-end wow fadeInUp" data-wow-delay=".3s">
+                        <a href="#enquire" class="ev-btn ev-btn-primary">Plan Your Event</a>
+                    </div>
+                </div>
+                <div class="ev-gallery-grid wow fadeInUp" data-wow-delay=".3s">
+                    <div class="eg eg-wide">
+                        <img src="assets/images/about/16.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="eg">
+                        <img src="assets/images/about/22.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="eg">
+                        <img src="assets/images/about/28.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="eg">
+                        <img src="assets/images/about/32.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="eg">
+                        <img src="assets/images/about/38.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="eg eg-wide">
+                        <img src="assets/images/about/42.jpeg" alt="Event">
+                        <div class="eg-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             PLANNING PROCESS
+             ============================================================ -->
+        <section class="ev-section ev-section-dark">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label ev-label-light wow fadeInUp" data-wow-delay=".1s">How It Works</span>
+                        <h2 class="ev-heading ev-heading-light wow fadeInUp" data-wow-delay=".2s">Your Event in <em>4 Easy Steps</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row align-items-start g-0 wow fadeInUp" data-wow-delay=".3s">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="ev-step-card" style="margin:8px;">
+                            <span class="ev-step-num">1</span>
+                            <div class="ev-step-icon"><i class="fa-solid fa-phone"></i></div>
+                            <h5 class="ev-step-title">Initial Enquiry</h5>
+                            <p class="ev-step-text">Call, email, or fill our enquiry form. Tell us about your event — type, date, guest count, and vision.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="ev-step-card" style="margin:8px;">
+                            <span class="ev-step-num">2</span>
+                            <div class="ev-step-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h5 class="ev-step-title">Site Visit &amp; Planning</h5>
+                            <p class="ev-step-text">Visit Mahua House, explore the venues, meet our coordinator and begin shaping your event plan.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="ev-step-card" style="margin:8px;">
+                            <span class="ev-step-num">3</span>
+                            <div class="ev-step-icon"><i class="fa-solid fa-palette"></i></div>
+                            <h5 class="ev-step-title">Customise &amp; Confirm</h5>
+                            <p class="ev-step-text">Finalise decor, menus, entertainment, and timeline. We handle all vendors and logistics end-to-end.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="ev-step-card" style="margin:8px;">
+                            <span class="ev-step-num">4</span>
+                            <div class="ev-step-icon"><i class="fa-solid fa-star"></i></div>
+                            <h5 class="ev-step-title">Your Perfect Event</h5>
+                            <p class="ev-step-text">Arrive, relax, and celebrate. Our team manages everything on the day — you just enjoy every moment.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             TESTIMONIALS
+             ============================================================ -->
+        <section class="ev-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label wow fadeInUp" data-wow-delay=".1s">Guest Reviews</span>
+                        <h2 class="ev-heading wow fadeInUp" data-wow-delay=".2s">What Our <em>Hosts Say</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ev-testi-card">
+                            <div class="ev-testi-quote">"</div>
+                            <div class="ev-testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="ev-testi-text">We hosted our annual company offsite at Mahua House and it was transformational. The forest setting broke every mental barrier. Our team came back more connected than ever. Will be back next year.</p>
+                            <div class="ev-testi-author">
+                                <img src="assets/images/avatar/avatar-1.jpg" alt="Vikram Singh">
+                                <div>
+                                    <p class="ev-testi-name">Vikram Singh</p>
+                                    <p class="ev-testi-role">Director, TechVentures India &bull; Corporate Retreat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ev-testi-card">
+                            <div class="ev-testi-quote">"</div>
+                            <div class="ev-testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="ev-testi-text">My 50th birthday at the Campfire Amphitheatre was beyond my wildest imagination. The folk musicians, the starry sky, the food — every guest said it was the most magical evening of their life.</p>
+                            <div class="ev-testi-author">
+                                <img src="assets/images/avatar/avatar-3.jpg" alt="Sunita Agarwal">
+                                <div>
+                                    <p class="ev-testi-name">Sunita Agarwal</p>
+                                    <p class="ev-testi-role">Bhopal &bull; Birthday Celebration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ev-testi-card">
+                            <div class="ev-testi-quote">"</div>
+                            <div class="ev-testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                            <p class="ev-testi-text">Our family reunion at Mahua House brought four generations together in a way a hotel never could. The nature trails, the campfire, the birdwatching — everyone had something they loved. Truly special.</p>
+                            <div class="ev-testi-author">
+                                <img src="assets/images/avatar/avatar-5.jpg" alt="Ramesh Tiwari">
+                                <div>
+                                    <p class="ev-testi-name">Ramesh Tiwari</p>
+                                    <p class="ev-testi-role">Indore &bull; Family Reunion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ENQUIRY FORM
+             ============================================================ -->
+        <section class="ev-section ev-section-alt" id="enquire">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ev-label wow fadeInUp" data-wow-delay=".1s">Get In Touch</span>
+                        <h2 class="ev-heading wow fadeInUp" data-wow-delay=".2s">Start Planning Your <em>Event Today</em></h2>
+                        <div class="ev-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ev-body wow fadeInUp" data-wow-delay=".4s">Fill in your details and our events team will respond within 24 hours with availability and a tailored proposal.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 wow fadeInUp" data-wow-delay=".3s">
+                        <div style="background:#fff;border-radius:20px;padding:48px 44px;box-shadow:0 8px 40px rgba(3,54,49,0.1);border:1px solid rgba(3,54,49,0.08);">
+                            <form>
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Full Name</label>
+                                        <input type="text" class="form-control" placeholder="Your name" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="your@email.com" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="+91 00000 00000" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Event Type</label>
+                                        <select class="form-control" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;appearance:none;">
+                                            <option value="" disabled selected>Select event type</option>
+                                            <option>Destination Wedding</option>
+                                            <option>Corporate Retreat</option>
+                                            <option>Birthday Celebration</option>
+                                            <option>Anniversary</option>
+                                            <option>Family Reunion</option>
+                                            <option>Cultural / Music Event</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Event Date</label>
+                                        <input type="date" class="form-control" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Number of Guests</label>
+                                        <select class="form-control" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;appearance:none;">
+                                            <option value="" disabled selected>Select range</option>
+                                            <option>Up to 25</option>
+                                            <option>26 – 50</option>
+                                            <option>51 – 100</option>
+                                            <option>101 – 150</option>
+                                            <option>151 – 300</option>
+                                            <option>300+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Preferred Venue</label>
+                                        <select class="form-control" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;appearance:none;">
+                                            <option value="" disabled selected>Select venue</option>
+                                            <option>Grand Forest Lawn</option>
+                                            <option>The Forest Clearing</option>
+                                            <option>Campfire Amphitheatre</option>
+                                            <option>Teak Grove Pavilion</option>
+                                            <option>Poolside Deck</option>
+                                            <option>Full Resort Exclusive</option>
+                                            <option>Not Sure Yet</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Budget Range</label>
+                                        <select class="form-control" style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;appearance:none;">
+                                            <option value="" disabled selected>Approximate budget</option>
+                                            <option>Under ₹50,000</option>
+                                            <option>₹50,000 – ₹1,50,000</option>
+                                            <option>₹1,50,000 – ₹4,00,000</option>
+                                            <option>₹4,00,000 – ₹10,00,000</option>
+                                            <option>Above ₹10,00,000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#033631;margin-bottom:7px;display:block;">Tell Us About Your Event</label>
+                                        <textarea class="form-control" rows="4" placeholder="Share your vision, theme, special requirements, or any questions..." style="border:1px solid rgba(3,54,49,0.15);border-radius:10px;padding:13px 16px;font-size:14px;color:#033631;background:#fafafa;width:100%;resize:none;"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="ev-btn ev-btn-primary w-100" style="font-size:15px;border-radius:12px;padding:16px;">
+                                            <i class="fa-solid fa-paper-plane me-2"></i> Send Event Enquiry
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA BOTTOM
+             ============================================================ -->
+        <section class="ev-section">
+            <div class="container">
+                <div class="ev-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="ev-label ev-label-light">Let's Create Something</span>
+                        <h2 class="ev-heading ev-heading-light" style="margin-bottom:14px;">
+                            Your Forest Event is <em>One Call Away</em>
+                        </h2>
+                        <p class="ev-body ev-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            From the first conversation to the final farewell, we're with you every step. Let's build an event your guests will never forget.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="tel:+919425651754" class="ev-btn ev-btn-gold"><i class="fa-solid fa-phone me-2"></i>Call Us Now</a>
+                            <a href="contact-us.html" class="ev-btn ev-btn-outline">Send an Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland — a stunning venue for every celebration.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Our Events</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="destination-wedding.html"><i class="fa-solid fa-chevron-right"></i> Weddings</a></li>
+                                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Corporate Retreats</a></li>
+                                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Birthdays</a></li>
+                                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Cultural Events</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
