@@ -1,396 +1,600 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="pus_infotech">
-        <meta name="description" content="HTML Template">
-        <meta name="keywords" content="Html Template">
-        <!-- page title -->
-        <title>Booking | Lucxorio - Luxury Hotel and Resort Booking HTML Template</title>
-        <!-- favicon icon -->
-        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-        <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-        <!-- font awesome css -->
-        <link rel="stylesheet" href="assets/css/all.min.css">        
-        <!-- bootstrap css -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- swiper css -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <!-- magnific css -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <!-- animate css -->
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <!-- main css  -->
-        <link rel="stylesheet" href="assets/css/main.css">
-        <!-- style css -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Explore all rooms and cottages at Mahua House — six unique forest accommodations from eco rooms to luxury suites in the heart of Bhopal's forest.">
+    <meta name="keywords" content="Mahua House Rooms, Forest Resort Rooms Bhopal, Eco Cottage, Nature Suite, Luxury Forest Room, Bamboo Nest, Treetop Loft">
+    <title>Rooms &amp; Cottages | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           ROOMS PAGE — STYLES   prefix: rm-
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        /* ---- Utilities ---- */
+        .rm-section       { padding: 90px 0; }
+        .rm-section-alt   { background: #E7EEEE; }
+        .rm-section-dark  { background: #033631; }
+        .rm-section-cream { background: #faf8f3; }
+
+        .rm-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .rm-label-light { color: rgba(218,165,32,0.9); }
+
+        .rm-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .rm-heading-light { color: #ffffff; }
+        .rm-heading em { font-style: normal; color: #DAA520; }
+
+        .rm-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .rm-divider.centered { justify-content: center; }
+        .rm-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .rm-divider i { font-size: 9px; }
+
+        .rm-body { font-size: 15px; color: rgba(3,54,49,0.6); line-height: 1.85; margin-bottom: 0; }
+        .rm-body-light { color: rgba(255,255,255,0.65); }
+
+        .rm-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .rm-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .rm-btn-primary:hover { background:transparent; color:#033631; }
+        .rm-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .rm-btn-gold:hover { background:transparent; color:#DAA520; }
+        .rm-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.5); }
+        .rm-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .rm-btn-outline-dark { background:transparent; color:#033631; border-color:rgba(3,54,49,0.4); }
+        .rm-btn-outline-dark:hover { background:#033631; color:#fff; border-color:#033631; }
+        .rm-btn-sm { padding: 10px 22px; font-size: 13px; }
+
+        /* ---- Breadcrumb ---- */
+        .rm-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 20px;
+            display: flex; gap: 8px; align-items: center;
+            font-size: 13px; color: rgba(255,255,255,0.65);
+        }
+        .rm-breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
+        .rm-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .rm-breadcrumb a:hover { color: #DAA520; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .rm-hero {
+            position: relative; height: 600px;
+            background: linear-gradient(135deg, rgba(3,54,49,0.88) 0%, rgba(3,54,49,0.5) 60%, rgba(0,0,0,0.2) 100%),
+                        url('assets/images/room/room-1.jpg') center/cover no-repeat;
+            display: flex; align-items: center;
+        }
+        .rm-hero-content { position: relative; z-index: 2; }
+        .rm-hero h1 {
+            font-size: clamp(36px, 5.5vw, 66px); font-weight: 800;
+            line-height: 1.05; margin-bottom: 18px; color: #fff;
+        }
+        .rm-hero h1 em { font-style: normal; color: #DAA520; }
+        .rm-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 540px; margin-bottom: 32px; }
+        .rm-hero-shape { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3; line-height: 0; }
+        .rm-hero-shape img { width: 100%; }
+
+        .rm-hero-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+        .rm-hero-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+            padding: 8px 18px; font-size: 13px; font-weight: 600; color: #fff;
+        }
+        .rm-hero-pill i { color: #DAA520; }
+
+        /* ============================================================
+           BOOKING BAR
+           ============================================================ */
+        .rm-booking-bar {
+            background: #033631; border-radius: 20px; padding: 30px 36px;
+            display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+            box-shadow: 0 8px 48px rgba(3,54,49,0.25);
+            position: relative; z-index: 10; margin-top: -60px;
+        }
+        .rm-bb-field { flex: 1; min-width: 160px; }
+        .rm-bb-label {
+            display: block; font-size: 10px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            color: rgba(255,255,255,0.45); margin-bottom: 6px;
+        }
+        .rm-bb-field input,
+        .rm-bb-field select {
+            width: 100%; background: transparent; border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+            color: #fff; font-size: 15px; font-weight: 600;
+            padding: 8px 0; outline: none; font-family: inherit;
+        }
+        .rm-bb-field input::placeholder { color: rgba(255,255,255,0.4); }
+        .rm-bb-field select option { color: #033631; background: #fff; }
+        .rm-bb-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+
+        /* ============================================================
+           FILTER TABS
+           ============================================================ */
+        .rm-filters {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            margin-bottom: 40px; justify-content: center;
+        }
+        .rm-filter-btn {
+            padding: 10px 24px; border-radius: 100px;
+            border: 1.5px solid rgba(3,54,49,0.15);
+            background: #fff; color: rgba(3,54,49,0.65);
+            font-size: 13px; font-weight: 600; cursor: pointer;
+            transition: all 0.25s ease; text-decoration: none;
+        }
+        .rm-filter-btn:hover,
+        .rm-filter-btn.active {
+            background: #033631; color: #fff; border-color: #033631;
+        }
+
+        /* ============================================================
+           FEATURED SUITE (full-width split)
+           ============================================================ */
+        .rm-featured {
+            display: grid; grid-template-columns: 55% 45%;
+            border-radius: 24px; overflow: hidden;
+            box-shadow: 0 12px 60px rgba(3,54,49,0.15);
+        }
+        .rm-featured-imgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 4px;
+        }
+        .rm-featured-imgs .rfi { overflow: hidden; position: relative; }
+        .rm-featured-imgs .rfi img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-featured-imgs .rfi:hover img { transform: scale(1.06); }
+        .rm-featured-imgs .rfi-main { grid-row: 1 / 3; }
+        .rm-featured-content {
+            background: #fff; padding: 52px 48px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .rm-price-tag {
+            display: inline-flex; align-items: baseline; gap: 4px;
+            margin-bottom: 28px;
+        }
+        .rm-price-tag .curr { font-size: 20px; color: #033631; font-weight: 700; }
+        .rm-price-tag .amt  { font-size: 44px; color: #033631; font-weight: 800; line-height: 1; }
+        .rm-price-tag .per  { font-size: 13px; color: rgba(3,54,49,0.5); font-weight: 500; }
+        .rm-amenity-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 12px; margin: 20px 0 28px;
+        }
+        .rm-amenity-item {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 13px; color: rgba(3,54,49,0.7); font-weight: 500;
+        }
+        .rm-amenity-item i { color: #DAA520; width: 16px; }
+        .rm-featured-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(218,165,32,0.12); color: #a07a00;
+            border-radius: 100px; padding: 6px 16px;
+            font-size: 11px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 16px;
+        }
+
+        /* ============================================================
+           ROOM CARD (grid)
+           ============================================================ */
+        .rm-card {
+            background: #fff; border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.06);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .rm-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 56px rgba(3,54,49,0.13);
+        }
+
+        /* Image area */
+        .rm-card-img {
+            position: relative; height: 240px; overflow: hidden;
+        }
+        .rm-card-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-card:hover .rm-card-img img { transform: scale(1.06); }
+
+        .rm-card-badges {
+            position: absolute; top: 14px; left: 14px;
+            display: flex; gap: 6px; flex-wrap: wrap;
+        }
+        .rm-badge {
+            font-size: 10px; font-weight: 700; letter-spacing: 1px;
+            text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
+        }
+        .rm-badge-gold  { background: #DAA520; color: #033631; }
+        .rm-badge-green { background: #033631; color: #fff; }
+        .rm-badge-white { background: #fff; color: #033631; }
+        .rm-badge-eco   { background: #2d8c5e; color: #fff; }
+
+        .rm-card-price {
+            position: absolute; bottom: 0; right: 0;
+            background: linear-gradient(135deg, #033631, #055a50);
+            color: #fff; padding: 10px 18px 10px 22px;
+            border-radius: 16px 0 0 0;
+        }
+        .rm-card-price .from { font-size: 10px; color: rgba(255,255,255,0.6); display: block; }
+        .rm-card-price .amount { font-size: 20px; font-weight: 800; color: #DAA520; line-height: 1; }
+        .rm-card-price .night { font-size: 10px; color: rgba(255,255,255,0.6); }
+
+        /* Body area */
+        .rm-card-body { padding: 26px 28px 30px; flex: 1; display: flex; flex-direction: column; }
+        .rm-card-type { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #DAA520; margin-bottom: 6px; display: block; }
+        .rm-card-title { font-size: 21px; font-weight: 700; color: #033631; margin-bottom: 10px; }
+        .rm-card-desc { font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.75; margin-bottom: 18px; flex: 1; }
+
+        .rm-card-specs {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+        }
+        .rm-spec {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #E7EEEE; border-radius: 100px;
+            padding: 6px 14px; font-size: 12px; font-weight: 600; color: #033631;
+        }
+        .rm-spec i { color: #DAA520; font-size: 11px; }
+
+        .rm-card-amenities {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
+        }
+        .rm-amenity-tag {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 12px; color: rgba(3,54,49,0.65);
+            border: 1px solid rgba(3,54,49,0.1); border-radius: 6px;
+            padding: 5px 10px;
+        }
+        .rm-amenity-tag i { color: #DAA520; font-size: 10px; }
+
+        .rm-card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 12px; padding-top: 18px; border-top: 1px solid rgba(3,54,49,0.08);
+            flex-wrap: wrap;
+        }
+        .rm-card-capacity {
+            font-size: 13px; color: rgba(3,54,49,0.6); font-weight: 600;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .rm-card-capacity i { color: #DAA520; }
+
+        /* ============================================================
+           ROOM DETAIL ROW (alternating full-width sections)
+           ============================================================ */
+        .rm-detail-row {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 0; border-radius: 24px; overflow: hidden;
+            box-shadow: 0 8px 40px rgba(3,54,49,0.1);
+            margin-bottom: 32px;
+        }
+        .rm-detail-row.reverse { direction: rtl; }
+        .rm-detail-row.reverse > * { direction: ltr; }
+
+        .rm-detail-img {
+            position: relative; overflow: hidden; min-height: 420px;
+        }
+        .rm-detail-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .rm-detail-row:hover .rm-detail-img img { transform: scale(1.04); }
+        .rm-detail-img-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(3,54,49,0.4) 0%, transparent 50%);
+        }
+        .rm-detail-img-badge {
+            position: absolute; top: 20px; left: 20px;
+            display: flex; gap: 8px; flex-wrap: wrap;
+        }
+        .rm-detail-img-price {
+            position: absolute; bottom: 20px; left: 20px;
+        }
+        .rm-detail-img-price .dp-from { font-size: 11px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 2px; }
+        .rm-detail-img-price .dp-amount { font-size: 28px; font-weight: 800; color: #DAA520; line-height: 1; }
+        .rm-detail-img-price .dp-per { font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 4px; }
+
+        .rm-detail-content {
+            background: #fff; padding: 50px 48px;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .rm-detail-features {
+            list-style: none; padding: 0; margin: 0 0 24px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .rm-detail-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: rgba(3,54,49,0.7); line-height: 1.5;
+        }
+        .rm-detail-features li i { color: #DAA520; margin-top: 3px; font-size: 11px; flex-shrink: 0; }
+        .rm-detail-specs {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;
+        }
+
+        /* ============================================================
+           COMPARISON TABLE
+           ============================================================ */
+        .rm-compare-table {
+            width: 100%; border-collapse: collapse; font-size: 14px;
+        }
+        .rm-compare-table thead tr { background: #033631; color: #fff; }
+        .rm-compare-table thead th {
+            padding: 16px 18px; text-align: left;
+            font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+        }
+        .rm-compare-table thead th:first-child { border-radius: 12px 0 0 0; }
+        .rm-compare-table thead th:last-child  { border-radius: 0 12px 0 0; }
+        .rm-compare-table tbody tr { border-bottom: 1px solid rgba(3,54,49,0.07); transition: background 0.2s; }
+        .rm-compare-table tbody tr:hover { background: #E7EEEE; }
+        .rm-compare-table tbody tr:last-child { border-bottom: none; }
+        .rm-compare-table td { padding: 14px 18px; color: rgba(3,54,49,0.7); vertical-align: middle; }
+        .rm-compare-table td:first-child { font-weight: 700; color: #033631; }
+        .rm-compare-table .rc-price { color: #DAA520; font-weight: 800; font-size: 16px; }
+        .rm-compare-table .rc-check { color: #2d8c5e; font-size: 14px; }
+        .rm-compare-table .rc-cross { color: rgba(3,54,49,0.2); font-size: 12px; }
+
+        /* ============================================================
+           AMENITIES ICONS SECTION
+           ============================================================ */
+        .rm-amenity-block {
+            background: #fff; border-radius: 18px; padding: 36px 28px;
+            text-align: center; border: 1px solid rgba(3,54,49,0.07);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.05);
+            transition: transform 0.3s, box-shadow 0.3s; height: 100%;
+        }
+        .rm-amenity-block:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 44px rgba(3,54,49,0.11);
+        }
+        .rm-amenity-block-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(3,54,49,0.07);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px; transition: background 0.3s;
+        }
+        .rm-amenity-block-icon i { font-size: 24px; color: #033631; transition: color 0.3s; }
+        .rm-amenity-block:hover .rm-amenity-block-icon { background: #033631; }
+        .rm-amenity-block:hover .rm-amenity-block-icon i { color: #DAA520; }
+        .rm-amenity-block h5 { font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 8px; }
+        .rm-amenity-block p { font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.65; margin: 0; }
+
+        /* ============================================================
+           POLICIES STRIP
+           ============================================================ */
+        .rm-policy-card {
+            background: #fff; border-radius: 16px; padding: 28px 24px;
+            border-left: 4px solid #DAA520; height: 100%;
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
+        }
+        .rm-policy-card h5 {
+            font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .rm-policy-card h5 i { color: #DAA520; }
+        .rm-policy-list { list-style: none; padding: 0; margin: 0; }
+        .rm-policy-list li {
+            font-size: 13px; color: rgba(3,54,49,0.65);
+            padding: 5px 0; border-bottom: 1px solid rgba(3,54,49,0.06);
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .rm-policy-list li:last-child { border-bottom: none; }
+        .rm-policy-list li i { color: #DAA520; font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+
+        /* ============================================================
+           CTA
+           ============================================================ */
+        .rm-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #055a50 100%);
+            border-radius: 24px; padding: 70px 50px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .rm-cta-box::before {
+            content: ''; position: absolute;
+            top: -80px; right: -80px; width: 300px; height: 300px;
+            border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .rm-cta-box::after {
+            content: ''; position: absolute;
+            bottom: -60px; left: -60px; width: 220px; height: 220px;
+            border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1199px) {
+            .rm-featured { grid-template-columns: 1fr 1fr; }
+            .rm-featured-content { padding: 40px 36px; }
+        }
+        @media (max-width: 991px) {
+            .rm-featured { grid-template-columns: 1fr; }
+            .rm-featured-imgs { grid-template-rows: 200px 200px; }
+            .rm-featured-imgs .rfi-main { grid-row: auto; }
+            .rm-detail-row { grid-template-columns: 1fr; }
+            .rm-detail-row.reverse { direction: ltr; }
+            .rm-detail-img { min-height: 280px; }
+            .rm-detail-content { padding: 36px 32px; }
+            .rm-booking-bar { padding: 24px 20px; }
+            .rm-bb-divider { display: none; }
+        }
+        @media (max-width: 767px) {
+            .rm-amenity-grid { grid-template-columns: 1fr; }
+            .rm-cta-box { padding: 50px 28px; }
+        }
+        @media (max-width: 575px) {
+            .rm-hero h1 { font-size: 32px; }
+            .rm-price-tag .amt { font-size: 34px; }
+            .rm-booking-bar { margin-top: 0; border-radius: 0; }
+        }
+    </style>
 </head>
 
-    <body> 
-        <!-- page wrapper start -->
-        <div class="page-wrapper">
-            <!-- preloader start --> 
-            <div class="preloader">
-                <div class="preloader-icon">   
-                    <img src="assets/images/loader.svg" alt="loader image">
-                </div> 
-                <div class="preloader-text">
-                    <p>L</p>
-                    <p>u</p>
-                    <p>c</p>
-                    <p>x</p>
-                    <p>o</p>
-                    <p>r</p>
-                    <p>i</p>
-                    <p>o</p>
-                </div>
-            </div> 
-            <!-- preloader end -->
-    
-            <!-- back to top start -->
-            <button id="back-top" class="back-to-top" aria-label="back to top">
-                <i class="fa-solid fa-chevron-up"></i>
-            </button>
-            <!-- back to top end --> 
+<body>
+<div class="page-wrapper">
 
-            <!-- mouse cursor start -->
-            <div class="mouse-cursor cursor-outer"></div>
-            <div class="mouse-cursor cursor-inner"></div>
-            <!-- mouse cursor end -->  
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
 
-            <!-- offcanvas sidebar start -->
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar" aria-labelledby="offcanvas-sidebar">
-                <!-- offcanvas header start -->
-                <div class="offcanvas-header">
-                    <!-- offcanvas logo start -->
-                    <div class="offcanvas-logo">
-                        <figure>
-                            <img src="assets/images/logo/logo.svg" alt="offcanvas logo">
-                        </figure>                        
-                    </div>
-                    <!-- offcanvas logo emd -->
-                    <!-- offcanvas close start -->
-                    <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-                    <!-- offcanvas close end -->
-                </div>
-                <!-- offcanvas header end -->
-                <!-- offcanvas body start -->
-                <div class="offcanvas-body">
-                    <!-- menu outer start -->
-                    <div class="mobile-menu">
-                        <!-- Here menu will come automatically via javascript / same menu as in header -->
-                    </div>
-                    <!-- menu outer end -->
-                    <!-- offcanvas about start -->
-                    <div class="offcanvas-about d-none d-xl-block">
-                        <p>There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don't look even slightly believable.</p>
-                    </div>
-                    <!-- offcanvas about end -->
-                    <!-- offcanvas contact start -->
-                    <div class="offcanvas-contact">
-                        <!-- widget-contact start -->
-                        <div class="widget widget-contact">
-                            <!-- widget title start -->
-                            <div class="widget-title">
-                                <h3 class="line-anime">Contact Info</h3>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
                             </div>
-                            <!-- widget title end -->
-                            <!-- widget content start -->
-                            <div class="widget-content">
-                                <!-- offcanvas cta item start -->
-                                <div class="offcanvas-cta-item">
-                                    <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <p>123 Serenity Lane, Suite 101, Hometown, CA 12345</p>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                     <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-envelope"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <a href="mailto:info@example.com">info@example.com</a>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                    <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <a href="tel:123446788">+1 234 467 88</a>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                </div>
-                                <!-- offcanvas cta item end -->
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
                             </div>
-                            <!-- widget content end -->
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
                         </div>
-                        <!-- widget-contact end -->
                     </div>
-                    <!-- offcanvas contact end -->
-                    <!-- offcanvas button wapper start -->
-                    <div class="offcanvas-button-wapper"> 
-                        <a href="booking.html" class="theme-button style-1" aria-label="Book Now">
-                            Book Now
-                        </a>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
                     </div>
-                    <!-- offcanvas button wapper end -->
-                    <!-- offcanvas social start -->
-                    <div class="offcanvas-social">
-                        <!-- widget social media start -->
-                        <div class="widget widget-social-media"> 
-                            <!-- widget content start -->
-                            <div class="widget-content">
-                                <ul class="social-icon">
-                                    <li>
-                                        <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
                                 </ul>
                             </div>
-                            <!-- widget content end -->
                         </div>
-                        <!-- widget social media end -->
                     </div>
-                    <!-- offcanvas-social end -->
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- offcanvas body end -->
             </div>
-            <!-- offcanvas sidebar end -->
-
-            <!-- header start -->
-            <header class="header header-1 background-one">
-                <!-- header top start -->
-                <div class="header-top d-none d-xl-block">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center justify-content-lg-between align-items-center">
-                            <div class="col-auto">
-                                <!-- header top left start -->
-                                <div class="header-top-left">
-                                    <!-- header contact info -->
-                                    <div class="header-contact-info">
-                                        <ul>
-                                            <li>
-                                                <p><i class="fa-solid fa-location-dot"></i> 123 Serenity Lane, Suite 101 UK</p>
-                                            </li> 
-                                            <li>
-                                                <p><i class="fa-solid fa-phone-volume"></i> +1 234 467 88</p>
-                                            </li>
-                                        </ul>
+        </div>
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
                                     </div>
                                 </div>
-                                <!-- header top left end -->
                             </div>
-                            <div class="col-auto">
-                                <!-- header top right start -->
-                                <div class="header-top-right">
-                                    <!-- header social icon -->
-                                    <div class="header-social-icon">
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
                                         <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
                                             <li>
-                                                <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- header top right end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- header top end -->
-                <!-- header lower start -->
-                <div class="header-lower">
-                    <div class="container-fluid">
-                        <div class="row align-items-center justify-content-between g-0">
-                            <div class="col-12"> 
-                                <!-- header content start -->
-                                <div class="header-content d-flex justify-content-between align-items-center">
-                                    <!-- logo box start -->
-                                    <div class="logo-box">
-                                        <div class="logo">
-                                            <a href="index.html">
-                                                <figure>
-                                                    <img src="assets/images/logo/logo-white.svg" alt="header logo">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- logo box end  --> 
-                                    <!-- header left start -->
-                                    <div class="header-left">
-                                        <!-- header sidebar  -->
-                                        <div class="header-sidebar">
-                                            <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
-                                                <span></span>
-                                                <span></span>
-                                            </a>
-                                        </div> 
-                                    </div>
-                                    <!-- header right end -->
-
-                                    <!-- header navigation start -->
-                                    <div class="header-navigation d-flex align-items-center"> 
-                                        <!-- main menu -->
-                                        <div class="main-menu">
-                                            <nav id="mobile-menu">
-                                                <ul>
-                                                    <li class="menu-thumb">
-                                                        <a href="index.html">Home<i class="fa-solid fa-angle-down"></i></a>
-                                                        <ul class="has-homemenu">
-                                                            <li>
-                                                                <a href="index.html">
-                                                                    <img src="assets/images/header/home-1.jpg" alt="home one">
-                                                                    Luxury Hotel - Home One
-                                                                </a> 
-                                                            </li>
-                                                            <li>
-                                                                <a href="index-2.html">
-                                                                    <img src="assets/images/header/home-2.jpg" alt="home two">
-                                                                    Luxury Resort - Home Two
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="index-3.html">
-                                                                    <img src="assets/images/header/home-3.jpg" alt="home three">
-                                                                    Modern Villa - Home Three
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="room.html">Room <i class="fa-solid fa-chevron-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="room.html">Room Grid</a></li>
-                                                            <li><a href="room-list.html">Room List</a></li>
-                                                            <li><a href="room-details.html">Room Details</a></li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="about.html">Pages<i class="fa-solid fa-angle-down"></i></a>                                                        
-                                                        <ul class="submenu">
-                                                            <li><a href="about.html">About Us</a></li>
-                                                            <li><a href="booking.html">Book An Appointment</a></li> 
-                                                            <li class="has-dropdown">
-                                                                <a href="team.html">Team <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="team.html">Team</a></li>
-                                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                                </ul>
-                                                            </li> 
-                                                            <li><a href="restaurant.html">Restaurant</a></li> 
-                                                            <li class="has-dropdown">
-                                                                <a href="offer.html">Offer <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="offer.html">Offer</a></li>
-                                                                    <li><a href="offer-details.html">Offer Details</a></li>
-                                                                </ul>
-                                                            </li> 
-                                                            <li><a href="facilities.html">Hotel Facilities</a></li> 
-                                                            <li><a href="gallery.html">Gallery</a></li> 
-                                                            <li><a href="pricing.html">Pricing</a></li>
-                                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                                            <li><a href="faq.html">Faq's</a></li>
-                                                            <li><a href="error.html">404 Error</a></li>
-                                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                            <li class="has-dropdown">
-                                                                <a href="sign-in.html">Authentication <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="login.html">Login</a></li>
-                                                                    <li><a href="sign-up.html">Sign Up</a></li>
-                                                                    <li><a href="forget-password.html">Forgot Password</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="center-logo">
-                                                        <div class="logo">
-                                                            <img class="logo-shape" src="assets/images/shape/logo-shape.png" alt="logo shape">
-                                                            <a href="index.html">
-                                                                <figure>
-                                                                    <img src="assets/images/logo/logo-black.svg" alt="header logo">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <a href="services.html">Services<i class="fa-solid fa-angle-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="services.html">Services Grid</a></li>
-                                                            <li><a href="services-list.html">Services List</a></li>
-                                                            <li><a href="services-details.html">Services Details</a></li>
-                                                        </ul>
-                                                    </li>                                                    
-                                                    <li>
-                                                        <a href="blog.html">Blog <i class="fa-solid fa-chevron-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="blog.html">Blog Grid</a></li>
-                                                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="contact.html">Contact Us</a>
-                                                    </li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="#">Ayurveda Wellness</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
                                                 </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <!-- header navigation end -->
-
-                                    <!-- header right start -->
-                                    <div class="header-right d-flex align-items-center">
-                                        <!-- header button -->
-                                        <div class="header-button">
-                                            <a href="booking.html" class="theme-button style-1" aria-label="Book Now">
-                                                Book Now
-                                            </a>
-                                        </div> 
-                                    </div>
-                                    <!-- header right end -->
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
                                 </div>
-                                <!-- header content end -->
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- header lower end -->
-            </header>
-            <!-- header end-->
+            </div>
+        </div>
+    </header>
 
             <!-- main start -->
             <main class="main">
@@ -405,17 +609,10 @@
                                     <div class="breadcrumb-content">
                                         <!-- breadcrumb title start -->
                                         <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
-                                            <h1>Book An Appointment</h1>
+                                            <h1 style="font-size: 30px;"></h1>
                                         </div>
                                         <!-- breadcrumb title end -->
-                                        <!-- nav start -->
-                                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a href="index.html">Home</a></li> 
-                                                <li class="breadcrumb-item active" aria-current="page">Book An Appointment</li>
-                                            </ol>
-                                        </nav>
-                                        <!-- nav end -->
+                       
                                     </div>
                                     <!-- breadcrumb content end -->
                                 </div>
@@ -593,174 +790,84 @@
                 <!-- subscribe section end -->
             </main>
             <!-- main end -->
-
-            <!-- footer start -->
-            <footer class="footer footer-1">
-                <!-- footer bottom start -->
-                <div class="footer-bottom">
-                    <div class="container">
-                        <!-- footer widget wrap start -->
-                        <div class="footer-widget-wrap">
-                            <div class="row justify-content-between">
-                                <div class="col-xl-4 col-lg-12">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
-                                        <div class="footer-logo mb-20">
-                                            <a href="index.html">
-                                                <figure>
-                                                    <img src="assets/images/logo/logo-white.svg" alt="footer logo">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asin cididunt ut labore et dolore magna ali qua. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asin cididunt ut labore et dolore magna ali qua. Lorem ipsum dolor sit amet.</p>
-                                        <!-- footer social icon start -->
-                                        <div class="footer-social-icon">
-                                            <ul class="social-icon">
-                                                <li>
-                                                    <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- footer social icon end -->
-                                        <!-- degree text start -->
-                                        <div class="degree-text mt-40">
-                                            <a href="index.html">
-                                                <img src="assets/images/footer/degree.svg" alt="degree">
-                                            </a>
-                                        </div>
-                                        <!-- degree text end -->
-                                    </div>
-                                    <!-- footer widget end -->
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
                                 </div>
-                                <div class="col-xl-2 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 class="footer-widget-title line-anime">Quick Links</h3>
-                                        <!-- widget link start -->
-                                        <div class="widget-link">
-                                            <ul class="link">
-                                                <li>
-                                                    <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
-                                                </li>
-                                                <li>
-                                                    <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book An Appointment</a>
-                                                </li>
-                                                <li>
-                                                    <a href="faq.html"><i class="fa-solid fa-chevron-right"></i> FAQ</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- widget link end -->
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
-                                        <h3 class="footer-widget-title line-anime">Explore</h3>
-                                        <!-- widget link start -->
-                                        <div class="widget-link">
-                                            <ul class="link">
-                                                <li>
-                                                    <a href="offer.html"><i class="fa-solid fa-chevron-right"></i> Offers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="room.html"><i class="fa-solid fa-chevron-right"></i> Rooms</a>
-                                                </li>
-                                                <li>
-                                                    <a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a>
-                                                </li>
-                                                <li>
-                                                    <a href="testimonials.html"><i class="fa-solid fa-chevron-right"></i> Testimonials</a>
-                                                </li>
-                                                <li>
-                                                    <a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> Restaurant</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- widget link end -->
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                                <div class="col-xl-3 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
-                                        <h4 class="footer-widget-title line-anime">Get In Touch</h4>
-                                        <div class="widget-contact">
-                                            <ul class="contact-info">
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                        123 Serenity Lane, Suite 101, Hometown, CA 12345
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-envelope"></i>
-                                                        info@example.com
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-phone-volume"></i>
-                                                        +1 234 467 88
-                                                    </p>
-                                                </li> 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House offers six unique forest rooms and cottages — from eco bamboo nests to signature suites — all surrounded by 3.5 acres of natural woodland.</p>
                             </div>
                         </div>
-                        <!-- footer widget wrap end -->
-                    </div>
-                </div>
-                <!-- footer bottom end -->
-                <!-- footer copyright start -->
-                <div class="footer-copyright">
-                    <div class="container">
-                        <!-- footer copyright wrap start -->
-                        <div class="footer-copyright-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <!-- footer copyright start -->
-                                    <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
-                                        <p class="m-0">&#169; Copyright 2025 Lucxorio All Rights Reserved</p>
-                                    </div>
-                                    <!-- footer copyright end -->
-                                </div>
-                                <div class="col-lg-6 text-lg-end">
-                                    <!-- footer bottom nav start -->
-                                    <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
-                                        <li><a class="line-effect" href="contact.html">Terms and Conditions</a></li>
-                                        <li><a class="line-effect" href="contact.html">Privacy Policy</a></li>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Stay Info</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
                                     </ul>
-                                    <!-- footer bottom nav end -->
                                 </div>
                             </div>
                         </div>
-                        <!-- footer copyright wrap end -->
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Our Rooms</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Forest View Room</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Teak Cottage</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Mahua Suite</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Family Cabin</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Treetop Loft</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- footer copyright end -->
-            </footer>
-            <!-- footer end -->
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
         </div>
         <!-- page wrapper end -->
 
