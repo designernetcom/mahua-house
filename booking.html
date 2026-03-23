@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mahua House">
-    <meta name="description" content="Explore all rooms and cottages at Mahua House — six unique forest accommodations from eco rooms to luxury suites in the heart of Bhopal's forest.">
-    <meta name="keywords" content="Mahua House Rooms, Forest Resort Rooms Bhopal, Eco Cottage, Nature Suite, Luxury Forest Room, Bamboo Nest, Treetop Loft">
-    <title>Rooms &amp; Cottages | Mahua House</title>
+    <meta name="description" content="Book your stay at Mahua House — three comfortable forest rooms and cottages in Bhopal. Book directly via WhatsApp for instant confirmation.">
+    <meta name="keywords" content="Book Mahua House, Forest Resort Bhopal Booking, WhatsApp Booking, Eco Resort Bhopal">
+    <title>Book a Room | Mahua House</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -21,441 +21,230 @@
 
     <style>
         /* =============================================
-           ROOMS PAGE — STYLES   prefix: rm-
+           BOOKING PAGE — STYLES   prefix: bk-
            Palette: #033631 | #DAA520 | #E7EEEE
            ============================================= */
 
-        /* ---- Utilities ---- */
-        .rm-section       { padding: 90px 0; }
-        .rm-section-alt   { background: #E7EEEE; }
-        .rm-section-dark  { background: #033631; }
-        .rm-section-cream { background: #faf8f3; }
+        .bk-section       { padding: 90px 0; }
+        .bk-section-alt   { background: #E7EEEE; }
+        .bk-section-dark  { background: #033631; }
+        .bk-section-cream { background: #faf8f3; }
 
-        .rm-label {
+        .bk-label {
             display: inline-block; font-size: 11px; font-weight: 700;
             letter-spacing: 4px; text-transform: uppercase;
             color: #DAA520; margin-bottom: 12px;
         }
-        .rm-label-light { color: rgba(218,165,32,0.9); }
+        .bk-label-light { color: rgba(218,165,32,0.9); }
 
-        .rm-heading {
+        .bk-heading {
             font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
             color: #033631; line-height: 1.2; margin-bottom: 14px;
         }
-        .rm-heading-light { color: #ffffff; }
-        .rm-heading em { font-style: normal; color: #DAA520; }
+        .bk-heading-light { color: #ffffff; }
+        .bk-heading em { font-style: normal; color: #DAA520; }
 
-        .rm-divider {
+        .bk-divider {
             display: flex; align-items: center;
             gap: 12px; color: #DAA520; margin-bottom: 22px;
         }
-        .rm-divider.centered { justify-content: center; }
-        .rm-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
-        .rm-divider i { font-size: 9px; }
+        .bk-divider.centered { justify-content: center; }
+        .bk-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .bk-divider i { font-size: 9px; }
 
-        .rm-body { font-size: 15px; color: rgba(3,54,49,0.6); line-height: 1.85; margin-bottom: 0; }
-        .rm-body-light { color: rgba(255,255,255,0.65); }
+        .bk-body { font-size: 15px; color: rgba(3,54,49,0.6); line-height: 1.85; margin-bottom: 0; }
+        .bk-body-light { color: rgba(255,255,255,0.65); }
 
-        .rm-btn {
-            display: inline-block; padding: 13px 32px;
-            border-radius: 100px; font-size: 14px; font-weight: 700;
+        .bk-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 32px; border-radius: 100px; font-size: 14px; font-weight: 700;
             letter-spacing: 0.5px; text-decoration: none;
             transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
         }
-        .rm-btn-primary { background:#033631; color:#fff; border-color:#033631; }
-        .rm-btn-primary:hover { background:transparent; color:#033631; }
-        .rm-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
-        .rm-btn-gold:hover { background:transparent; color:#DAA520; }
-        .rm-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.5); }
-        .rm-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
-        .rm-btn-outline-dark { background:transparent; color:#033631; border-color:rgba(3,54,49,0.4); }
-        .rm-btn-outline-dark:hover { background:#033631; color:#fff; border-color:#033631; }
-        .rm-btn-sm { padding: 10px 22px; font-size: 13px; }
+        .bk-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .bk-btn-primary:hover { background:transparent; color:#033631; }
+        .bk-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .bk-btn-gold:hover { background:transparent; color:#DAA520; }
+        .bk-btn-green   { background:#25D366; color:#fff; border-color:#25D366; }
+        .bk-btn-green:hover { background:#1ebe5a; border-color:#1ebe5a; }
+        .bk-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.5); }
+        .bk-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .bk-btn-outline-dark { background:transparent; color:#033631; border-color:rgba(3,54,49,0.35); }
+        .bk-btn-outline-dark:hover { background:#033631; color:#fff; border-color:#033631; }
+        .bk-btn-lg { padding: 16px 40px; font-size: 16px; }
 
-        /* ---- Breadcrumb ---- */
-        .rm-breadcrumb {
-            list-style: none; padding: 0; margin: 0 0 20px;
-            display: flex; gap: 8px; align-items: center;
-            font-size: 13px; color: rgba(255,255,255,0.65);
+        /* ---- Hero ---- */
+        .bk-hero {
+            position: relative; height: 560px;
+            background: url('assets/images/about/14.jpeg') center center / cover no-repeat;
+            display: flex; align-items: flex-end; overflow: hidden;
         }
-        .rm-breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
-        .rm-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        .rm-breadcrumb a:hover { color: #DAA520; }
-
-        /* ============================================================
-           HERO
-           ============================================================ */
-        .rm-hero {
-            position: relative; height: 600px;
-            background: linear-gradient(135deg, rgba(3,54,49,0.88) 0%, rgba(3,54,49,0.5) 60%, rgba(0,0,0,0.2) 100%),
-                        url('assets/images/room/room-1.jpg') center/cover no-repeat;
-            display: flex; align-items: center;
+        .bk-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.2) 0%, rgba(3,54,49,0.88) 100%);
         }
-        .rm-hero-content { position: relative; z-index: 2; }
-        .rm-hero h1 {
-            font-size: clamp(36px, 5.5vw, 66px); font-weight: 800;
-            line-height: 1.05; margin-bottom: 18px; color: #fff;
-        }
-        .rm-hero h1 em { font-style: normal; color: #DAA520; }
-        .rm-hero p { font-size: 16px; color: rgba(255,255,255,0.78); max-width: 540px; margin-bottom: 32px; }
-        .rm-hero-shape { position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3; line-height: 0; }
-        .rm-hero-shape img { width: 100%; }
-
-        .rm-hero-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
-        .rm-hero-pill {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(6px);
-            border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
-            padding: 8px 18px; font-size: 13px; font-weight: 600; color: #fff;
-        }
-        .rm-hero-pill i { color: #DAA520; }
-
-        /* ============================================================
-           BOOKING BAR
-           ============================================================ */
-        .rm-booking-bar {
-            background: #033631; border-radius: 20px; padding: 30px 36px;
-            display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-            box-shadow: 0 8px 48px rgba(3,54,49,0.25);
-            position: relative; z-index: 10; margin-top: -60px;
-        }
-        .rm-bb-field { flex: 1; min-width: 160px; }
-        .rm-bb-label {
-            display: block; font-size: 10px; font-weight: 700;
-            letter-spacing: 2px; text-transform: uppercase;
-            color: rgba(255,255,255,0.45); margin-bottom: 6px;
-        }
-        .rm-bb-field input,
-        .rm-bb-field select {
-            width: 100%; background: transparent; border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.18);
-            color: #fff; font-size: 15px; font-weight: 600;
-            padding: 8px 0; outline: none; font-family: inherit;
-        }
-        .rm-bb-field input::placeholder { color: rgba(255,255,255,0.4); }
-        .rm-bb-field select option { color: #033631; background: #fff; }
-        .rm-bb-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
-
-        /* ============================================================
-           FILTER TABS
-           ============================================================ */
-        .rm-filters {
-            display: flex; flex-wrap: wrap; gap: 10px;
-            margin-bottom: 40px; justify-content: center;
-        }
-        .rm-filter-btn {
-            padding: 10px 24px; border-radius: 100px;
-            border: 1.5px solid rgba(3,54,49,0.15);
-            background: #fff; color: rgba(3,54,49,0.65);
-            font-size: 13px; font-weight: 600; cursor: pointer;
-            transition: all 0.25s ease; text-decoration: none;
-        }
-        .rm-filter-btn:hover,
-        .rm-filter-btn.active {
-            background: #033631; color: #fff; border-color: #033631;
-        }
-
-        /* ============================================================
-           FEATURED SUITE (full-width split)
-           ============================================================ */
-        .rm-featured {
-            display: grid; grid-template-columns: 55% 45%;
-            border-radius: 24px; overflow: hidden;
-            box-shadow: 0 12px 60px rgba(3,54,49,0.15);
-        }
-        .rm-featured-imgs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 4px;
-        }
-        .rm-featured-imgs .rfi { overflow: hidden; position: relative; }
-        .rm-featured-imgs .rfi img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .rm-featured-imgs .rfi:hover img { transform: scale(1.06); }
-        .rm-featured-imgs .rfi-main { grid-row: 1 / 3; }
-        .rm-featured-content {
-            background: #fff; padding: 52px 48px;
-            display: flex; flex-direction: column; justify-content: center;
-        }
-        .rm-price-tag {
-            display: inline-flex; align-items: baseline; gap: 4px;
-            margin-bottom: 28px;
-        }
-        .rm-price-tag .curr { font-size: 20px; color: #033631; font-weight: 700; }
-        .rm-price-tag .amt  { font-size: 44px; color: #033631; font-weight: 800; line-height: 1; }
-        .rm-price-tag .per  { font-size: 13px; color: rgba(3,54,49,0.5); font-weight: 500; }
-        .rm-amenity-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 12px; margin: 20px 0 28px;
-        }
-        .rm-amenity-item {
-            display: flex; align-items: center; gap: 10px;
-            font-size: 13px; color: rgba(3,54,49,0.7); font-weight: 500;
-        }
-        .rm-amenity-item i { color: #DAA520; width: 16px; }
-        .rm-featured-badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(218,165,32,0.12); color: #a07a00;
-            border-radius: 100px; padding: 6px 16px;
-            font-size: 11px; font-weight: 700; letter-spacing: 2px;
-            text-transform: uppercase; margin-bottom: 16px;
-        }
-
-        /* ============================================================
-           ROOM CARD (grid)
-           ============================================================ */
-        .rm-card {
-            background: #fff; border-radius: 20px; overflow: hidden;
-            border: 1px solid rgba(3,54,49,0.08);
-            box-shadow: 0 4px 24px rgba(3,54,49,0.06);
-            transition: transform 0.35s ease, box-shadow 0.35s ease;
-            height: 100%; display: flex; flex-direction: column;
-        }
-        .rm-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 56px rgba(3,54,49,0.13);
-        }
-
-        /* Image area */
-        .rm-card-img {
-            position: relative; height: 240px; overflow: hidden;
-        }
-        .rm-card-img img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .rm-card:hover .rm-card-img img { transform: scale(1.06); }
-
-        .rm-card-badges {
-            position: absolute; top: 14px; left: 14px;
-            display: flex; gap: 6px; flex-wrap: wrap;
-        }
-        .rm-badge {
-            font-size: 10px; font-weight: 700; letter-spacing: 1px;
-            text-transform: uppercase; padding: 5px 12px; border-radius: 100px;
-        }
-        .rm-badge-gold  { background: #DAA520; color: #033631; }
-        .rm-badge-green { background: #033631; color: #fff; }
-        .rm-badge-white { background: #fff; color: #033631; }
-        .rm-badge-eco   { background: #2d8c5e; color: #fff; }
-
-        .rm-card-price {
-            position: absolute; bottom: 0; right: 0;
-            background: linear-gradient(135deg, #033631, #055a50);
-            color: #fff; padding: 10px 18px 10px 22px;
-            border-radius: 16px 0 0 0;
-        }
-        .rm-card-price .from { font-size: 10px; color: rgba(255,255,255,0.6); display: block; }
-        .rm-card-price .amount { font-size: 20px; font-weight: 800; color: #DAA520; line-height: 1; }
-        .rm-card-price .night { font-size: 10px; color: rgba(255,255,255,0.6); }
-
-        /* Body area */
-        .rm-card-body { padding: 26px 28px 30px; flex: 1; display: flex; flex-direction: column; }
-        .rm-card-type { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #DAA520; margin-bottom: 6px; display: block; }
-        .rm-card-title { font-size: 21px; font-weight: 700; color: #033631; margin-bottom: 10px; }
-        .rm-card-desc { font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.75; margin-bottom: 18px; flex: 1; }
-
-        .rm-card-specs {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
-        }
-        .rm-spec {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: #E7EEEE; border-radius: 100px;
-            padding: 6px 14px; font-size: 12px; font-weight: 600; color: #033631;
-        }
-        .rm-spec i { color: #DAA520; font-size: 11px; }
-
-        .rm-card-amenities {
-            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
-        }
-        .rm-amenity-tag {
-            display: inline-flex; align-items: center; gap: 5px;
-            font-size: 12px; color: rgba(3,54,49,0.65);
-            border: 1px solid rgba(3,54,49,0.1); border-radius: 6px;
-            padding: 5px 10px;
-        }
-        .rm-amenity-tag i { color: #DAA520; font-size: 10px; }
-
-        .rm-card-footer {
-            display: flex; align-items: center; justify-content: space-between;
-            gap: 12px; padding-top: 18px; border-top: 1px solid rgba(3,54,49,0.08);
-            flex-wrap: wrap;
-        }
-        .rm-card-capacity {
-            font-size: 13px; color: rgba(3,54,49,0.6); font-weight: 600;
-            display: flex; align-items: center; gap: 6px;
-        }
-        .rm-card-capacity i { color: #DAA520; }
-
-        /* ============================================================
-           ROOM DETAIL ROW (alternating full-width sections)
-           ============================================================ */
-        .rm-detail-row {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 0; border-radius: 24px; overflow: hidden;
-            box-shadow: 0 8px 40px rgba(3,54,49,0.1);
-            margin-bottom: 32px;
-        }
-        .rm-detail-row.reverse { direction: rtl; }
-        .rm-detail-row.reverse > * { direction: ltr; }
-
-        .rm-detail-img {
-            position: relative; overflow: hidden; min-height: 420px;
-        }
-        .rm-detail-img img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .rm-detail-row:hover .rm-detail-img img { transform: scale(1.04); }
-        .rm-detail-img-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(to top, rgba(3,54,49,0.4) 0%, transparent 50%);
-        }
-        .rm-detail-img-badge {
-            position: absolute; top: 20px; left: 20px;
-            display: flex; gap: 8px; flex-wrap: wrap;
-        }
-        .rm-detail-img-price {
-            position: absolute; bottom: 20px; left: 20px;
-        }
-        .rm-detail-img-price .dp-from { font-size: 11px; color: rgba(255,255,255,0.7); display: block; margin-bottom: 2px; }
-        .rm-detail-img-price .dp-amount { font-size: 28px; font-weight: 800; color: #DAA520; line-height: 1; }
-        .rm-detail-img-price .dp-per { font-size: 12px; color: rgba(255,255,255,0.7); margin-left: 4px; }
-
-        .rm-detail-content {
-            background: #fff; padding: 50px 48px;
-            display: flex; flex-direction: column; justify-content: center;
-        }
-        .rm-detail-features {
-            list-style: none; padding: 0; margin: 0 0 24px;
-            display: flex; flex-direction: column; gap: 10px;
-        }
-        .rm-detail-features li {
-            display: flex; align-items: flex-start; gap: 10px;
-            font-size: 14px; color: rgba(3,54,49,0.7); line-height: 1.5;
-        }
-        .rm-detail-features li i { color: #DAA520; margin-top: 3px; font-size: 11px; flex-shrink: 0; }
-        .rm-detail-specs {
-            display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;
-        }
-
-        /* ============================================================
-           COMPARISON TABLE
-           ============================================================ */
-        .rm-compare-table {
-            width: 100%; border-collapse: collapse; font-size: 14px;
-        }
-        .rm-compare-table thead tr { background: #033631; color: #fff; }
-        .rm-compare-table thead th {
-            padding: 16px 18px; text-align: left;
-            font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
-        }
-        .rm-compare-table thead th:first-child { border-radius: 12px 0 0 0; }
-        .rm-compare-table thead th:last-child  { border-radius: 0 12px 0 0; }
-        .rm-compare-table tbody tr { border-bottom: 1px solid rgba(3,54,49,0.07); transition: background 0.2s; }
-        .rm-compare-table tbody tr:hover { background: #E7EEEE; }
-        .rm-compare-table tbody tr:last-child { border-bottom: none; }
-        .rm-compare-table td { padding: 14px 18px; color: rgba(3,54,49,0.7); vertical-align: middle; }
-        .rm-compare-table td:first-child { font-weight: 700; color: #033631; }
-        .rm-compare-table .rc-price { color: #DAA520; font-weight: 800; font-size: 16px; }
-        .rm-compare-table .rc-check { color: #2d8c5e; font-size: 14px; }
-        .rm-compare-table .rc-cross { color: rgba(3,54,49,0.2); font-size: 12px; }
-
-        /* ============================================================
-           AMENITIES ICONS SECTION
-           ============================================================ */
-        .rm-amenity-block {
-            background: #fff; border-radius: 18px; padding: 36px 28px;
-            text-align: center; border: 1px solid rgba(3,54,49,0.07);
-            box-shadow: 0 4px 20px rgba(3,54,49,0.05);
-            transition: transform 0.3s, box-shadow 0.3s; height: 100%;
-        }
-        .rm-amenity-block:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 44px rgba(3,54,49,0.11);
-        }
-        .rm-amenity-block-icon {
-            width: 64px; height: 64px; border-radius: 50%;
-            background: rgba(3,54,49,0.07);
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 16px; transition: background 0.3s;
-        }
-        .rm-amenity-block-icon i { font-size: 24px; color: #033631; transition: color 0.3s; }
-        .rm-amenity-block:hover .rm-amenity-block-icon { background: #033631; }
-        .rm-amenity-block:hover .rm-amenity-block-icon i { color: #DAA520; }
-        .rm-amenity-block h5 { font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 8px; }
-        .rm-amenity-block p { font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.65; margin: 0; }
-
-        /* ============================================================
-           POLICIES STRIP
-           ============================================================ */
-        .rm-policy-card {
-            background: #fff; border-radius: 16px; padding: 28px 24px;
-            border-left: 4px solid #DAA520; height: 100%;
-            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
-        }
-        .rm-policy-card h5 {
-            font-size: 15px; font-weight: 700; color: #033631; margin-bottom: 14px;
+        .bk-hero-content { position: relative; z-index: 2; padding-bottom: 90px; width: 100%; }
+        .bk-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 14px;
             display: flex; align-items: center; gap: 8px;
         }
-        .rm-policy-card h5 i { color: #DAA520; }
-        .rm-policy-list { list-style: none; padding: 0; margin: 0; }
-        .rm-policy-list li {
-            font-size: 13px; color: rgba(3,54,49,0.65);
-            padding: 5px 0; border-bottom: 1px solid rgba(3,54,49,0.06);
-            display: flex; align-items: flex-start; gap: 8px;
+        .bk-breadcrumb li { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .bk-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .bk-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+        .bk-hero h1 {
+            font-size: clamp(36px, 5vw, 68px); font-weight: 800;
+            color: #fff; line-height: 1.1; margin-bottom: 18px;
         }
-        .rm-policy-list li:last-child { border-bottom: none; }
-        .rm-policy-list li i { color: #DAA520; font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+        .bk-hero h1 em { font-style: italic; color: #DAA520; }
+        .bk-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.75);
+            max-width: 520px; line-height: 1.75; margin-bottom: 30px;
+        }
+        .bk-hero-shape { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; line-height: 0; }
+        .bk-hero-shape img { width: 100%; }
 
-        /* ============================================================
-           CTA
-           ============================================================ */
-        .rm-cta-box {
-            background: linear-gradient(135deg, #033631 0%, #055a50 100%);
-            border-radius: 24px; padding: 70px 50px; text-align: center;
+        /* ---- How to Book Banner ---- */
+        .bk-how-banner {
+            background: #DAA520; padding: 22px 0;
+        }
+        .bk-how-banner p {
+            margin: 0; font-size: 15px; font-weight: 600; color: #033631; text-align: center;
+        }
+        .bk-how-banner a { color: #033631; text-decoration: underline; }
+
+        /* ---- Room Cards ---- */
+        .bk-room-card {
+            background: #fff; border-radius: 18px;
+            box-shadow: 0 6px 36px rgba(3,54,49,0.10);
+            overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .bk-room-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 52px rgba(3,54,49,0.18);
+        }
+        .bk-room-img {
+            position: relative; height: 230px; overflow: hidden;
+        }
+        .bk-room-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+        .bk-room-card:hover .bk-room-img img { transform: scale(1.06); }
+        .bk-room-badge {
+            position: absolute; top: 16px; left: 16px;
+            background: #DAA520; color: #033631;
+            font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; padding: 5px 14px; border-radius: 100px;
+        }
+        .bk-room-body { padding: 28px 28px 32px; }
+        .bk-room-title {
+            font-size: 20px; font-weight: 700; color: #033631; margin-bottom: 6px;
+        }
+        .bk-room-price {
+            font-size: 28px; font-weight: 800; color: #DAA520; margin-bottom: 4px; line-height: 1;
+        }
+        .bk-room-price .per { font-size: 14px; color: rgba(3,54,49,0.5); font-weight: 500; }
+        .bk-room-occ {
+            font-size: 12px; color: rgba(3,54,49,0.55); margin-bottom: 20px;
+        }
+        .bk-amenity-list {
+            list-style: none; padding: 0; margin: 0 0 24px;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 8px 12px;
+        }
+        .bk-amenity-list li {
+            font-size: 13px; color: rgba(3,54,49,0.7);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .bk-amenity-list li i { color: #DAA520; font-size: 12px; width: 14px; }
+
+        /* ---- Dining Card ---- */
+        .bk-dining-card {
+            background: #033631; border-radius: 18px; padding: 40px 36px;
+            color: #fff; height: 100%;
+        }
+        .bk-dining-meal {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .bk-dining-meal:last-child { border-bottom: none; padding-bottom: 0; }
+        .bk-dining-meal-icon {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(218,165,32,0.15); flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 16px;
+        }
+        .bk-dining-meal-name { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+        .bk-dining-meal-desc { font-size: 13px; color: rgba(255,255,255,0.6); margin: 0; }
+
+        /* ---- Policy Cards ---- */
+        .bk-policy-card {
+            background: #fff; border-radius: 14px; padding: 28px 26px;
+            box-shadow: 0 4px 24px rgba(3,54,49,0.08); height: 100%;
+        }
+        .bk-policy-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: rgba(3,54,49,0.06);
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 20px; margin-bottom: 16px;
+        }
+        .bk-policy-title { font-size: 16px; font-weight: 700; color: #033631; margin-bottom: 12px; }
+        .bk-policy-list { list-style: none; padding: 0; margin: 0; }
+        .bk-policy-list li {
+            font-size: 13px; color: rgba(3,54,49,0.65);
+            padding: 5px 0; display: flex; align-items: flex-start; gap: 8px;
+        }
+        .bk-policy-list li i { color: #DAA520; font-size: 10px; margin-top: 4px; flex-shrink: 0; }
+
+        /* ---- Contact Person ---- */
+        .bk-contact-card {
+            background: #fff; border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(3,54,49,0.12); overflow: hidden;
+        }
+        .bk-contact-inner {
+            display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+        }
+        .bk-contact-img { height: 100%; min-height: 280px; }
+        .bk-contact-img img { width: 100%; height: 100%; object-fit: cover; }
+        .bk-contact-body { padding: 48px 44px; }
+        .bk-contact-info-item {
+            display: flex; align-items: center; gap: 14px; margin-bottom: 16px;
+        }
+        .bk-ci-icon {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: rgba(3,54,49,0.06);
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 18px; flex-shrink: 0;
+        }
+        .bk-ci-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(3,54,49,0.45); }
+        .bk-ci-value { font-size: 15px; font-weight: 600; color: #033631; text-decoration: none; }
+        .bk-ci-value:hover { color: #DAA520; }
+
+        /* ---- CTA box ---- */
+        .bk-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #045e55 100%);
+            border-radius: 24px; padding: 70px 40px; text-align: center;
             position: relative; overflow: hidden;
         }
-        .rm-cta-box::before {
-            content: ''; position: absolute;
-            top: -80px; right: -80px; width: 300px; height: 300px;
-            border-radius: 50%; background: rgba(218,165,32,0.08);
-        }
-        .rm-cta-box::after {
-            content: ''; position: absolute;
-            bottom: -60px; left: -60px; width: 220px; height: 220px;
-            border-radius: 50%; background: rgba(218,165,32,0.06);
+        .bk-cta-box::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('assets/images/about/5.jpeg') center center / cover no-repeat;
+            opacity: 0.08;
         }
 
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
-        @media (max-width: 1199px) {
-            .rm-featured { grid-template-columns: 1fr 1fr; }
-            .rm-featured-content { padding: 40px 36px; }
-        }
         @media (max-width: 991px) {
-            .rm-featured { grid-template-columns: 1fr; }
-            .rm-featured-imgs { grid-template-rows: 200px 200px; }
-            .rm-featured-imgs .rfi-main { grid-row: auto; }
-            .rm-detail-row { grid-template-columns: 1fr; }
-            .rm-detail-row.reverse { direction: ltr; }
-            .rm-detail-img { min-height: 280px; }
-            .rm-detail-content { padding: 36px 32px; }
-            .rm-booking-bar { padding: 24px 20px; }
-            .rm-bb-divider { display: none; }
-        }
-        @media (max-width: 767px) {
-            .rm-amenity-grid { grid-template-columns: 1fr; }
-            .rm-cta-box { padding: 50px 28px; }
+            .bk-hero { height: 480px; }
+            .bk-section { padding: 70px 0; }
+            .bk-contact-inner { grid-template-columns: 1fr; }
+            .bk-contact-img { min-height: 250px; }
+            .bk-contact-body { padding: 36px 28px; }
+            .bk-amenity-list { grid-template-columns: 1fr; }
         }
         @media (max-width: 575px) {
-            .rm-hero h1 { font-size: 32px; }
-            .rm-price-tag .amt { font-size: 34px; }
-            .rm-booking-bar { margin-top: 0; border-radius: 0; }
+            .bk-hero h1 { font-size: 32px; }
+            .bk-cta-box { padding: 48px 22px; }
+            .bk-room-body { padding: 22px 20px 26px; }
         }
     </style>
 </head>
@@ -500,7 +289,7 @@
                     <div class="widget-content">
                         <ul class="social-icon">
                             <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                             <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
                         </ul>
@@ -530,7 +319,7 @@
                             <div class="header-social-icon">
                                 <ul>
                                     <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
                                     <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 </ul>
                             </div>
@@ -563,17 +352,17 @@
                                                 <ul class="submenu">
                                                     <li><a href="about-us.html">About Us</a></li>
                                                     <li><a href="destination-wedding.html">Destination Wedding</a></li>
-                                                    <li><a href="#">Ayurveda Wellness</a></li>
                                                     <li><a href="video-tours.html">Video Tours</a></li>
+                                                    <li><a href="gallery.html">Gallery</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="rooms.html">Rooms</a></li>
                                             <li>
                                                 <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="events.html">Events</a></li>
                                                     <li><a href="stay.html">Stay</a></li>
                                                     <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="corporate-events.html">Corporate &amp; Group</a></li>
                                                     <li><a href="day_out_plan.html">Day Out Plan</a></li>
                                                 </ul>
                                             </li>
@@ -596,200 +385,380 @@
         </div>
     </header>
 
-            <!-- main start -->
-            <main class="main">
-                <!-- breadcrumb section start -->
-                <section class="breadcrumb-section">
-                    <!-- breadcrumb wapper start -->
-                    <div class="breadcrumb-wapper" data-img-src="assets/images/breadcrumb/breadcrumb.jpg">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <!-- breadcrumb content start -->
-                                    <div class="breadcrumb-content">
-                                        <!-- breadcrumb title start -->
-                                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
-                                            <h1 style="font-size: 30px;"></h1>
-                                        </div>
-                                        <!-- breadcrumb title end -->
-                       
-                                    </div>
-                                    <!-- breadcrumb content end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- breadcrumb shape bottom start -->
-                        <div class="breadcrumb-shape-bottom">
-                            <figure>
-                                <img src="assets/images/shape/shape-bottom-white.png" alt="breadcrumb shape bottom">
-                            </figure>
-                        </div>
-                        <!-- breadcrumb shape bottom end -->
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="bk-hero">
+            <div class="container bk-hero-content">
+                <ul class="bk-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Book a Room</li>
+                </ul>
+                <span class="bk-label wow fadeInUp" data-wow-delay=".2s">Simple Booking</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    Reserve Your <em>Forest Stay</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    No forms. No waiting. Just send us a WhatsApp message and your room is confirmed within minutes.
+                </p>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
+                    <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="bk-btn bk-btn-green bk-btn-lg">
+                        <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                    <a href="#rooms" class="bk-btn bk-btn-outline">See All Rooms</a>
+                </div>
+            </div>
+            <div class="bk-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             HOW TO BOOK BANNER
+             ============================================================ -->
+        <div class="bk-how-banner">
+            <div class="container">
+                <p>
+                    <i class="fa-brands fa-whatsapp me-2"></i>
+                    <strong>How to Book:</strong> Choose your room below → Message us on WhatsApp with your dates &amp; room preference → Receive confirmation in minutes.
+                    &nbsp;|&nbsp; <a href="tel:+919425651754">Call: +91 9425651754</a>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             ROOM OPTIONS
+             ============================================================ -->
+        <section class="bk-section" id="rooms">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="bk-label wow fadeInUp" data-wow-delay=".1s">Your Accommodation Options</span>
+                        <h2 class="bk-heading wow fadeInUp" data-wow-delay=".2s">Choose Your <em>Room</em></h2>
+                        <div class="bk-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="bk-body wow fadeInUp" data-wow-delay=".4s">Three comfortable forest accommodation options — all double occupancy, all with modern amenities, all surrounded by nature.</p>
                     </div>
-                    <!-- breadcrumb wapper end -->
-                </section>
-                <!-- breadcrumb section end --> 
+                </div>
 
-                <!-- booking section start -->
-                <section class="booking-section-3 pt-100 md-pt-80 pb-100 md-pb-80">
-                    <form action="#" class="booking-form" id="booking-forms">
-                        <div class="container"> 
-                            <div class="row"> 
-                                <div class="col-lg-8 col-md-12">
-                                    <div class="booking-content">
-                                        <!-- section title start -->
-                                        <div class="section-title mb-30"> 
-                                            <h2 class="line-anime">Customer Details</h2>
-                                        </div>
-                                        <!-- section title end -->
-                                        <div class="row">
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <div class="field-inner">
-                                                        <label for="name">Name</label>
-                                                        <input id="name" class="form-control" name="name" type="text" placeholder="Ex. Name" autocomplete="off" required="required">
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <div class="field-inner">
-                                                        <label for="email">Email</label>
-                                                        <input class="form-control" id="email" name="email" type="email" placeholder="Ex. info@example.com" autocomplete="off" required="required">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <div class="field-inner">
-                                                        <label for="phone">Phone Number</label>
-                                                        <input class="form-control" id="phone" name="phone" type="text" placeholder="Ex. 9876543210" autocomplete="off" required="required">
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <div class="field-inner">
-                                                        <label for="selectroom">Select Room</label>
-                                                        <select class="form-select" id="selectroom" aria-label="Select Room">
-                                                            <option selected="selected">Select Room</option>
-                                                            <option value="Deluxe King Bed">Deluxe King Bed</option>
-                                                            <option value="Exclusive Deluxe">Exclusive Deluxe</option>
-                                                            <option value="Family Exclusive">Family Exclusive</option>
-                                                            <option value="Signature Suites">Signature Suites</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>  
-                                            <div class="col-12">
-                                                <div class="form-group mb-0">
-                                                    <div class="field-inner">
-                                                        <label for="message">Message</label>
-                                                        <textarea id="message" class="form-control" name="message" placeholder="Ex. type messege" autocomplete="off" required="required"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div> 
-                                </div>
-                                <div class="col-lg-4 col-md-12">
-                                    <!-- widget sidebar start --> 
-                                    <div class="widget-sidebar sticky"> 
-                                        <!-- widget booking selection start -->
-                                        <div class="widget widget-booking-selection">
-                                            <!-- widget title start -->
-                                            <div class="widget-title">
-                                                <h3 class="line-anime">Booking Now</h3>
-                                                <p>There are many variations of passages Lorem available.</p>
-                                            </div>
-                                            <!-- widget title end -->
-                                            <!-- widget content start -->
-                                            <div class="widget-content">
-                                                <div class="widget-booking-list mb-30">
-                                                    <div class="widget-booking-item">
-                                                        <label for="checkindate">Check In</label>
-                                                        <input class="form-control" id="checkindate" name="checkindate" type="date" value="2025-08-18" autocomplete="off" required="required">
-                                                    </div>
-                                                    <div class="widget-booking-item">
-                                                        <label for="checkoutdate">Check Out</label>
-                                                        <input class="form-control" id="checkoutdate" name="checkoutdate" type="date" value="2025-08-20" autocomplete="off" required="required">
-                                                    </div> 
-                                                    <div class="widget-booking-item">
-                                                        <label for="selectadults">Adults</label>
-                                                        <select class="form-select" id="selectadults" aria-label="Select Adults">
-                                                            <option>Select Adults</option>
-                                                            <option value="01">01</option>
-                                                            <option selected="selected" value="02">02</option>
-                                                            <option value="03">03</option>
-                                                            <option value="04">04</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="widget-booking-item">
-                                                        <label for="selectchildren">Children</label>
-                                                        <select class="form-select" id="selectchildren" aria-label="Select Children">
-                                                            <option>Select Children</option>
-                                                            <option selected="selected" value="01">01</option>
-                                                            <option value="02">02</option>
-                                                            <option value="03">03</option>
-                                                            <option value="04">04</option>
-                                                        </select>
-                                                    </div> 
-                                                    <div class="widget-booking-item">
-                                                        <label for="selectextrabed">Extra Bed</label>
-                                                        <select class="form-select" id="selectextrabed" aria-label="Select Extra Bed">
-                                                            <option>Select Bed</option>
-                                                            <option selected="selected" value="01">01</option>
-                                                            <option value="02">02</option>
-                                                            <option value="03">03</option>
-                                                            <option value="04">04</option>
-                                                        </select>
-                                                    </div>
-                                                </div> 
-                                                <div class="widget-extra-services-button">
-                                                    <button type="submit" class="theme-button style-1 w-100" data-text="Book Now">
-                                                        Book Now
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <!-- widget content end -->
-                                        </div>
-                                        <!-- widget booking selection end -->
-                                    </div> 
-                                    <!-- widget sidebar end -->
-                                </div>
-                            </div> 
-                        </div>
-                    </form>
-                </section>
-                <!-- booking section end -->
+                <div class="row g-4">
 
-                <!-- subscribe section start -->
-                <section class="subscribe-section-1" data-img-src="assets/images/shape/bg-shape-1.png">
-                    <div class="container">
-                        <div class="row justify-content-center justify-content-xl-end">
-                            <div class="col-xl-6 col-lg-8">
-                                <!-- subscribe wapper start -->
-                                <div class="subscribe-wapper wow fadeInUp" data-wow-delay=".2s">
-                                    <h2 class="mb-30 text-black">Subscribe to Receive Latest Offers</h2> 
-                                    <!-- subscribe form start -->
-                                    <form action="#" class="subscribe-form" id="subscribe-form">
-                                        <div class="input-group">
-                                            <input type="text" id="emailid" name="emailid" placeholder="Enter your email" autocomplete="off" required="required">
-                                        </div>
-                                        <button type="submit" class="submit-btn" data-text="subscribe" aria-label="subscribe">
-                                            <i class="fa-solid fa-paper-plane"></i>
-                                        </button> 
-                                    </form>
-                                    <!-- subscribe form end -->
-                                </div>
-                                <!-- subscribe wapper end -->
+                    <!-- Super Deluxe AC Room -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="bk-room-card">
+                            <div class="bk-room-img">
+                                <img src="assets/images/about/13.jpeg" alt="Super Deluxe AC Room">
+                                <span class="bk-room-badge">Most Comfortable</span>
+                            </div>
+                            <div class="bk-room-body">
+                                <h3 class="bk-room-title">Super Deluxe AC Room</h3>
+                                <div class="bk-room-price">₹3,500 <span class="per">/ night</span></div>
+                                <p class="bk-room-occ"><i class="fa-solid fa-user-group me-1"></i> Double Occupancy</p>
+                                <ul class="bk-amenity-list">
+                                    <li><i class="fa-solid fa-bed"></i> Double Bed</li>
+                                    <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+                                    <li><i class="fa-solid fa-shower"></i> En-suite Bathroom</li>
+                                    <li><i class="fa-solid fa-fire"></i> Hot Water</li>
+                                    <li><i class="fa-solid fa-tv"></i> Television</li>
+                                    <li><i class="fa-solid fa-wifi"></i> Wi-Fi</li>
+                                    <li><i class="fa-solid fa-bolt"></i> Power Backup</li>
+                                    <li><i class="fa-solid fa-tree"></i> Forest View</li>
+                                </ul>
+                                <a href="https://wa.me/919425651754?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Super%20Deluxe%20AC%20Room%20at%20Mahua%20House." target="_blank" rel="noopener" class="bk-btn bk-btn-green w-100 justify-content-center">
+                                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                                </a>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- subscribe section end -->
-            </main>
-            <!-- main end -->
+
+                    <!-- Deluxe AC Room -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="bk-room-card">
+                            <div class="bk-room-img">
+                                <img src="assets/images/about/17.jpeg" alt="Deluxe AC Room">
+                                <span class="bk-room-badge">Great Value</span>
+                            </div>
+                            <div class="bk-room-body">
+                                <h3 class="bk-room-title">Deluxe AC Room</h3>
+                                <div class="bk-room-price">₹3,000 <span class="per">/ night</span></div>
+                                <p class="bk-room-occ"><i class="fa-solid fa-user-group me-1"></i> Double Occupancy</p>
+                                <ul class="bk-amenity-list">
+                                    <li><i class="fa-solid fa-bed"></i> Double Bed</li>
+                                    <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+                                    <li><i class="fa-solid fa-shower"></i> En-suite Bathroom</li>
+                                    <li><i class="fa-solid fa-fire"></i> Hot Water</li>
+                                    <li><i class="fa-solid fa-wifi"></i> Wi-Fi</li>
+                                    <li><i class="fa-solid fa-tree"></i> Forest View</li>
+                                    <li><i class="fa-solid fa-bolt"></i> Power Backup</li>
+                                    <li><i class="fa-solid fa-shield-halved"></i> Safe Management</li>
+                                </ul>
+                                <a href="https://wa.me/919425651754?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Deluxe%20AC%20Room%20at%20Mahua%20House." target="_blank" rel="noopener" class="bk-btn bk-btn-green w-100 justify-content-center">
+                                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forest Cottage -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="bk-room-card">
+                            <div class="bk-room-img">
+                                <img src="assets/images/about/18.jpeg" alt="Independent Forest Cottage">
+                                <span class="bk-room-badge">Forest Seclusion</span>
+                            </div>
+                            <div class="bk-room-body">
+                                <h3 class="bk-room-title">Independent Forest Cottage</h3>
+                                <div class="bk-room-price">₹2,500 <span class="per">/ night</span></div>
+                                <p class="bk-room-occ"><i class="fa-solid fa-user-group me-1"></i> Double Occupancy</p>
+                                <ul class="bk-amenity-list">
+                                    <li><i class="fa-solid fa-bed"></i> Double Bed</li>
+                                    <li><i class="fa-solid fa-house-chimney"></i> Private Space</li>
+                                    <li><i class="fa-solid fa-shower"></i> En-suite Bathroom</li>
+                                    <li><i class="fa-solid fa-fire"></i> Hot Water</li>
+                                    <li><i class="fa-solid fa-tree"></i> Forest Access</li>
+                                    <li><i class="fa-solid fa-wifi"></i> Wi-Fi</li>
+                                    <li><i class="fa-solid fa-bolt"></i> Power Backup</li>
+                                    <li><i class="fa-solid fa-leaf"></i> Eco Experience</li>
+                                </ul>
+                                <a href="https://wa.me/919425651754?text=Hi%2C%20I%20would%20like%20to%20book%20the%20Independent%20Forest%20Cottage%20at%20Mahua%20House." target="_blank" rel="noopener" class="bk-btn bk-btn-green w-100 justify-content-center">
+                                    <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="text-center mt-4" style="font-size:14px;color:rgba(3,54,49,0.5);">
+                    <i class="fa-solid fa-circle-info me-1"></i>
+                    All prices are per night. Check-in: 11:00 AM &nbsp;|&nbsp; Check-out: 10:00 AM. Additional guests on request.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             DINING PACKAGE
+             ============================================================ -->
+        <section class="bk-section bk-section-alt">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                        <span class="bk-label">Add to Your Stay</span>
+                        <h2 class="bk-heading">Dining at <em>Mahua House</em></h2>
+                        <div class="bk-divider"><span></span><i class="fa-solid fa-utensils"></i><span></span></div>
+                        <p class="bk-body mb-4">Our traditional home-style meals are cooked fresh using locally sourced ingredients. Add a meal plan to your stay for a complete forest experience.</p>
+                        <div style="background:#033631;border-radius:14px;padding:22px 24px;display:inline-block;text-align:center;">
+                            <div style="font-size:36px;font-weight:800;color:#DAA520;line-height:1;">₹1,000</div>
+                            <div style="font-size:13px;color:rgba(255,255,255,0.7);margin-top:6px;">per head &nbsp;·&nbsp; full day (all meals)</div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://wa.me/919425651754?text=Hi%2C%20I%27d%20like%20to%20add%20a%20meal%20plan%20to%20my%20booking%20at%20Mahua%20House." target="_blank" rel="noopener" class="bk-btn bk-btn-primary">
+                                <i class="fa-brands fa-whatsapp me-2"></i> Add Meal Plan
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                        <div class="bk-dining-card">
+                            <span class="bk-label bk-label-light">What's Included</span>
+                            <h3 style="font-size:22px;font-weight:700;color:#fff;margin-bottom:24px;">Full Day Meal Plan</h3>
+
+                            <div class="bk-dining-meal">
+                                <div class="bk-dining-meal-icon"><i class="fa-solid fa-sun"></i></div>
+                                <div>
+                                    <div class="bk-dining-meal-name">Breakfast</div>
+                                    <p class="bk-dining-meal-desc">Fresh poha, parathas, chai and seasonal fruits — a traditional start to your forest morning.</p>
+                                </div>
+                            </div>
+                            <div class="bk-dining-meal">
+                                <div class="bk-dining-meal-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                                <div>
+                                    <div class="bk-dining-meal-name">Lunch</div>
+                                    <p class="bk-dining-meal-desc">Full dal-chawal-sabzi thali with homemade pickles, salad and buttermilk.</p>
+                                </div>
+                            </div>
+                            <div class="bk-dining-meal">
+                                <div class="bk-dining-meal-icon"><i class="fa-solid fa-mug-saucer"></i></div>
+                                <div>
+                                    <div class="bk-dining-meal-name">Evening Snacks</div>
+                                    <p class="bk-dining-meal-desc">Chai with namkeen or seasonal snacks — enjoy by the poolside or forest verandah.</p>
+                                </div>
+                            </div>
+                            <div class="bk-dining-meal">
+                                <div class="bk-dining-meal-icon"><i class="fa-solid fa-moon"></i></div>
+                                <div>
+                                    <div class="bk-dining-meal-name">Dinner</div>
+                                    <p class="bk-dining-meal-desc">Traditional Madhya Pradesh dinner — roti, dal, sabzi, rice and dessert, served family-style.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             POLICIES
+             ============================================================ -->
+        <section class="bk-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="bk-label wow fadeInUp" data-wow-delay=".1s">Before You Book</span>
+                        <h2 class="bk-heading wow fadeInUp" data-wow-delay=".2s">Stay <em>Policies</em></h2>
+                        <div class="bk-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-circle-info"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="bk-policy-card">
+                            <div class="bk-policy-icon"><i class="fa-solid fa-clock"></i></div>
+                            <h5 class="bk-policy-title">Check-in &amp; Out</h5>
+                            <ul class="bk-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Check-in from 11:00 AM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Check-out by 10:00 AM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Early check-in on request</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Late checkout may incur a fee</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="bk-policy-card">
+                            <div class="bk-policy-icon"><i class="fa-solid fa-ban"></i></div>
+                            <h5 class="bk-policy-title">Cancellations</h5>
+                            <ul class="bk-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Free cancellation 7+ days prior</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> 50% charge within 7 days</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> No-show: 100% charge applies</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Special terms for peak season</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="bk-policy-card">
+                            <div class="bk-policy-icon"><i class="fa-solid fa-child"></i></div>
+                            <h5 class="bk-policy-title">Children &amp; Pets</h5>
+                            <ul class="bk-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> Children of all ages welcome</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Under 5 stay free</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Extra bed available on request</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Pet-friendly on pre-arrangement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="bk-policy-card">
+                            <div class="bk-policy-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h5 class="bk-policy-title">General Rules</h5>
+                            <ul class="bk-policy-list">
+                                <li><i class="fa-solid fa-circle-dot"></i> No smoking inside rooms</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Quiet hours after 10:00 PM</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Outside food &amp; alcohol policy applies</li>
+                                <li><i class="fa-solid fa-circle-dot"></i> Respect the forest &amp; wildlife</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CONTACT PERSON
+             ============================================================ -->
+        <section class="bk-section bk-section-alt">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="bk-label wow fadeInUp" data-wow-delay=".1s">Speak to Us Directly</span>
+                        <h2 class="bk-heading wow fadeInUp" data-wow-delay=".2s">Your Booking <em>Contact</em></h2>
+                        <div class="bk-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-phone"></i><span></span></div>
+                        <p class="bk-body wow fadeInUp" data-wow-delay=".4s">Reach out directly to confirm your booking, ask about packages, or customise your stay experience.</p>
+                    </div>
+                </div>
+
+                <div class="bk-contact-card wow fadeInUp" data-wow-delay=".3s">
+                    <div class="bk-contact-inner">
+                        <div class="bk-contact-img">
+                            <img src="assets/images/about/8.jpeg" alt="Mahua House Property">
+                        </div>
+                        <div class="bk-contact-body">
+                            <span class="bk-label">Your Host</span>
+                            <h3 class="bk-heading" style="font-size:28px;margin-bottom:6px;">Sushma Kalambe</h3>
+                            <p class="bk-body mb-28" style="margin-bottom:28px;">Mahua House &nbsp;·&nbsp; Haripura, Raisen Bhopal</p>
+
+                            <div class="bk-contact-info-item">
+                                <div class="bk-ci-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div>
+                                    <div class="bk-ci-label">WhatsApp</div>
+                                    <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="bk-ci-value">+91 9425651754</a>
+                                </div>
+                            </div>
+                            <div class="bk-contact-info-item">
+                                <div class="bk-ci-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <div class="bk-ci-label">Phone</div>
+                                    <a href="tel:+919425651754" class="bk-ci-value">+91 9425651754</a>
+                                </div>
+                            </div>
+                            <div class="bk-contact-info-item">
+                                <div class="bk-ci-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <div class="bk-ci-label">Email</div>
+                                    <a href="mailto:mahuahouse17@gmail.com" class="bk-ci-value">mahuahouse17@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="bk-contact-info-item">
+                                <div class="bk-ci-icon"><i class="fa-solid fa-globe"></i></div>
+                                <div>
+                                    <div class="bk-ci-label">Website</div>
+                                    <a href="http://www.mahuahouse.com" target="_blank" rel="noopener" class="bk-ci-value">www.mahuahouse.com</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-3 flex-wrap mt-4">
+                                <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="bk-btn bk-btn-green">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Now
+                                </a>
+                                <a href="contact-us.html" class="bk-btn bk-btn-outline-dark">Send an Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA
+             ============================================================ -->
+        <section class="bk-section">
+            <div class="container">
+                <div class="bk-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="bk-label bk-label-light">Ready to Book?</span>
+                        <h2 class="bk-heading bk-heading-light" style="margin-bottom:14px;">
+                            Your Forest Escape <em>Awaits</em>
+                        </h2>
+                        <p class="bk-body bk-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Book via WhatsApp, give us a call, or send an enquiry. We'll confirm your stay and welcome you to the forest.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" class="bk-btn bk-btn-outline"><i class="fa-brands fa-facebook-f me-2"></i>Visit Facebook</a>
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="bk-btn bk-btn-gold"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Enquiry</a>
+                            <a href="contact-us.html" class="bk-btn bk-btn-outline">Enquire Today</a>
+                            <a href="tel:+919425651754" class="bk-btn bk-btn-outline"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer footer-1">
         <div class="footer-bottom">
@@ -801,7 +770,7 @@
                                 <div class="footer-logo mb-20">
                                     <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
                                 </div>
-                                <p>Nestled in the lush green forests of Bhopal, Mahua House offers six unique forest rooms and cottages — from eco bamboo nests to signature suites — all surrounded by 3.5 acres of natural woodland.</p>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland. Boutique rooms and forest cottages await you.</p>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-4 col-sm-6">
@@ -811,23 +780,20 @@
                                     <ul class="link">
                                         <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
                                         <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Stay Info</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Rooms &amp; Stay</a></li>
                                         <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
-                                        <li><a href="contact-us.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-4 col-sm-6">
-                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                            <div class="footer-widget wow fadeInUp" data-wow-delay=".4s">
                                 <h3 class="footer-widget-title line-anime">Our Rooms</h3>
                                 <div class="widget-link">
                                     <ul class="link">
-                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Forest View Room</a></li>
-                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Teak Cottage</a></li>
-                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Mahua Suite</a></li>
-                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Family Cabin</a></li>
-                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Treetop Loft</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Super Deluxe AC Room</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Deluxe AC Room</a></li>
+                                        <li><a href="#rooms"><i class="fa-solid fa-chevron-right"></i> Forest Cottage</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -868,32 +834,21 @@
             </div>
         </div>
     </footer>
-        </div>
-        <!-- page wrapper end -->
 
-        <!-- jQuery -->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
-        <!-- bootstrap js -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!-- jquery meanmenu js -->
-        <script src="assets/js/jquery.meanmenu.min.js"></script>
-        <!-- swiper js -->
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <!-- wow Js -->
-        <script src="assets/js/wow.min.js"></script>
-        <!-- validate js -->
-        <script src="assets/js/validate.min.js"></script>
-        <!-- ajax form Js -->
-        <script src="assets/js/ajax-form.js"></script> 
-        <!-- SmoothScroll Js -->
-        <script src="assets/js/SmoothScroll.js"></script>
-        <!-- appear Js -->
-        <script src="assets/js/jquery.appear.js"></script>
-        <!-- magnific Js -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>  
-        <!-- syotimer Js -->
-        <script src="assets/js/jquery.syotimer.min.js"></script>  
-        <!-- main Js -->
-        <script src="assets/js/main.js"></script>
-    </body>
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>

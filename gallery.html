@@ -1,816 +1,715 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- meta tags -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="pus_infotech">
-        <meta name="description" content="HTML Template">
-        <meta name="keywords" content="Html Template">
-        <!-- page title -->
-        <title>Gallery | Lucxorio - Luxury Hotel and Resort Booking HTML Template</title>
-        <!-- favicon icon -->
-        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-        <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-        <!-- font awesome css -->
-        <link rel="stylesheet" href="assets/css/all.min.css">        
-        <!-- bootstrap css -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- swiper css -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <!-- magnific css -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <!-- animate css -->
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <!-- main css  -->
-        <link rel="stylesheet" href="assets/css/main.css">
-        <!-- style css -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Explore the Mahua House photo gallery — forests, events, rooms, weddings, activities and more from our eco retreat near Bhopal.">
+    <meta name="keywords" content="Mahua House Gallery, Forest Resort Photos, Bhopal Eco Resort, Wedding Venue Photos, Nature Photos">
+    <title>Gallery | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           GALLERY PAGE — STYLES   prefix: gl-
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        .gl-section       { padding: 90px 0; }
+        .gl-section-alt   { background: #E7EEEE; }
+        .gl-section-dark  { background: #033631; }
+        .gl-section-cream { background: #faf8f3; }
+
+        .gl-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .gl-label-light { color: rgba(218,165,32,0.9); }
+
+        .gl-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .gl-heading-light { color: #ffffff; }
+        .gl-heading em { font-style: normal; color: #DAA520; }
+
+        .gl-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .gl-divider.centered { justify-content: center; }
+        .gl-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .gl-divider i { font-size: 9px; }
+
+        .gl-body { font-size: 15px; color: rgba(3,54,49,0.6); line-height: 1.85; margin-bottom: 0; }
+        .gl-body-light { color: rgba(255,255,255,0.65); }
+
+        .gl-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .gl-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .gl-btn-primary:hover { background:transparent; color:#033631; }
+        .gl-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .gl-btn-gold:hover { background:transparent; color:#DAA520; }
+        .gl-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.5); }
+        .gl-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+
+        /* ---- Hero ---- */
+        .gl-hero {
+            position: relative; height: 560px;
+            background: url('assets/images/about/3.jpeg') center center / cover no-repeat;
+            display: flex; align-items: flex-end; overflow: hidden;
+        }
+        .gl-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.2) 0%, rgba(3,54,49,0.85) 100%);
+        }
+        .gl-hero-content { position: relative; z-index: 2; padding-bottom: 90px; width: 100%; }
+        .gl-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .gl-breadcrumb li { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .gl-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .gl-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+        .gl-hero h1 {
+            font-size: clamp(36px, 5vw, 68px); font-weight: 800;
+            color: #fff; line-height: 1.1; margin-bottom: 18px;
+        }
+        .gl-hero h1 em { font-style: italic; color: #DAA520; }
+        .gl-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.75);
+            max-width: 500px; line-height: 1.75; margin-bottom: 0;
+        }
+        .gl-hero-shape { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; line-height: 0; }
+        .gl-hero-shape img { width: 100%; }
+
+        /* ---- Filter Tabs ---- */
+        .gl-filter-tabs {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            justify-content: center; margin-bottom: 50px;
+        }
+        .gl-filter-tab {
+            padding: 10px 24px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; cursor: pointer;
+            border: 1.5px solid rgba(3,54,49,0.2);
+            background: transparent; color: rgba(3,54,49,0.65);
+            transition: all 0.25s ease;
+        }
+        .gl-filter-tab:hover,
+        .gl-filter-tab.active {
+            background: #033631; color: #fff; border-color: #033631;
+        }
+
+        /* ---- Masonry Grid ---- */
+        .gl-grid {
+            columns: 4; column-gap: 14px;
+        }
+        .gl-item {
+            break-inside: avoid; margin-bottom: 14px;
+            display: block; position: relative; overflow: hidden;
+            border-radius: 10px; cursor: pointer;
+        }
+        .gl-item img {
+            width: 100%; display: block;
+            transition: transform 0.45s ease;
+        }
+        .gl-item:hover img { transform: scale(1.06); }
+        .gl-item-overlay {
+            position: absolute; inset: 0;
+            background: rgba(3,54,49,0.55);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .gl-item:hover .gl-item-overlay { opacity: 1; }
+        .gl-item-overlay i { font-size: 26px; color: #fff; }
+
+        .gl-item.hidden { display: none; }
+
+        /* ---- Stats strip ---- */
+        .gl-stats-strip {
+            background: #033631; padding: 50px 0;
+        }
+        .gl-stat-item { text-align: center; }
+        .gl-stat-num {
+            font-size: 42px; font-weight: 800; color: #DAA520;
+            line-height: 1; margin-bottom: 8px;
+        }
+        .gl-stat-label { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 1px; text-transform: uppercase; }
+
+        /* ---- CTA ---- */
+        .gl-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #045e55 100%);
+            border-radius: 24px; padding: 70px 40px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .gl-cta-box::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('assets/images/about/2.jpeg') center center / cover no-repeat;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1199px) { .gl-grid { columns: 3; } }
+        @media (max-width: 767px)  { .gl-grid { columns: 2; } .gl-hero { height: 460px; } }
+        @media (max-width: 480px)  { .gl-grid { columns: 1; } }
+    </style>
 </head>
 
-    <body> 
-        <!-- page wrapper start -->
-        <div class="page-wrapper">
-            <!-- preloader start --> 
-            <div class="preloader">
-                <div class="preloader-icon">   
-                    <img src="assets/images/loader.svg" alt="loader image">
-                </div> 
-                <div class="preloader-text">
-                    <p>L</p>
-                    <p>u</p>
-                    <p>c</p>
-                    <p>x</p>
-                    <p>o</p>
-                    <p>r</p>
-                    <p>i</p>
-                    <p>o</p>
-                </div>
-            </div> 
-            <!-- preloader end -->
-    
-            <!-- back to top start -->
-            <button id="back-top" class="back-to-top" aria-label="back to top">
-                <i class="fa-solid fa-chevron-up"></i>
-            </button>
-            <!-- back to top end --> 
+<body>
+<div class="page-wrapper">
 
-            <!-- mouse cursor start -->
-            <div class="mouse-cursor cursor-outer"></div>
-            <div class="mouse-cursor cursor-inner"></div>
-            <!-- mouse cursor end -->  
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
 
-            <!-- offcanvas sidebar start -->
-            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar" aria-labelledby="offcanvas-sidebar">
-                <!-- offcanvas header start -->
-                <div class="offcanvas-header">
-                    <!-- offcanvas logo start -->
-                    <div class="offcanvas-logo">
-                        <figure>
-                            <img src="assets/images/logo/logo.svg" alt="offcanvas logo">
-                        </figure>                        
-                    </div>
-                    <!-- offcanvas logo emd -->
-                    <!-- offcanvas close start -->
-                    <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-                    <!-- offcanvas close end -->
-                </div>
-                <!-- offcanvas header end -->
-                <!-- offcanvas body start -->
-                <div class="offcanvas-body">
-                    <!-- menu outer start -->
-                    <div class="mobile-menu">
-                        <!-- Here menu will come automatically via javascript / same menu as in header -->
-                    </div>
-                    <!-- menu outer end -->
-                    <!-- offcanvas about start -->
-                    <div class="offcanvas-about d-none d-xl-block">
-                        <p>There are many variations of passages available sure there majority have suffered alteration in some form by inject humour or randomised words which don't look even slightly believable.</p>
-                    </div>
-                    <!-- offcanvas about end -->
-                    <!-- offcanvas contact start -->
-                    <div class="offcanvas-contact">
-                        <!-- widget-contact start -->
-                        <div class="widget widget-contact">
-                            <!-- widget title start -->
-                            <div class="widget-title">
-                                <h3 class="line-anime">Contact Info</h3>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
                             </div>
-                            <!-- widget title end -->
-                            <!-- widget content start -->
-                            <div class="widget-content">
-                                <!-- offcanvas cta item start -->
-                                <div class="offcanvas-cta-item">
-                                    <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <p>123 Serenity Lane, Suite 101, Hometown, CA 12345</p>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                     <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-envelope"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <a href="mailto:info@example.com">info@example.com</a>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                    <!-- offcanvas cta list start -->
-                                    <div class="offcanvas-cta-list">
-                                        <div class="offcanvas-cta-icon">
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                        </div>
-                                        <div class="offcanvas-cta-content"> 
-                                            <a href="tel:123446788">+1 234 467 88</a>
-                                        </div>
-                                    </div>
-                                    <!-- offcanvas cta list end -->
-                                </div>
-                                <!-- offcanvas cta item end -->
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
                             </div>
-                            <!-- widget content end -->
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
                         </div>
-                        <!-- widget-contact end -->
                     </div>
-                    <!-- offcanvas contact end -->
-                    <!-- offcanvas button wapper start -->
-                    <div class="offcanvas-button-wapper"> 
-                        <a href="booking.html" class="theme-button style-1" aria-label="Book Now">
-                            Book Now
-                        </a>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
                     </div>
-                    <!-- offcanvas button wapper end -->
-                    <!-- offcanvas social start -->
-                    <div class="offcanvas-social">
-                        <!-- widget social media start -->
-                        <div class="widget widget-social-media"> 
-                            <!-- widget content start -->
-                            <div class="widget-content">
-                                <ul class="social-icon">
-                                    <li>
-                                        <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
                                 </ul>
                             </div>
-                            <!-- widget content end -->
                         </div>
-                        <!-- widget social media end -->
                     </div>
-                    <!-- offcanvas-social end -->
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- offcanvas body end -->
             </div>
-            <!-- offcanvas sidebar end -->
-
-            <!-- header start -->
-            <header class="header header-1 background-one">
-                <!-- header top start -->
-                <div class="header-top d-none d-xl-block">
-                    <div class="container-fluid">
-                        <div class="row justify-content-center justify-content-lg-between align-items-center">
-                            <div class="col-auto">
-                                <!-- header top left start -->
-                                <div class="header-top-left">
-                                    <!-- header contact info -->
-                                    <div class="header-contact-info">
-                                        <ul>
-                                            <li>
-                                                <p><i class="fa-solid fa-location-dot"></i> 123 Serenity Lane, Suite 101 UK</p>
-                                            </li> 
-                                            <li>
-                                                <p><i class="fa-solid fa-phone-volume"></i> +1 234 467 88</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- header top left end -->
-                            </div>
-                            <div class="col-auto">
-                                <!-- header top right start -->
-                                <div class="header-top-right">
-                                    <!-- header social icon -->
-                                    <div class="header-social-icon">
-                                        <ul>
-                                            <li>
-                                                <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- header top right end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- header top end -->
-                <!-- header lower start -->
-                <div class="header-lower">
-                    <div class="container-fluid">
-                        <div class="row align-items-center justify-content-between g-0">
-                            <div class="col-12"> 
-                                <!-- header content start -->
-                                <div class="header-content d-flex justify-content-between align-items-center">
-                                    <!-- logo box start -->
-                                    <div class="logo-box">
-                                        <div class="logo">
-                                            <a href="index.html">
-                                                <figure>
-                                                    <img src="assets/images/logo/logo-white.svg" alt="header logo">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- logo box end  --> 
-                                    <!-- header left start -->
-                                    <div class="header-left">
-                                        <!-- header sidebar  -->
-                                        <div class="header-sidebar">
-                                            <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" aria-label="sidebar toggler" role="button" aria-controls="offcanvas-sidebar">
-                                                <span></span>
-                                                <span></span>
-                                            </a>
-                                        </div> 
-                                    </div>
-                                    <!-- header right end -->
-
-                                    <!-- header navigation start -->
-                                    <div class="header-navigation d-flex align-items-center"> 
-                                        <!-- main menu -->
-                                        <div class="main-menu">
-                                            <nav id="mobile-menu">
-                                                <ul>
-                                                    <li class="menu-thumb">
-                                                        <a href="index.html">Home<i class="fa-solid fa-angle-down"></i></a>
-                                                        <ul class="has-homemenu">
-                                                            <li>
-                                                                <a href="index.html">
-                                                                    <img src="assets/images/header/home-1.jpg" alt="home one">
-                                                                    Luxury Hotel - Home One
-                                                                </a> 
-                                                            </li>
-                                                            <li>
-                                                                <a href="index-2.html">
-                                                                    <img src="assets/images/header/home-2.jpg" alt="home two">
-                                                                    Luxury Resort - Home Two
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="index-3.html">
-                                                                    <img src="assets/images/header/home-3.jpg" alt="home three">
-                                                                    Modern Villa - Home Three
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="room.html">Room <i class="fa-solid fa-chevron-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="room.html">Room Grid</a></li>
-                                                            <li><a href="room-list.html">Room List</a></li>
-                                                            <li><a href="room-details.html">Room Details</a></li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="about.html">Pages<i class="fa-solid fa-angle-down"></i></a>                                                        
-                                                        <ul class="submenu">
-                                                            <li><a href="about.html">About Us</a></li>
-                                                            <li><a href="booking.html">Book An Appointment</a></li> 
-                                                            <li class="has-dropdown">
-                                                                <a href="team.html">Team <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="team.html">Team</a></li>
-                                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                                </ul>
-                                                            </li> 
-                                                            <li><a href="restaurant.html">Restaurant</a></li> 
-                                                            <li class="has-dropdown">
-                                                                <a href="offer.html">Offer <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="offer.html">Offer</a></li>
-                                                                    <li><a href="offer-details.html">Offer Details</a></li>
-                                                                </ul>
-                                                            </li> 
-                                                            <li><a href="facilities.html">Hotel Facilities</a></li> 
-                                                            <li><a href="gallery.html">Gallery</a></li> 
-                                                            <li><a href="pricing.html">Pricing</a></li>
-                                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                                            <li><a href="faq.html">Faq's</a></li>
-                                                            <li><a href="error.html">404 Error</a></li>
-                                                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                                                            <li class="has-dropdown">
-                                                                <a href="sign-in.html">Authentication <i class="fa-solid fa-chevron-right"></i></a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="login.html">Login</a></li>
-                                                                    <li><a href="sign-up.html">Sign Up</a></li>
-                                                                    <li><a href="forget-password.html">Forgot Password</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="center-logo">
-                                                        <div class="logo">
-                                                            <img class="logo-shape" src="assets/images/shape/logo-shape.png" alt="logo shape">
-                                                            <a href="index.html">
-                                                                <figure>
-                                                                    <img src="assets/images/logo/logo-black.svg" alt="header logo">
-                                                                </figure>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <a href="services.html">Services<i class="fa-solid fa-angle-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="services.html">Services Grid</a></li>
-                                                            <li><a href="services-list.html">Services List</a></li>
-                                                            <li><a href="services-details.html">Services Details</a></li>
-                                                        </ul>
-                                                    </li>                                                    
-                                                    <li>
-                                                        <a href="blog.html">Blog <i class="fa-solid fa-chevron-down"></i></a>
-                                                        <ul class="submenu">
-                                                            <li><a href="blog.html">Blog Grid</a></li>
-                                                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                                        </ul>
-                                                    </li> 
-                                                    <li>
-                                                        <a href="contact.html">Contact Us</a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                    <!-- header navigation end -->
-
-                                    <!-- header right start -->
-                                    <div class="header-right d-flex align-items-center">
-                                        <!-- header button -->
-                                        <div class="header-button">
-                                            <a href="booking.html" class="theme-button style-1" aria-label="Book Now">
-                                                Book Now
-                                            </a>
-                                        </div> 
-                                    </div>
-                                    <!-- header right end -->
-                                </div>
-                                <!-- header content end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- header lower end -->
-            </header>
-            <!-- header end-->
-
-            <!-- main start -->
-            <main class="main">
-                <!-- breadcrumb section start -->
-                <section class="breadcrumb-section">
-                    <!-- breadcrumb wapper start -->
-                    <div class="breadcrumb-wapper" data-img-src="assets/images/breadcrumb/breadcrumb.jpg">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <!-- breadcrumb content start -->
-                                    <div class="breadcrumb-content">
-                                        <!-- breadcrumb title start -->
-                                        <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
-                                            <h1>Gallery</h1>
-                                        </div>
-                                        <!-- breadcrumb title end -->
-                                        <!-- nav start -->
-                                        <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
-                                            <ol class="breadcrumb">
-                                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
-                                            </ol>
-                                        </nav>
-                                        <!-- nav end -->
-                                    </div>
-                                    <!-- breadcrumb content end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- breadcrumb shape bottom start -->
-                        <div class="breadcrumb-shape-bottom">
-                            <figure>
-                                <img src="assets/images/shape/shape-bottom-white.png" alt="breadcrumb shape bottom">
-                            </figure>
-                        </div>
-                        <!-- breadcrumb shape bottom end -->
-                    </div>
-                    <!-- breadcrumb wapper end -->
-                </section>
-                <!-- breadcrumb section end -->
-                
-                <!-- gallery section start -->
-                <div class="gallery-section pt-100 md-pt-80 pb-70 md-pb-50">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <!-- photo-gallery start -->
-                                <div class="photo-gallery">
-                                    <div class="photo-gallery-image">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/gallery/gallery-1.jpg" alt="photo gallery one">
-                                        </figure>
-                                    </div>
-                                    <div class="photo-gallery-icon">
-                                        <a class="photo-popup" href="assets/images/gallery/gallery-1.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- photo-gallery end -->
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-2.jpg" alt="photo gallery two">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-2.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-3.jpg" alt="photo gallery three">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-3.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-4.jpg" alt="photo gallery four">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-4.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-5.jpg" alt="photo gallery five">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-5.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <!-- photo-gallery start -->
-                                <div class="photo-gallery">
-                                    <div class="photo-gallery-image">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/gallery/gallery-6.jpg" alt="photo gallery six">
-                                        </figure>
-                                    </div>
-                                    <div class="photo-gallery-icon">
-                                        <a class="photo-popup" href="assets/images/gallery/gallery-6.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- photo-gallery end -->
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <!-- photo-gallery start -->
-                                <div class="photo-gallery">
-                                    <div class="photo-gallery-image">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/gallery/gallery-7.jpg" alt="photo gallery seven">
-                                        </figure>
-                                    </div>
-                                    <div class="photo-gallery-icon">
-                                        <a class="photo-popup" href="assets/images/gallery/gallery-7.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- photo-gallery end -->
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <!-- photo-gallery start -->
-                                <div class="photo-gallery">
-                                    <div class="photo-gallery-image">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/gallery/gallery-8.jpg" alt="photo gallery eight">
-                                        </figure>
-                                    </div>
-                                    <div class="photo-gallery-icon">
-                                        <a class="photo-popup" href="assets/images/gallery/gallery-8.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                    </div>
-                                </div>
-                                <!-- photo-gallery end -->
-                            </div> 
-                            <div class="col-lg-12">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-9.jpg" alt="photo gallery nine">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-9.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <!-- photo-gallery start -->
-                                        <div class="photo-gallery">
-                                            <div class="photo-gallery-image">
-                                                <figure class="image-anime">
-                                                    <img src="assets/images/gallery/gallery-10.jpg" alt="photo gallery ten">
-                                                </figure>
-                                            </div>
-                                            <div class="photo-gallery-icon">
-                                                <a class="photo-popup" href="assets/images/gallery/gallery-10.jpg" aria-label="photo gallery"><i class="fa-solid fa-plus"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- photo-gallery end -->
-                                    </div> 
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <!-- gallery section end -->
-
-                <!-- subscribe section start -->
-                <section class="subscribe-section-1" data-img-src="assets/images/shape/bg-shape-1.png">
-                    <div class="container">
-                        <div class="row justify-content-center justify-content-xl-end">
-                            <div class="col-xl-6 col-lg-8">
-                                <!-- subscribe wapper start -->
-                                <div class="subscribe-wapper wow fadeInUp" data-wow-delay=".2s">
-                                    <h2 class="mb-30 text-black">Subscribe to Receive Latest Offers</h2> 
-                                    <!-- subscribe form start -->
-                                    <form action="#" class="subscribe-form" id="subscribe-form">
-                                        <div class="input-group">
-                                            <input type="text" id="emailid" name="emailid" placeholder="Enter your email" autocomplete="off" required="required">
-                                        </div>
-                                        <button type="submit" class="submit-btn" data-text="subscribe" aria-label="subscribe">
-                                            <i class="fa-solid fa-paper-plane"></i>
-                                        </button> 
-                                    </form>
-                                    <!-- subscribe form end -->
-                                </div>
-                                <!-- subscribe wapper end -->
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- subscribe section end -->
-            </main>
-            <!-- main end -->
-
-            <!-- footer start -->
-            <footer class="footer footer-1">
-                <!-- footer bottom start -->
-                <div class="footer-bottom">
-                    <div class="container">
-                        <!-- footer widget wrap start -->
-                        <div class="footer-widget-wrap">
-                            <div class="row justify-content-between">
-                                <div class="col-xl-4 col-lg-12">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
-                                        <div class="footer-logo mb-20">
-                                            <a href="index.html">
-                                                <figure>
-                                                    <img src="assets/images/logo/logo-white.svg" alt="footer logo">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asin cididunt ut labore et dolore magna ali qua. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asin cididunt ut labore et dolore magna ali qua. Lorem ipsum dolor sit amet.</p>
-                                        <!-- footer social icon start -->
-                                        <div class="footer-social-icon">
-                                            <ul class="social-icon">
-                                                <li>
-                                                    <a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- footer social icon end -->
-                                        <!-- degree text start -->
-                                        <div class="degree-text mt-40">
-                                            <a href="index.html">
-                                                <img src="assets/images/footer/degree.svg" alt="degree">
-                                            </a>
-                                        </div>
-                                        <!-- degree text end -->
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
-                                        <h3 class="footer-widget-title line-anime">Quick Links</h3>
-                                        <!-- widget link start -->
-                                        <div class="widget-link">
-                                            <ul class="link">
-                                                <li>
-                                                    <a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a>
-                                                </li>
-                                                <li>
-                                                    <a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book An Appointment</a>
-                                                </li>
-                                                <li>
-                                                    <a href="faq.html"><i class="fa-solid fa-chevron-right"></i> FAQ</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- widget link end -->
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                                <div class="col-xl-2 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
-                                        <h3 class="footer-widget-title line-anime">Explore</h3>
-                                        <!-- widget link start -->
-                                        <div class="widget-link">
-                                            <ul class="link">
-                                                <li>
-                                                    <a href="offer.html"><i class="fa-solid fa-chevron-right"></i> Offers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="room.html"><i class="fa-solid fa-chevron-right"></i> Rooms</a>
-                                                </li>
-                                                <li>
-                                                    <a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a>
-                                                </li>
-                                                <li>
-                                                    <a href="testimonials.html"><i class="fa-solid fa-chevron-right"></i> Testimonials</a>
-                                                </li>
-                                                <li>
-                                                    <a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> Restaurant</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- widget link end -->
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                                <div class="col-xl-3 col-lg-4 col-sm-6">
-                                    <!-- footer widget start -->
-                                    <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
-                                        <h4 class="footer-widget-title line-anime">Get In Touch</h4>
-                                        <div class="widget-contact">
-                                            <ul class="contact-info">
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-location-dot"></i>
-                                                        123 Serenity Lane, Suite 101, Hometown, CA 12345
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-envelope"></i>
-                                                        info@example.com
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <i class="fa-solid fa-phone-volume"></i>
-                                                        +1 234 467 88
-                                                    </p>
-                                                </li> 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- footer widget end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- footer widget wrap end -->
-                    </div>
-                </div>
-                <!-- footer bottom end -->
-                <!-- footer copyright start -->
-                <div class="footer-copyright">
-                    <div class="container">
-                        <!-- footer copyright wrap start -->
-                        <div class="footer-copyright-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <!-- footer copyright start -->
-                                    <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
-                                        <p class="m-0">&#169; Copyright 2025 Lucxorio All Rights Reserved</p>
-                                    </div>
-                                    <!-- footer copyright end -->
-                                </div>
-                                <div class="col-lg-6 text-lg-end">
-                                    <!-- footer bottom nav start -->
-                                    <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
-                                        <li><a class="line-effect" href="contact.html">Terms and Conditions</a></li>
-                                        <li><a class="line-effect" href="contact.html">Privacy Policy</a></li>
-                                    </ul>
-                                    <!-- footer bottom nav end -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- footer copyright wrap end -->
-                    </div>
-                </div>
-                <!-- footer copyright end -->
-            </footer>
-            <!-- footer end -->
         </div>
-        <!-- page wrapper end -->
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                    <li><a href="gallery.html">Gallery</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="corporate-events.html">Corporate &amp; Group</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-        <!-- jQuery -->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
-        <!-- bootstrap js -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!-- jquery meanmenu js -->
-        <script src="assets/js/jquery.meanmenu.min.js"></script>
-        <!-- swiper js -->
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <!-- wow Js -->
-        <script src="assets/js/wow.min.js"></script>
-        <!-- validate js -->
-        <script src="assets/js/validate.min.js"></script>
-        <!-- ajax form Js -->
-        <script src="assets/js/ajax-form.js"></script> 
-        <!-- SmoothScroll Js -->
-        <script src="assets/js/SmoothScroll.js"></script>
-        <!-- appear Js -->
-        <script src="assets/js/jquery.appear.js"></script>
-        <!-- magnific Js -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>  
-        <!-- syotimer Js -->
-        <script src="assets/js/jquery.syotimer.min.js"></script>  
-        <!-- main Js -->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="gl-hero">
+            <div class="container gl-hero-content">
+                <ul class="gl-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Gallery</li>
+                </ul>
+                <span class="gl-label wow fadeInUp" data-wow-delay=".2s">Visual Journey</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    Mahua House<br><em>Through the Lens</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Forests, celebrations, moments of stillness — every photograph is a window into life at Mahua House.
+                </p>
+            </div>
+            <div class="gl-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             STATS STRIP
+             ============================================================ -->
+        <div class="gl-stats-strip">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="gl-stat-item wow fadeInUp" data-wow-delay=".1s">
+                            <div class="gl-stat-num">3.5</div>
+                            <div class="gl-stat-label">Acres of Forest</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="gl-stat-item wow fadeInUp" data-wow-delay=".2s">
+                            <div class="gl-stat-num">4</div>
+                            <div class="gl-stat-label">Named Venues</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="gl-stat-item wow fadeInUp" data-wow-delay=".3s">
+                            <div class="gl-stat-num">3</div>
+                            <div class="gl-stat-label">Room Types</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="gl-stat-item wow fadeInUp" data-wow-delay=".4s">
+                            <div class="gl-stat-num">MP</div>
+                            <div class="gl-stat-label">Tourism Accredited</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             GALLERY
+             ============================================================ -->
+        <section class="gl-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="gl-label wow fadeInUp" data-wow-delay=".1s">Our Collection</span>
+                        <h2 class="gl-heading wow fadeInUp" data-wow-delay=".2s">Explore <em>Mahua House</em></h2>
+                        <div class="gl-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-camera"></i><span></span></div>
+                        <p class="gl-body wow fadeInUp" data-wow-delay=".4s">Filter by category to explore weddings and events, forest nature, our rooms and cottages, or activities and experiences.</p>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="gl-filter-tabs wow fadeInUp" data-wow-delay=".2s">
+                    <button class="gl-filter-tab active" data-filter="all">All Photos</button>
+                    <button class="gl-filter-tab" data-filter="weddings">Weddings &amp; Events</button>
+                    <button class="gl-filter-tab" data-filter="nature">Nature &amp; Forest</button>
+                    <button class="gl-filter-tab" data-filter="rooms">Rooms &amp; Stay</button>
+                    <button class="gl-filter-tab" data-filter="activities">Activities</button>
+                    <button class="gl-filter-tab" data-filter="dining">Dining</button>
+                </div>
+
+                <!-- Masonry Grid -->
+                <div class="gl-grid" id="gl-masonry">
+
+                    <!-- Weddings & Events -->
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/1.jpeg">
+                        <img src="assets/images/about/1.jpeg" alt="Mahua House Celebration" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/2.jpeg">
+                        <img src="assets/images/about/2.jpeg" alt="Mahua House Event" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/6.jpeg">
+                        <img src="assets/images/about/6.jpeg" alt="Wedding Venue" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/7.jpeg">
+                        <img src="assets/images/about/7.jpeg" alt="Celebration at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/8.jpeg">
+                        <img src="assets/images/about/8.jpeg" alt="Event Setup" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/9.jpeg">
+                        <img src="assets/images/about/9.jpeg" alt="Forest Wedding" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/40.jpeg">
+                        <img src="assets/images/about/40.jpeg" alt="Mahua House Event" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="weddings" href="assets/images/about/41.jpeg">
+                        <img src="assets/images/about/41.jpeg" alt="Corporate Event" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+
+                    <!-- Nature & Forest -->
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/3.jpeg">
+                        <img src="assets/images/about/3.jpeg" alt="Samardha Forest" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/4.jpeg">
+                        <img src="assets/images/about/4.jpeg" alt="Forest at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/5.jpeg">
+                        <img src="assets/images/about/5.jpeg" alt="Green Woodland" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/10.jpeg">
+                        <img src="assets/images/about/10.jpeg" alt="Nature at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/11.jpeg">
+                        <img src="assets/images/about/11.jpeg" alt="Forest Path" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/12.jpeg">
+                        <img src="assets/images/about/12.jpeg" alt="Woodland View" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/60.jpeg">
+                        <img src="assets/images/about/60.jpeg" alt="Forest Landscape" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="nature" href="assets/images/about/61.jpeg">
+                        <img src="assets/images/about/61.jpeg" alt="Nature Walk" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+
+                    <!-- Rooms & Stay -->
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/13.jpeg">
+                        <img src="assets/images/about/13.jpeg" alt="Room at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/14.jpeg">
+                        <img src="assets/images/about/14.jpeg" alt="Cottage Interior" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/15.jpeg">
+                        <img src="assets/images/about/15.jpeg" alt="Forest Cottage" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/16.jpeg">
+                        <img src="assets/images/about/16.jpeg" alt="Room View" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/17.jpeg">
+                        <img src="assets/images/about/17.jpeg" alt="Deluxe AC Room" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/18.jpeg">
+                        <img src="assets/images/about/18.jpeg" alt="Mahua House Cottage" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/19.jpeg">
+                        <img src="assets/images/about/19.jpeg" alt="Stay at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="rooms" href="assets/images/about/20.jpeg">
+                        <img src="assets/images/about/20.jpeg" alt="Forest Room" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+
+                    <!-- Activities -->
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/21.jpeg">
+                        <img src="assets/images/about/21.jpeg" alt="Swimming Pool" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/22.jpeg">
+                        <img src="assets/images/about/22.jpeg" alt="Rain Dance" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/23.jpeg">
+                        <img src="assets/images/about/23.jpeg" alt="Activities at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/24.jpeg">
+                        <img src="assets/images/about/24.jpeg" alt="Forest Trek" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/25.jpeg">
+                        <img src="assets/images/about/25.jpeg" alt="Bonfire" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/26.jpeg">
+                        <img src="assets/images/about/26.jpeg" alt="Camping" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/27.jpeg">
+                        <img src="assets/images/about/27.jpeg" alt="Sports Zone" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="activities" href="assets/images/about/28.jpeg">
+                        <img src="assets/images/about/28.jpeg" alt="Outdoor Activities" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+
+                    <!-- Dining -->
+                    <a class="gl-item mfp-image" data-category="dining" href="assets/images/about/29.jpeg">
+                        <img src="assets/images/about/29.jpeg" alt="Dining at Mahua House" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="dining" href="assets/images/about/30.jpeg">
+                        <img src="assets/images/about/30.jpeg" alt="Traditional Meals" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="dining" href="assets/images/about/31.jpeg">
+                        <img src="assets/images/about/31.jpeg" alt="Restaurant" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="dining" href="assets/images/about/32.jpeg">
+                        <img src="assets/images/about/32.jpeg" alt="Dining Experience" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+                    <a class="gl-item mfp-image" data-category="dining" href="assets/images/about/33.jpeg">
+                        <img src="assets/images/about/33.jpeg" alt="Forest Dining" loading="lazy">
+                        <div class="gl-item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA
+             ============================================================ -->
+        <section class="gl-section gl-section-cream">
+            <div class="container">
+                <div class="gl-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="gl-label gl-label-light">Come and See for Yourself</span>
+                        <h2 class="gl-heading gl-heading-light" style="margin-bottom:14px;">
+                            Experience Mahua House <em>in Person</em>
+                        </h2>
+                        <p class="gl-body gl-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Every photograph only hints at what it feels like to be here. Book your stay or event and let the forest do the rest.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" class="gl-btn gl-btn-outline"><i class="fa-brands fa-facebook-f me-2"></i>Visit Facebook</a>
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="gl-btn gl-btn-gold"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Enquiry</a>
+                            <a href="contact-us.html" class="gl-btn gl-btn-outline">Enquire Today</a>
+                            <a href="tel:+919425651754" class="gl-btn gl-btn-outline"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the lush green forests of Bhopal, Mahua House is a serene eco-tourism retreat spread across 3.5 acres of natural woodland. Boutique rooms and forest cottages await you.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Our Services</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+                                        <li><a href="stay.html"><i class="fa-solid fa-chevron-right"></i> Stay</a></li>
+                                        <li><a href="spaces.html"><i class="fa-solid fa-chevron-right"></i> Venues</a></li>
+                                        <li><a href="corporate-events.html"><i class="fa-solid fa-chevron-right"></i> Corporate</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/SmoothScroll.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.syotimer.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+    // Gallery filter
+    document.addEventListener('DOMContentLoaded', function () {
+        var tabs = document.querySelectorAll('.gl-filter-tab');
+        var items = document.querySelectorAll('.gl-item');
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                tabs.forEach(function (t) { t.classList.remove('active'); });
+                tab.classList.add('active');
+                var filter = tab.getAttribute('data-filter');
+                items.forEach(function (item) {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Magnific Popup — open items not hidden
+        $(document).on('click', '.gl-item.mfp-image:not(.hidden)', function (e) {
+            e.preventDefault();
+            var visibleItems = $('.gl-item.mfp-image:not(.hidden)');
+            var index = visibleItems.index(this);
+            $.magnificPopup.open({
+                items: visibleItems.map(function () {
+                    return { src: $(this).attr('href'), type: 'image' };
+                }).get(),
+                gallery: { enabled: true },
+                type: 'image',
+                index: index
+            });
+        });
+    });
+</script>
+
+</body>
 </html>

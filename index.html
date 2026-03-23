@@ -437,6 +437,33 @@
             .hm-cta-wrap { padding: 44px 22px; }
             .hm-hero-controls { right: 20px; bottom: 24px; }
         }
+
+        /* ============================================================
+           WHY CHOOSE CARDS
+           ============================================================ */
+        .hm-why-card {
+            background: #fff; border-radius: 18px; padding: 34px 28px;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.06);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+            height: 100%;
+        }
+        .hm-why-card:hover {
+            transform: translateY(-8px); box-shadow: 0 20px 50px rgba(3,54,49,0.14);
+            background: #033631;
+        }
+        .hm-why-card:hover .hm-why-title { color: #fff; }
+        .hm-why-card:hover .hm-why-text { color: rgba(255,255,255,0.65); }
+        .hm-why-card:hover .hm-why-icon { background: #DAA520; color: #033631; }
+        .hm-why-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(218,165,32,0.12); color: #DAA520;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 24px; margin-bottom: 18px;
+            transition: background 0.35s ease, color 0.35s ease;
+        }
+        .hm-why-title { font-size: 18px; font-weight: 700; color: #033631; margin-bottom: 10px; transition: color 0.35s ease; }
+        .hm-why-text { font-size: 14px; color: rgba(3,54,49,0.6); line-height: 1.75; margin: 0; transition: color 0.35s ease; }
     </style>
 </head>
 
@@ -590,7 +617,8 @@
 
         <!-- ============================================================
              HERO SECTION
-             ============================================================ -->
+             ===================
+             ========================================= -->
         <section class="hm-hero" id="hm-hero">
 
             <!-- Slide 1 -->
@@ -603,17 +631,18 @@
             <div class="hm-hero-slide" style="background-image: url('assets/images/about/65.jpeg');"></div>
 
             <div class="container hm-hero-content">
-                <span class="hm-label hm-label-light wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Eco-Tourism | Bhopal</span>
-                <h1 class="wow fadeInUp" data-wow-delay=".3s" style="color: #fff;font-size: 32px;">
-                    Where the Forest<br><em>Comes Alive</em>
+                <span class="hm-label hm-label-light wow fadeInUp" data-wow-delay=".2s" style="color: #DAA520;">MP Tourism Accredited · Raisen Road, Bhopal</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s" style="color: #fff;font-size: clamp(30px,5vw,58px);">
+                    Mahua House —<br><em>The Nostalgic Woods</em>
                 </h1>
                 <p class="hm-hero-sub wow fadeInUp" data-wow-delay=".4s">
-                    3.5 acres of pristine woodland at the edge of Samardha Reserved Forest.
-                    Disconnect from the city. Reconnect with nature.
+                    Where Tradition Meets Tranquility — A Nature Retreat for Weddings, Events &amp; Peaceful Getaways in Bhopal
                 </p>
                 <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".5s">
-                    <a href="booking.html" class="hm-btn hm-btn-gold">Book Your Stay</a>
-                    <a href="about-us.html" class="hm-btn hm-btn-outline">Discover Mahua House</a>
+                    <a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" class="hm-btn hm-btn-outline"><i class="fa-brands fa-facebook-f" style="margin-right:7px;"></i>Visit FB</a>
+                    <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="hm-btn hm-btn-outline"><i class="fa-brands fa-whatsapp" style="margin-right:7px;"></i>WhatsApp Enquiry</a>
+                    <a href="video-tours.html" class="hm-btn hm-btn-outline"><i class="fa-solid fa-play" style="margin-right:7px;"></i>Watch Videos</a>
+                    <a href="booking.html" class="hm-btn hm-btn-gold"><i class="fa-solid fa-phone" style="margin-right:7px;"></i>Book Your Stay</a>
                 </div>
             </div>
 
@@ -680,19 +709,19 @@
                     <!-- content -->
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
                         <span class="hm-label">Welcome to Mahua House</span>
-                        <h2 class="hm-heading">The Nostalgic <em>Woodland Retreat</em></h2>
+                        <h2 class="hm-heading">The Nostalgic <em>Woods</em></h2>
                         <div class="hm-divider"><span></span><i class="fa-solid fa-leaf"></i><span></span></div>
                         <p class="hm-body mb-3">
-                            Nestled at the edge of Samardha Reserved Forest in Bhopal, Mahua House is a 3.5-acre eco-tourism haven. We believe the finest hospitality is the kind that nature itself provides — warm, honest, and deeply restorative.
+                            Mahua House — The Nostalgic Woods is an MP Tourism accredited countryside retreat located on Raisen Road, Bhopal, surrounded by serene forest landscapes.
                         </p>
                         <p class="hm-body mb-4">
-                            Named after the ancient Mahua trees that grace our grounds, our retreat offers forest stays, destination weddings, farm-to-table dining, and unforgettable outdoor experiences — all within reach of the city, yet a world apart.
+                            Designed for those who value peace, culture, and meaningful gatherings, Mahua House blends rustic charm with modern comfort. Whether it is a wedding celebration, corporate retreat, educational tour, or a quiet family getaway, the space offers an environment that encourages connection — with nature and with each other.
                         </p>
                         <ul class="hm-intro-list">
-                            <li><i class="fa-solid fa-check"></i> 3.5 acres of pristine woodland in Bhopal district</li>
-                            <li><i class="fa-solid fa-check"></i> Surrounded by Mahua, Teak and Bamboo groves</li>
-                            <li><i class="fa-solid fa-check"></i> Eco-conscious design — minimal footprint, maximum experience</li>
-                            <li><i class="fa-solid fa-check"></i> Independently owned &amp; operated since 2014</li>
+                            <li><i class="fa-solid fa-check"></i> MP Tourism Accredited countryside retreat</li>
+                            <li><i class="fa-solid fa-check"></i> Adjoining Samardha Reserved Forest, Bhopal</li>
+                            <li><i class="fa-solid fa-check"></i> Trusted by Doordarshan productions</li>
+                            <li><i class="fa-solid fa-check"></i> Ideal for weddings, events, picnics &amp; peaceful stays</li>
                         </ul>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="about-us.html" class="hm-btn hm-btn-primary">Our Story</a>
@@ -748,6 +777,66 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- ============================================================
+             WHY CHOOSE MAHUA HOUSE
+             ============================================================ -->
+        <section class="hm-section hm-section-alt" id="why-choose">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <span class="hm-label wow fadeInUp" data-wow-delay=".1s">Why Choose Us</span>
+                        <h2 class="hm-heading wow fadeInUp" data-wow-delay=".2s">Why <em>Mahua House</em></h2>
+                        <div class="hm-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-tree"></i></div>
+                            <h4 class="hm-why-title">Nature-Centric Location</h4>
+                            <p class="hm-why-text">Surrounded by forest — शांत और सुकून भरा वातावरण. Experience serene, peaceful surroundings away from city noise.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <h4 class="hm-why-title">Authentic Food</h4>
+                            <p class="hm-why-text">Traditional &amp; local cuisine experience. Taste the real flavours of Madhya Pradesh — fresh, hygienic, and locally inspired.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                            <h4 class="hm-why-title">Versatile Venue</h4>
+                            <p class="hm-why-text">Perfect for weddings, corporate events, picnics, family outings, and photo shoots in a stunning natural setting.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-spa"></i></div>
+                            <h4 class="hm-why-title">Peaceful Retreat</h4>
+                            <p class="hm-why-text">Ideal for meditation, relaxation, and rejuvenation. Disconnect from the digital world and reconnect with yourself.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-video"></i></div>
+                            <h4 class="hm-why-title">Media-Friendly</h4>
+                            <p class="hm-why-text">Trusted by Doordarshan productions. Natural backdrops, quiet environment, and permit guidance for film &amp; media shoots.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="hm-why-card">
+                            <div class="hm-why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4 class="hm-why-title">Safe &amp; Managed</h4>
+                            <p class="hm-why-text">CCTV surveillance, dedicated security, and full event management support for your peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- ============================================================
@@ -846,91 +935,91 @@
                 </div>
 
                 <div class="row g-4">
-                    <!-- Room 1 -->
+                    <!-- Room 1: Super Deluxe AC -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="hm-room-card">
                             <div class="hm-room-img">
-                                <img src="assets/images/room/room-1.jpg" alt="Deluxe King Bed">
+                                <img src="assets/images/room/room-1.jpg" alt="Super Deluxe AC Room">
                                 <span class="hm-room-badge">Popular</span>
                                 <div class="hm-room-price-tag">
                                     <span class="from">From</span>
-                                    <span class="price">₹670</span>
+                                    <span class="price">₹3,500</span>
                                     <span class="night">/ night</span>
                                 </div>
                             </div>
                             <div class="hm-room-body">
-                                <span class="hm-room-type">Forest Room</span>
-                                <h3 class="hm-room-title">Deluxe King Bed</h3>
-                                <p class="hm-room-desc">A spacious forest-facing room with a king-size bed, private terrace, and views of the Mahua grove.</p>
+                                <span class="hm-room-type">Super Deluxe AC</span>
+                                <h3 class="hm-room-title">Super Deluxe AC Room</h3>
+                                <p class="hm-room-desc">Spacious air-conditioned room with forest views. Double occupancy. Check-in 11AM · Check-out 10AM.</p>
                                 <div class="hm-room-amenities">
-                                    <span class="hm-amenity"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-bed"></i> King Bed</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-bed"></i> Double Bed</span>
                                     <span class="hm-amenity"><i class="fa-solid fa-shower"></i> Bath</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-utensils"></i> Breakfast</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-bolt"></i> Power Backup</span>
                                 </div>
                                 <div class="hm-room-footer">
                                     <span style="font-size:13px;color:rgba(3,54,49,0.5);"><i class="fa-solid fa-user" style="color:#DAA520;margin-right:4px;"></i> 2 Guests</span>
-                                    <a href="room-details.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
+                                    <a href="rooms.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Room 2 -->
+                    <!-- Room 2: Deluxe AC -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="hm-room-card">
                             <div class="hm-room-img">
-                                <img src="assets/images/room/room-2.jpg" alt="Exclusive Deluxe">
+                                <img src="assets/images/room/room-2.jpg" alt="Deluxe AC Room">
                                 <span class="hm-room-badge" style="background:#033631;color:#DAA520;">Best Value</span>
                                 <div class="hm-room-price-tag">
                                     <span class="from">From</span>
-                                    <span class="price">₹610</span>
+                                    <span class="price">₹3,000</span>
                                     <span class="night">/ night</span>
                                 </div>
                             </div>
                             <div class="hm-room-body">
-                                <span class="hm-room-type">Eco Cottage</span>
-                                <h3 class="hm-room-title">Exclusive Deluxe</h3>
-                                <p class="hm-room-desc">A charming eco-cottage with all modern comforts, surrounded by bamboo groves and morning birdsong.</p>
+                                <span class="hm-room-type">Deluxe AC</span>
+                                <h3 class="hm-room-title">Deluxe AC Room</h3>
+                                <p class="hm-room-desc">Comfortable air-conditioned room amidst nature. Double occupancy. Check-in 11AM · Check-out 10AM.</p>
                                 <div class="hm-room-amenities">
-                                    <span class="hm-amenity"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-snowflake"></i> AC</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-tv"></i> TV</span>
                                     <span class="hm-amenity"><i class="fa-solid fa-square-parking"></i> Parking</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-utensils"></i> Breakfast</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-bolt"></i> Power Backup</span>
                                 </div>
                                 <div class="hm-room-footer">
                                     <span style="font-size:13px;color:rgba(3,54,49,0.5);"><i class="fa-solid fa-user" style="color:#DAA520;margin-right:4px;"></i> 2 Guests</span>
-                                    <a href="room-details.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
+                                    <a href="rooms.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Room 3 -->
+                    <!-- Room 3: Independent Cottage -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                         <div class="hm-room-card">
                             <div class="hm-room-img">
-                                <img src="assets/images/room/room-3.jpg" alt="Family Exclusive">
-                                <span class="hm-room-badge" style="background:#fff;color:#033631;">Family</span>
+                                <img src="assets/images/room/room-3.jpg" alt="Independent Cottage">
+                                <span class="hm-room-badge" style="background:#fff;color:#033631;">Cottage</span>
                                 <div class="hm-room-price-tag">
                                     <span class="from">From</span>
-                                    <span class="price">₹620</span>
+                                    <span class="price">₹2,500</span>
                                     <span class="night">/ night</span>
                                 </div>
                             </div>
                             <div class="hm-room-body">
-                                <span class="hm-room-type">Family Suite</span>
-                                <h3 class="hm-room-title">Family Exclusive</h3>
-                                <p class="hm-room-desc">A generous suite perfect for families, with two bedrooms, a living area, and a private nature-facing porch.</p>
+                                <span class="hm-room-type">Independent Cottage</span>
+                                <h3 class="hm-room-title">Forest Cottage</h3>
+                                <p class="hm-room-desc">Charming private cottage nestled in nature. Double occupancy. Check-in 11AM · Check-out 10AM.</p>
                                 <div class="hm-room-amenities">
-                                    <span class="hm-amenity"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-bed"></i> 2 Beds</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-house"></i> Private</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-bed"></i> Double Bed</span>
                                     <span class="hm-amenity"><i class="fa-solid fa-bath"></i> Bath</span>
-                                    <span class="hm-amenity"><i class="fa-solid fa-utensils"></i> Breakfast</span>
+                                    <span class="hm-amenity"><i class="fa-solid fa-bolt"></i> Power Backup</span>
                                 </div>
                                 <div class="hm-room-footer">
-                                    <span style="font-size:13px;color:rgba(3,54,49,0.5);"><i class="fa-solid fa-user" style="color:#DAA520;margin-right:4px;"></i> 4 Guests</span>
-                                    <a href="room-details.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
+                                    <span style="font-size:13px;color:rgba(3,54,49,0.5);"><i class="fa-solid fa-user" style="color:#DAA520;margin-right:4px;"></i> 2 Guests</span>
+                                    <a href="rooms.html" class="hm-btn hm-btn-primary" style="padding:9px 20px;font-size:13px;">Details</a>
                                 </div>
                             </div>
                         </div>
@@ -1059,23 +1148,24 @@ Shivani  &amp; Shukla</p>
 
 
         <!-- ============================================================
-             CTA SECTION
+             FINAL CTA SECTION
              ============================================================ -->
         <section class="hm-section">
             <div class="container">
                 <div class="hm-cta-wrap wow fadeInUp" data-wow-delay=".2s">
                     <div style="position:relative;z-index:1;">
-                        <span class="hm-label hm-label-light wow fadeInUp" data-wow-delay=".2s">Come Find Us</span>
+                        <span class="hm-label hm-label-light wow fadeInUp" data-wow-delay=".2s">Ready to Visit?</span>
                         <h2 class="hm-heading hm-heading-light wow fadeInUp" data-wow-delay=".3s" style="margin-bottom:16px;">
                             Ready to Experience <em>Mahua House?</em>
                         </h2>
                         <p class="hm-body hm-body-light wow fadeInUp" data-wow-delay=".4s" style="max-width:560px;margin:0 auto 36px;">
-                            Whether you're seeking a weekend escape, a family adventure, a corporate retreat, or a destination wedding — our forest is waiting for you.
+                            Book your stay, plan your event, or simply come to unwind in nature. Our forest is waiting for you.
                         </p>
                         <div class="d-flex flex-wrap gap-3 justify-content-center wow fadeInUp" data-wow-delay=".5s">
-                            <a href="booking.html" class="hm-btn hm-btn-gold">Book a Stay</a>
-                            <a href="destination-wedding.html" class="hm-btn hm-btn-outline">Plan Your Wedding</a>
-                            <a href="contact-us.html" class="hm-btn hm-btn-outline">Get in Touch</a>
+                            <a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" class="hm-btn hm-btn-outline"><i class="fa-brands fa-facebook-f" style="margin-right:7px;"></i>Visit Facebook</a>
+                            <a href="https://maps.app.goo.gl/K2ag8CT2Nza4JZrb9" target="_blank" rel="noopener" class="hm-btn hm-btn-outline"><i class="fa-solid fa-star" style="margin-right:7px;"></i>Read Google Reviews</a>
+                            <a href="contact-us.html" class="hm-btn hm-btn-outline"><i class="fa-solid fa-envelope" style="margin-right:7px;"></i>Enquire Today</a>
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="hm-btn hm-btn-gold"><i class="fa-brands fa-whatsapp" style="margin-right:7px;"></i>WhatsApp or Call Now</a>
                         </div>
                     </div>
                 </div>

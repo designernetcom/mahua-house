@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Corporate retreats, team-building workshops, educational tours and film shoots at Mahua House — MP Tourism accredited nature retreat on Raisen Road, Bhopal.">
+    <meta name="keywords" content="Corporate Retreat Bhopal, Team Building Forest Bhopal, Educational Tour Forest, Film Shoot Location Bhopal, Mahua House Corporate">
+    <title>Corporate Events & Group Retreats | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           CORPORATE EVENTS PAGE — STYLES  prefix: .ce-
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        .ce-section       { padding: 90px 0; }
+        .ce-section-alt   { background: #E7EEEE; }
+        .ce-section-dark  { background: #033631; }
+        .ce-section-cream { background: #faf8f3; }
+
+        .ce-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .ce-label-light { color: rgba(218,165,32,0.9); }
+
+        .ce-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .ce-heading-light { color: #ffffff; }
+        .ce-heading em { font-style: normal; color: #DAA520; }
+
+        .ce-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .ce-divider.centered { justify-content: center; }
+        .ce-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .ce-divider i { font-size: 9px; }
+
+        .ce-body {
+            font-size: 15px; color: rgba(3,54,49,0.6);
+            line-height: 1.85; margin-bottom: 0;
+        }
+        .ce-body-light { color: rgba(255,255,255,0.62); }
+
+        .ce-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .ce-btn-primary { background:#033631; color:#fff; border-color:#033631; }
+        .ce-btn-primary:hover { background:transparent; color:#033631; }
+        .ce-btn-gold    { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .ce-btn-gold:hover { background:transparent; color:#DAA520; }
+        .ce-btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,0.45); }
+        .ce-btn-outline:hover { background:#DAA520; color:#033631; border-color:#DAA520; }
+        .ce-btn-outline-green { background:transparent; color:#033631; border-color:rgba(3,54,49,0.35); }
+        .ce-btn-outline-green:hover { background:#033631; color:#fff; border-color:#033631; }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .ce-hero {
+            position: relative; height: 580px;
+            background: url('assets/images/about/7.jpeg') center center / cover no-repeat;
+            display: flex; align-items: flex-end; overflow: hidden;
+        }
+        .ce-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.28) 0%, rgba(3,54,49,0.85) 100%);
+        }
+        .ce-hero-content {
+            position: relative; z-index: 2;
+            padding-bottom: 80px; width: 100%;
+        }
+        .ce-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .ce-breadcrumb li { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .ce-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .ce-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+        .ce-hero h1 {
+            font-size: clamp(38px, 5vw, 70px); font-weight: 800;
+            color: #fff; line-height: 1.1; margin-bottom: 18px;
+        }
+        .ce-hero h1 em { font-style: italic; color: #DAA520; }
+        .ce-hero p {
+            font-size: 16px; color: rgba(255,255,255,0.75);
+            max-width: 580px; line-height: 1.75; margin-bottom: 30px;
+        }
+        .ce-hero-shape {
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; line-height: 0;
+        }
+        .ce-hero-shape img { width: 100%; }
+
+        /* ============================================================
+           CATEGORY CARDS
+           ============================================================ */
+        .ce-cat-card {
+            border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 24px rgba(3,54,49,0.07);
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .ce-cat-head {
+            background: #033631; padding: 30px 28px;
+            display: flex; align-items: center; gap: 16px;
+        }
+        .ce-cat-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: rgba(218,165,32,0.15); border: 1px solid rgba(218,165,32,0.3);
+            display: flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 22px; flex-shrink: 0;
+        }
+        .ce-cat-head-title { font-size: 20px; font-weight: 700; color: #fff; margin: 0; }
+        .ce-cat-head-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin: 4px 0 0; }
+        .ce-cat-body { padding: 26px 28px; background: #fff; flex: 1; }
+        .ce-cat-list { list-style: none; padding: 0; margin: 0; }
+        .ce-cat-list li {
+            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 14px; color: rgba(3,54,49,0.65);
+            padding: 8px 0; border-bottom: 1px solid rgba(3,54,49,0.06);
+        }
+        .ce-cat-list li:last-child { border-bottom: none; }
+        .ce-cat-list li i { color: #DAA520; font-size: 11px; margin-top: 4px; min-width: 14px; }
+
+        /* ============================================================
+           FEATURE LIST
+           ============================================================ */
+        .ce-feature-item {
+            display: flex; align-items: flex-start; gap: 18px;
+            padding: 22px 0; border-bottom: 1px solid rgba(3,54,49,0.08);
+        }
+        .ce-feature-item:first-child { padding-top: 0; }
+        .ce-feature-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .ce-feature-icon {
+            width: 52px; height: 52px; min-width: 52px; border-radius: 14px;
+            background: rgba(3,54,49,0.07); border: 1px solid rgba(3,54,49,0.12);
+            display: flex; align-items: center; justify-content: center;
+            color: #033631; font-size: 20px; flex-shrink: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .ce-feature-item:hover .ce-feature-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ce-feature-title { font-size: 16px; font-weight: 700; color: #033631; margin-bottom: 5px; }
+        .ce-feature-text  { font-size: 14px; color: rgba(3,54,49,0.55); line-height: 1.7; margin: 0; }
+
+        /* ============================================================
+           ACTIVITIES GRID
+           ============================================================ */
+        .ce-act-card {
+            background: #fff; border-radius: 16px;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 16px rgba(3,54,49,0.06);
+            padding: 28px 22px; text-align: center; height: 100%;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+        }
+        .ce-act-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(3,54,49,0.12); background: #033631; }
+        .ce-act-icon {
+            width: 62px; height: 62px; border-radius: 50%;
+            background: rgba(218,165,32,0.1); border: 1px solid rgba(218,165,32,0.25);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 24px; margin-bottom: 16px;
+            transition: background 0.35s;
+        }
+        .ce-act-card:hover .ce-act-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ce-act-title { font-size: 16px; font-weight: 700; color: #033631; margin-bottom: 8px; transition: color 0.35s; }
+        .ce-act-card:hover .ce-act-title { color: #DAA520; }
+        .ce-act-text { font-size: 13px; color: rgba(3,54,49,0.55); line-height: 1.65; margin: 0; transition: color 0.35s; }
+        .ce-act-card:hover .ce-act-text { color: rgba(255,255,255,0.6); }
+
+        /* ============================================================
+           INFO SPLIT SECTION
+           ============================================================ */
+        .ce-info-img {
+            border-radius: 20px; overflow: hidden; height: 480px; position: relative;
+        }
+        .ce-info-img img { width: 100%; height: 100%; object-fit: cover; }
+        .ce-info-badge {
+            position: absolute; bottom: 24px; left: 24px; right: 24px;
+            background: rgba(3,54,49,0.92); backdrop-filter: blur(8px);
+            border-radius: 14px; padding: 18px 20px;
+            display: flex; align-items: center; gap: 14px;
+        }
+        .ce-info-badge-icon {
+            width: 44px; height: 44px; border-radius: 50%; background: #DAA520;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: #033631; flex-shrink: 0;
+        }
+
+        /* ============================================================
+           STEP CARDS (dark bg)
+           ============================================================ */
+        .ce-step-card {
+            text-align: center; padding: 36px 24px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px; height: 100%;
+            transition: background 0.35s ease, border-color 0.35s ease;
+            position: relative;
+        }
+        .ce-step-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(218,165,32,0.4); }
+        .ce-step-num {
+            font-size: 60px; font-weight: 900; line-height: 1;
+            color: rgba(218,165,32,0.12); position: absolute;
+            top: 16px; right: 20px; font-family: Georgia, serif;
+        }
+        .ce-step-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(218,165,32,0.15); border: 1px solid rgba(218,165,32,0.3);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 24px; margin-bottom: 20px;
+            transition: background 0.35s ease;
+        }
+        .ce-step-card:hover .ce-step-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .ce-step-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .ce-step-text  { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.75; margin: 0; }
+
+        /* ============================================================
+           CTA BOX
+           ============================================================ */
+        .ce-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #07554D 100%);
+            border-radius: 24px; padding: 70px 60px;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .ce-cta-box::before {
+            content: ''; position: absolute; top: -100px; right: -100px;
+            width: 350px; height: 350px; border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .ce-cta-box::after {
+            content: ''; position: absolute; bottom: -80px; left: -80px;
+            width: 260px; height: 260px; border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        /* ============================================================
+           ENQUIRY FORM
+           ============================================================ */
+        .ce-form-wrap {
+            background: #fff; border-radius: 20px; padding: 48px 44px;
+            box-shadow: 0 8px 40px rgba(3,54,49,0.1);
+            border: 1px solid rgba(3,54,49,0.08);
+        }
+        .ce-form-label {
+            font-size: 12px; font-weight: 600; letter-spacing: 1px;
+            text-transform: uppercase; color: #033631; margin-bottom: 7px; display: block;
+        }
+        .ce-form-control {
+            border: 1px solid rgba(3,54,49,0.15); border-radius: 10px;
+            padding: 13px 16px; font-size: 14px; color: #033631;
+            background: #fafafa; width: 100%;
+        }
+        .ce-form-control:focus { outline: none; border-color: #DAA520; }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 991px) {
+            .ce-hero { height: 460px; }
+            .ce-section { padding: 70px 0; }
+            .ce-cta-box { padding: 50px 30px; }
+        }
+        @media (max-width: 575px) {
+            .ce-hero h1 { font-size: 32px; }
+            .ce-cta-box { padding: 40px 20px; }
+            .ce-form-wrap { padding: 32px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/mahuahouse" aria-label="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://wa.me/919425651754" aria-label="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/mahuahouse" aria-label="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://wa.me/919425651754" aria-label="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="corporate-events.html">Corporate Retreats</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section class="ce-hero">
+            <div class="container ce-hero-content">
+                <ul class="ce-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Corporate &amp; Group Events</li>
+                </ul>
+                <span class="ce-label wow fadeInUp" data-wow-delay=".2s">Groups &amp; Corporates</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s" style="font-size: 30px;">
+                    Retreats, Workshops &amp;<br><em>Experiences</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Team-building retreats, educational tours, film shoots and group outings — Mahua House offers a complete nature-based experience for every kind of group, backed by MP Tourism accreditation.
+                </p>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".45s">
+                    <a href="#enquire" class="ce-btn ce-btn-gold">Plan Your Retreat</a>
+                    <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="ce-btn ce-btn-outline"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="ce-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- ============================================================
+             WHAT WE OFFER — 3 CATEGORY CARDS
+             ============================================================ -->
+        <section class="ce-section" style="padding-top:110px;">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ce-label wow fadeInUp" data-wow-delay=".1s">What We Offer</span>
+                        <h2 class="ce-heading wow fadeInUp" data-wow-delay=".2s">Three Distinct <em>Group Experiences</em></h2>
+                        <div class="ce-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ce-body wow fadeInUp" data-wow-delay=".4s">From corporate team-building to school field trips to film shoots — Mahua House has a forest experience for every group.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ce-cat-card">
+                            <div class="ce-cat-head">
+                                <div class="ce-cat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <div>
+                                    <h4 class="ce-cat-head-title">Corporate &amp; Group Events</h4>
+                                    <p class="ce-cat-head-sub">Team Retreats &amp; Workshops</p>
+                                </div>
+                            </div>
+                            <div class="ce-cat-body">
+                                <ul class="ce-cat-list">
+                                    <li><i class="fa-solid fa-check"></i> Team-building retreats</li>
+                                    <li><i class="fa-solid fa-check"></i> Strategic workshops &amp; meetings</li>
+                                    <li><i class="fa-solid fa-check"></i> Club &amp; group outings</li>
+                                    <li><i class="fa-solid fa-check"></i> Training programs</li>
+                                    <li><i class="fa-solid fa-check"></i> Projector &amp; sound support</li>
+                                    <li><i class="fa-solid fa-check"></i> Group activities included</li>
+                                    <li><i class="fa-solid fa-check"></i> Customised meal plans (₹1,000/head)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ce-cat-card">
+                            <div class="ce-cat-head">
+                                <div class="ce-cat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <h4 class="ce-cat-head-title">Educational &amp; Institutional Tours</h4>
+                                    <p class="ce-cat-head-sub">School, College &amp; Institution Groups</p>
+                                </div>
+                            </div>
+                            <div class="ce-cat-body">
+                                <ul class="ce-cat-list">
+                                    <li><i class="fa-solid fa-check"></i> School &amp; college group visits</li>
+                                    <li><i class="fa-solid fa-check"></i> Nature walks &amp; forest education</li>
+                                    <li><i class="fa-solid fa-check"></i> Eco-awareness camps</li>
+                                    <li><i class="fa-solid fa-check"></i> Hands-on farming experiences</li>
+                                    <li><i class="fa-solid fa-check"></i> Rural culture &amp; heritage discovery</li>
+                                    <li><i class="fa-solid fa-check"></i> Samardha Reserved Forest exploration</li>
+                                    <li><i class="fa-solid fa-check"></i> Supervised activities for students</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ce-cat-card">
+                            <div class="ce-cat-head">
+                                <div class="ce-cat-icon"><i class="fa-solid fa-video"></i></div>
+                                <div>
+                                    <h4 class="ce-cat-head-title">Film &amp; Media Productions</h4>
+                                    <p class="ce-cat-head-sub">Shoots, Documentaries &amp; Photography</p>
+                                </div>
+                            </div>
+                            <div class="ce-cat-body">
+                                <ul class="ce-cat-list">
+                                    <li><i class="fa-solid fa-check"></i> Natural forest backdrop — no fake sets</li>
+                                    <li><i class="fa-solid fa-check"></i> TV commercials &amp; brand films</li>
+                                    <li><i class="fa-solid fa-check"></i> Documentaries &amp; short films</li>
+                                    <li><i class="fa-solid fa-check"></i> Music videos &amp; cultural productions</li>
+                                    <li><i class="fa-solid fa-check"></i> Pre-wedding &amp; portfolio shoots</li>
+                                    <li><i class="fa-solid fa-check"></i> Editorial &amp; fashion photography</li>
+                                    <li><i class="fa-solid fa-check"></i> Crew accommodation on-site</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CORPORATE DETAILS — FEATURES + IMAGE
+             ============================================================ -->
+        <section class="ce-section ce-section-alt">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".2s">
+                        <div class="ce-info-img">
+                            <img src="assets/images/about/20.jpeg" alt="Corporate Retreat at Mahua House">
+                            <div class="ce-info-badge">
+                                <div class="ce-info-badge-icon"><i class="fa-solid fa-leaf"></i></div>
+                                <div>
+                                    <p style="font-size:15px;font-weight:700;color:#fff;margin:0;line-height:1.2;">MP Tourism Accredited</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.5);margin:0;">Trusted nature retreat on Raisen Road, Bhopal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay=".3s">
+                        <span class="ce-label">Why Choose Mahua House</span>
+                        <h2 class="ce-heading">Corporate Retreats in a<br><em>Real Forest</em></h2>
+                        <div class="ce-divider"><span></span><i class="fa-solid fa-star"></i><span></span></div>
+
+                        <div class="ce-feature-item">
+                            <div class="ce-feature-icon"><i class="fa-solid fa-tree"></i></div>
+                            <div>
+                                <h5 class="ce-feature-title">Adjoining Reserved Forest</h5>
+                                <p class="ce-feature-text">Mahua House sits adjoining Samardha Reserved Forest on Raisen Road, Bhopal — a natural, undistracted environment that boosts creativity, focus, and team bonding.</p>
+                            </div>
+                        </div>
+                        <div class="ce-feature-item">
+                            <div class="ce-feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <div>
+                                <h5 class="ce-feature-title">Meeting Spaces with Full AV</h5>
+                                <p class="ce-feature-text">Open and covered meeting areas equipped with projector, sound system, and whiteboards — perfect for strategy sessions, presentations, and workshops away from the office.</p>
+                            </div>
+                        </div>
+                        <div class="ce-feature-item">
+                            <div class="ce-feature-icon"><i class="fa-solid fa-person-running"></i></div>
+                            <div>
+                                <h5 class="ce-feature-title">Team Activities Built In</h5>
+                                <p class="ce-feature-text">Swimming pool, rain dance, jungle trekking, bonfire, badminton, cricket, volleyball, table tennis and more — activities that break barriers and build teams naturally.</p>
+                            </div>
+                        </div>
+                        <div class="ce-feature-item">
+                            <div class="ce-feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <div>
+                                <h5 class="ce-feature-title">Customised Dining (₹1,000/Head)</h5>
+                                <p class="ce-feature-text">Traditional home-style food, multi-cuisine buffet, and customised menus for groups — Bed Tea, Breakfast, Lunch, Hi Tea, and Dinner available at ₹1,000 per head.</p>
+                            </div>
+                        </div>
+                        <div class="ce-feature-item">
+                            <div class="ce-feature-icon"><i class="fa-solid fa-moon"></i></div>
+                            <div>
+                                <h5 class="ce-feature-title">Stay On-site</h5>
+                                <p class="ce-feature-text">Super Deluxe AC, Deluxe AC, and Independent Cottage options from ₹2,500/night (double occupancy). Check-in 11AM, Check-out 10AM.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ACTIVITIES GRID
+             ============================================================ -->
+        <section class="ce-section ce-section-cream">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ce-label wow fadeInUp" data-wow-delay=".1s">Group Activities</span>
+                        <h2 class="ce-heading wow fadeInUp" data-wow-delay=".2s">Activities for Your <em>Team or Group</em></h2>
+                        <div class="ce-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ce-body wow fadeInUp" data-wow-delay=".4s">From adventure to relaxation — there's something for every group member at Mahua House.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                            <h5 class="ce-act-title">Swimming Pool</h5>
+                            <p class="ce-act-text">Refreshing pool access for all group members</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".25s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                            <h5 class="ce-act-title">Rain Dance</h5>
+                            <p class="ce-act-text">Fun rain dance activity for team bonding</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                            <h5 class="ce-act-title">Jungle Trekking</h5>
+                            <p class="ce-act-text">Guided treks through the Samardha forest</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".35s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                            <h5 class="ce-act-title">Bonfire</h5>
+                            <p class="ce-act-text">Evening bonfire for storytelling and team time</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-tent"></i></div>
+                            <h5 class="ce-act-title">Camping</h5>
+                            <p class="ce-act-text">Camping tents for overnight forest stays</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".45s">
+                        <div class="ce-act-card">
+                            <div class="ce-act-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                            <h5 class="ce-act-title">Sports Zone</h5>
+                            <p class="ce-act-text">Badminton, cricket, volleyball, table tennis, chess</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             EDUCATIONAL TOURS SECTION
+             ============================================================ -->
+        <section class="ce-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                        <span class="ce-label">For Schools &amp; Colleges</span>
+                        <h2 class="ce-heading">Educational &amp;<br><em>Institutional Tours</em></h2>
+                        <div class="ce-divider"><span></span><i class="fa-solid fa-leaf"></i><span></span></div>
+                        <p class="ce-body mb-4">Mahua House welcomes school, college, and institutional groups for meaningful nature-based learning experiences. Adjoining the Samardha Reserved Forest, we provide a living classroom unlike any other.</p>
+                        <ul style="list-style:none;padding:0;margin:0 0 28px;">
+                            <li style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(3,54,49,0.08);font-size:14px;color:rgba(3,54,49,0.65);">
+                                <i class="fa-solid fa-seedling" style="color:#DAA520;margin-top:3px;min-width:16px;"></i>
+                                Guided nature walks &amp; forest education programs
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(3,54,49,0.08);font-size:14px;color:rgba(3,54,49,0.65);">
+                                <i class="fa-solid fa-leaf" style="color:#DAA520;margin-top:3px;min-width:16px;"></i>
+                                Eco-awareness camps &amp; environmental education
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(3,54,49,0.08);font-size:14px;color:rgba(3,54,49,0.65);">
+                                <i class="fa-solid fa-wheat-awn" style="color:#DAA520;margin-top:3px;min-width:16px;"></i>
+                                Hands-on farming &amp; rural culture experiences
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(3,54,49,0.08);font-size:14px;color:rgba(3,54,49,0.65);">
+                                <i class="fa-solid fa-binoculars" style="color:#DAA520;margin-top:3px;min-width:16px;"></i>
+                                Discover the Samardha Reserved Forest ecosystem
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;font-size:14px;color:rgba(3,54,49,0.65);">
+                                <i class="fa-solid fa-shield-halved" style="color:#DAA520;margin-top:3px;min-width:16px;"></i>
+                                Safe, supervised activities in a managed environment
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="ce-btn ce-btn-primary"><i class="fa-brands fa-whatsapp me-2"></i>Enquire for Group Tour</a>
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                        <div style="position:relative;border-radius:20px;overflow:hidden;height:460px;">
+                            <img src="assets/images/about/14.jpeg" alt="Educational Tour" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;top:20px;left:20px;">
+                                <span style="background:#DAA520;color:#033631;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;">Schools &amp; Colleges Welcome</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             FILM SHOOTS SECTION — DARK BG
+             ============================================================ -->
+        <section class="ce-section ce-section-dark">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                        <div style="position:relative;border-radius:20px;overflow:hidden;height:460px;">
+                            <img src="assets/images/about/18.jpeg" alt="Film Shoot at Mahua House" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;top:20px;right:20px;">
+                                <span style="background:#DAA520;color:#033631;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;">Media Friendly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                        <span class="ce-label ce-label-light">Media &amp; Productions</span>
+                        <h2 class="ce-heading ce-heading-light">Film &amp; Media<br><em>Shoots</em></h2>
+                        <div class="ce-divider"><span></span><i class="fa-solid fa-video"></i><span></span></div>
+                        <p class="ce-body ce-body-light mb-4">Mahua House offers one of Bhopal's most striking natural shoot locations — the living forest of Samardha Reserve as your backdrop. No artificial sets, no filters — just authentic forest beauty.</p>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 16px;">
+                                    <i class="fa-solid fa-tv" style="color:#DAA520;font-size:20px;margin-bottom:10px;display:block;"></i>
+                                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 4px;">TV Commercials</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin:0;">Brand &amp; product films</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 16px;">
+                                    <i class="fa-solid fa-film" style="color:#DAA520;font-size:20px;margin-bottom:10px;display:block;"></i>
+                                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 4px;">Short Films</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin:0;">Indie &amp; documentary films</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 16px;">
+                                    <i class="fa-solid fa-music" style="color:#DAA520;font-size:20px;margin-bottom:10px;display:block;"></i>
+                                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 4px;">Music Videos</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin:0;">Cultural &amp; folk productions</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 16px;">
+                                    <i class="fa-solid fa-camera" style="color:#DAA520;font-size:20px;margin-bottom:10px;display:block;"></i>
+                                    <p style="font-size:14px;font-weight:600;color:#fff;margin:0 0 4px;">Photography</p>
+                                    <p style="font-size:12px;color:rgba(255,255,255,0.45);margin:0;">Pre-wedding &amp; editorial</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:30px;">
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="ce-btn ce-btn-gold"><i class="fa-brands fa-whatsapp me-2"></i>Enquire for Media Shoot</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             ENQUIRY SECTION
+             ============================================================ -->
+        <section class="ce-section ce-section-alt" id="enquire">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="ce-label wow fadeInUp" data-wow-delay=".1s">Get In Touch</span>
+                        <h2 class="ce-heading wow fadeInUp" data-wow-delay=".2s">Plan Your Group <em>Experience</em></h2>
+                        <div class="ce-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="ce-body wow fadeInUp" data-wow-delay=".4s">Fill in your details and we'll get back to you quickly with availability and a tailored proposal for your group.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="ce-form-wrap">
+                            <form>
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Full Name</label>
+                                        <input type="text" class="ce-form-control" placeholder="Your name" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Phone Number</label>
+                                        <input type="tel" class="ce-form-control" placeholder="+91 00000 00000" required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Email Address</label>
+                                        <input type="email" class="ce-form-control" placeholder="your@email.com">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Group Type</label>
+                                        <select class="ce-form-control" style="appearance:none;">
+                                            <option value="" disabled selected>Select type</option>
+                                            <option>Corporate Retreat / Team Building</option>
+                                            <option>Workshop / Meeting</option>
+                                            <option>Educational / Institutional Tour</option>
+                                            <option>Film / Media Shoot</option>
+                                            <option>Club / Group Outing</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Group Size</label>
+                                        <select class="ce-form-control" style="appearance:none;">
+                                            <option value="" disabled selected>Select size</option>
+                                            <option>10 – 20 people</option>
+                                            <option>21 – 50 people</option>
+                                            <option>51 – 100 people</option>
+                                            <option>100+ people</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="ce-form-label">Preferred Date</label>
+                                        <input type="date" class="ce-form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="ce-form-label">Tell Us About Your Plan</label>
+                                        <textarea class="ce-form-control" rows="4" placeholder="Describe your group, event goals, special requirements or any questions..." style="resize:none;"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="ce-btn ce-btn-primary w-100" style="font-size:15px;border-radius:12px;padding:16px;">
+                                            <i class="fa-solid fa-paper-plane me-2"></i> Send Group Enquiry
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             CTA BOTTOM
+             ============================================================ -->
+        <section class="ce-section">
+            <div class="container">
+                <div class="ce-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="ce-label ce-label-light">Let's Plan Together</span>
+                        <h2 class="ce-heading ce-heading-light" style="margin-bottom:14px;">
+                            Your Forest Group Experience is <em>One Call Away</em>
+                        </h2>
+                        <p class="ce-body ce-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Contact Sushma Kalambe at Mahua House to plan your corporate retreat, educational tour, or film shoot in Bhopal's most beautiful forest setting.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="https://www.facebook.com/mahuahouse" target="_blank" rel="noopener" class="ce-btn ce-btn-outline"><i class="fa-brands fa-facebook-f me-2"></i>Visit Facebook</a>
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="ce-btn ce-btn-gold"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Enquiry</a>
+                            <a href="contact-us.html" class="ce-btn ce-btn-outline">Enquire Today</a>
+                            <a href="tel:+919425651754" class="ce-btn ce-btn-outline"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the forests of Bhopal, Mahua House is an MP Tourism accredited eco-tourism retreat — a nature venue for corporate retreats, educational tours, film shoots and group experiences.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Group Events</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="corporate-events.html"><i class="fa-solid fa-chevron-right"></i> Corporate Retreats</a></li>
+                                        <li><a href="corporate-events.html"><i class="fa-solid fa-chevron-right"></i> Educational Tours</a></li>
+                                        <li><a href="corporate-events.html"><i class="fa-solid fa-chevron-right"></i> Film Shoots</a></li>
+                                        <li><a href="day_out_plan.html"><i class="fa-solid fa-chevron-right"></i> Day Out Plan</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754 (Sushma Kalambe)</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
