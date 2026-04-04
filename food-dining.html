@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mahua House">
+    <meta name="description" content="Food & Dining at Mahua House — experience authentic traditional meals, multi-cuisine buffet and customised menus at just ₹1,000 per head. Fresh, hygienic and locally inspired.">
+    <meta name="keywords" content="Food Dining Mahua House, Traditional Meals Forest Bhopal, Buffet Forest Resort, Authentic Food Bhopal, Mahua House Restaurant">
+    <title>Food &amp; Dining | Mahua House</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =============================================
+           FOOD & DINING PAGE — STYLES  prefix: .fd-
+           Palette: #033631 | #DAA520 | #E7EEEE
+           ============================================= */
+
+        .fd-section       { padding: 90px 0; }
+        .fd-section-alt   { background: #E7EEEE; }
+        .fd-section-dark  { background: #033631; }
+        .fd-section-cream { background: #faf8f3; }
+
+        .fd-label {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #DAA520; margin-bottom: 12px;
+        }
+        .fd-label-light { color: rgba(218,165,32,0.9); }
+
+        .fd-heading {
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            color: #033631; line-height: 1.2; margin-bottom: 14px;
+        }
+        .fd-heading-light { color: #ffffff; }
+        .fd-heading em { font-style: normal; color: #DAA520; }
+
+        .fd-divider {
+            display: flex; align-items: center;
+            gap: 12px; color: #DAA520; margin-bottom: 22px;
+        }
+        .fd-divider.centered { justify-content: center; }
+        .fd-divider span { display: block; width: 60px; height: 1px; background: #DAA520; }
+        .fd-divider i { font-size: 9px; }
+
+        .fd-body {
+            font-size: 15px; color: rgba(3,54,49,0.6);
+            line-height: 1.85; margin-bottom: 0;
+        }
+        .fd-body-light { color: rgba(255,255,255,0.62); }
+
+        .fd-btn {
+            display: inline-block; padding: 13px 32px;
+            border-radius: 100px; font-size: 14px; font-weight: 700;
+            letter-spacing: 0.5px; text-decoration: none;
+            transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;
+        }
+        .fd-btn-primary { background: #033631; color: #fff; border-color: #033631; }
+        .fd-btn-primary:hover { background: transparent; color: #033631; }
+        .fd-btn-gold    { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .fd-btn-gold:hover { background: transparent; color: #DAA520; }
+        .fd-btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.45); }
+        .fd-btn-outline:hover { background: #DAA520; color: #033631; border-color: #DAA520; }
+
+        /* HERO */
+        .fd-hero {
+            position: relative; height: 580px;
+            background: url('assets/images/about/25.jpeg') center center / cover no-repeat;
+            display: flex; align-items: flex-end; overflow: hidden;
+        }
+        .fd-hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(3,54,49,0.20) 0%, rgba(3,54,49,0.90) 100%);
+        }
+        .fd-hero-content { position: relative; z-index: 2; padding-bottom: 80px; width: 100%; }
+        .fd-breadcrumb {
+            list-style: none; padding: 0; margin: 0 0 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .fd-breadcrumb li { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .fd-breadcrumb li a { color: #DAA520; text-decoration: none; }
+        .fd-breadcrumb li + li::before { content: '/'; margin-right: 8px; }
+        .fd-hero h1 {
+            font-size: clamp(32px, 5vw, 62px); font-weight: 800;
+            color: #fff; line-height: 1.1; margin-bottom: 18px;
+        }
+        .fd-hero h1 em { font-style: italic; color: #DAA520; }
+        .fd-hero p { font-size: 16px; color: rgba(255,255,255,0.75); max-width: 580px; line-height: 1.75; margin-bottom: 30px; }
+        .fd-hero-shape { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; line-height: 0; }
+        .fd-hero-shape img { width: 100%; }
+
+        /* PRICE BANNER */
+        .fd-price-banner {
+            background: #DAA520; border-radius: 20px;
+            padding: 40px 50px; text-align: center;
+        }
+
+        /* MEAL TIME CARDS */
+        .fd-meal-card {
+            background: #fff; border-radius: 20px; overflow: hidden;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 20px rgba(3,54,49,0.07);
+            height: 100%; transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .fd-meal-card:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(3,54,49,0.12); }
+        .fd-meal-card-img { height: 200px; overflow: hidden; }
+        .fd-meal-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .fd-meal-card:hover .fd-meal-card-img img { transform: scale(1.05); }
+        .fd-meal-card-body { padding: 24px 22px; }
+        .fd-meal-time {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(218,165,32,0.1); border: 1px solid rgba(218,165,32,0.25);
+            border-radius: 100px; padding: 4px 12px;
+            font-size: 11px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: #DAA520; margin-bottom: 12px;
+        }
+        .fd-meal-title { font-size: 20px; font-weight: 700; color: #033631; margin-bottom: 8px; }
+        .fd-meal-text  { font-size: 14px; color: rgba(3,54,49,0.55); line-height: 1.7; margin-bottom: 16px; }
+        .fd-meal-items { list-style: none; padding: 0; margin: 0; }
+        .fd-meal-items li {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 13px; color: rgba(3,54,49,0.65);
+            padding: 6px 0; border-bottom: 1px dashed rgba(3,54,49,0.08);
+        }
+        .fd-meal-items li:last-child { border-bottom: none; }
+        .fd-meal-items li i { color: #DAA520; font-size: 9px; }
+
+        /* DINING OPTIONS CARDS */
+        .fd-option-card {
+            background: #fff; border-radius: 18px; padding: 30px 24px;
+            border: 1px solid rgba(3,54,49,0.08);
+            box-shadow: 0 4px 18px rgba(3,54,49,0.06);
+            height: 100%; text-align: center;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+        }
+        .fd-option-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(3,54,49,0.12); background: #033631; }
+        .fd-option-icon {
+            width: 68px; height: 68px; border-radius: 50%;
+            background: rgba(218,165,32,0.1); border: 1px solid rgba(218,165,32,0.25);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: #DAA520; font-size: 26px; margin-bottom: 18px;
+            transition: background 0.35s ease;
+        }
+        .fd-option-card:hover .fd-option-icon { background: #DAA520; color: #033631; border-color: #DAA520; }
+        .fd-option-title { font-size: 18px; font-weight: 700; color: #033631; margin-bottom: 10px; transition: color 0.35s; }
+        .fd-option-card:hover .fd-option-title { color: #DAA520; }
+        .fd-option-text  { font-size: 14px; color: rgba(3,54,49,0.55); line-height: 1.7; margin: 0; transition: color 0.35s; }
+        .fd-option-card:hover .fd-option-text { color: rgba(255,255,255,0.6); }
+
+        /* TRUST STRIP */
+        .fd-trust-strip {
+            display: flex; align-items: center; justify-content: center;
+            gap: 12px; flex-wrap: wrap;
+        }
+        .fd-trust-pill {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(218,165,32,0.12); border: 1px solid rgba(218,165,32,0.3);
+            border-radius: 100px; padding: 10px 20px;
+            font-size: 13px; font-weight: 600; color: #DAA520;
+        }
+
+        /* CTA BOX */
+        .fd-cta-box {
+            background: linear-gradient(135deg, #033631 0%, #07554D 100%);
+            border-radius: 24px; padding: 70px 60px;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .fd-cta-box::before {
+            content: ''; position: absolute; top: -100px; right: -100px;
+            width: 350px; height: 350px; border-radius: 50%; background: rgba(218,165,32,0.08);
+        }
+        .fd-cta-box::after {
+            content: ''; position: absolute; bottom: -80px; left: -80px;
+            width: 260px; height: 260px; border-radius: 50%; background: rgba(218,165,32,0.06);
+        }
+
+        @media (max-width: 991px) {
+            .fd-hero { height: 460px; }
+            .fd-section { padding: 70px 0; }
+            .fd-cta-box { padding: 50px 30px; }
+            .fd-price-banner { padding: 32px 24px; }
+        }
+        @media (max-width: 575px) {
+            .fd-hero h1 { font-size: 30px; }
+            .fd-cta-box { padding: 40px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <button id="back-top" class="back-to-top" aria-label="back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvas-sidebar">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo"><figure><img src="assets/images/logo/Mahua-House.png" alt="logo"></figure></div>
+            <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu"></div>
+            <div class="offcanvas-contact">
+                <div class="widget widget-contact">
+                    <div class="widget-title"><h3 class="line-anime">Contact Info</h3></div>
+                    <div class="widget-content">
+                        <div class="offcanvas-cta-item">
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="offcanvas-cta-content"><p>Forest Barrier, Haripura, Raisen Bhopal-23</p></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="offcanvas-cta-content"><a href="mailto:mahuahouse17@gmail.com">mahuahouse17@gmail.com</a></div>
+                            </div>
+                            <div class="offcanvas-cta-list">
+                                <div class="offcanvas-cta-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="offcanvas-cta-content"><a href="tel:+919425651754">+91 9425651754</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-button-wapper"><a href="booking.html" class="theme-button style-1">Book Now</a></div>
+            <div class="offcanvas-social">
+                <div class="widget widget-social-media">
+                    <div class="widget-content">
+                        <ul class="social-icon">
+                            <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/mahuahouse" aria-label="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://wa.me/919425651754" aria-label="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+  <header class="header header-2">
+        <div class="header-top d-none d-xl-block">
+            <div class="container-fluid">
+                <div class="row justify-content-center justify-content-lg-between align-items-center">
+                    <div class="col-auto">
+                        <div class="header-top-left">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><p><i class="fa-solid fa-location-dot"></i> Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                    <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-top-right">
+                            <div class="header-social-icon">
+                                <ul>
+                                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/mahuahouse" aria-label="facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="https://wa.me/919425651754" aria-label="whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-between g-0">
+                    <div class="col-12">
+                        <div class="header-content d-flex justify-content-between align-items-center">
+                            <div class="header-left">
+                                <div class="logo-box">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="Mahua House"></figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-navigation d-flex align-items-center">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="menu-thumb"><a href="index.html">Home</a></li>
+                                            <li>
+                                                <a href="#">About <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="destination-wedding.html">Destination Wedding</a></li>
+                                                    <li><a href="video-tours.html">Video Tours</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="rooms.html">Rooms</a></li>
+                                            <li>
+                                                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="events.html">Events</a></li>
+                                                    <li><a href="corporate-events.html">Corporate Retreats</a></li>
+                                                    <li><a href="educational-tours.html">Educational Tours</a></li>
+                                                    <li><a href="film-shoots.html">Film &amp; Media Shoots</a></li>
+                                                    <li><a href="accommodation.html">Accommodation</a></li>
+                                                    <li><a href="food-dining.html">Food &amp; Dining</a></li>
+                                                    <li><a href="stay.html">Stay</a></li>
+                                                    <li><a href="spaces.html">Spaces</a></li>
+                                                    <li><a href="day_out_plan.html">Day Out Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex align-items-center gap-lg-4 gap-3">
+                                <div class="header-sidebar">
+                                    <a class="sidebar-toggler color-one" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-label="sidebar toggler" aria-controls="offcanvas-sidebar">
+                                        <span></span><span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- HERO -->
+        <section class="fd-hero">
+            <div class="container fd-hero-content">
+                <ul class="fd-breadcrumb wow fadeInUp" data-wow-delay=".1s">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Food &amp; Dining</li>
+                </ul>
+                <span class="fd-label wow fadeInUp" data-wow-delay=".2s">Authentic Flavours</span>
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">
+                    A Taste of the <em>Forest</em>
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                    Fresh, hygienic and locally inspired — every meal at Mahua House is a celebration of flavour. From bed tea at sunrise to a hearty dinner under the stars, we make every bite memorable.
+                </p>
+                <div class="d-flex flex-wrap gap-3 wow fadeInUp" data-wow-delay=".45s">
+                    <a href="#menu" class="fd-btn fd-btn-gold">See What's on the Menu</a>
+                    <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="fd-btn fd-btn-outline"><i class="fa-brands fa-whatsapp me-2"></i>Custom Menu Enquiry</a>
+                </div>
+            </div>
+            <div class="fd-hero-shape"><img src="assets/images/shape/shape-bottom-white.png" alt="shape"></div>
+        </section>
+
+
+        <!-- PRICING BANNER -->
+        <section style="padding: 60px 0;">
+            <div class="container">
+                <div class="fd-price-banner wow fadeInUp" data-wow-delay=".2s">
+                    <p style="font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(3,54,49,0.6);margin-bottom:8px;">All-Inclusive Meal Plan</p>
+                    <p style="font-size:clamp(38px,6vw,72px);font-weight:900;color:#033631;line-height:1;margin-bottom:8px;">&#8377;1,000 <span style="font-size:22px;font-weight:500;color:rgba(3,54,49,0.6);">per person</span></p>
+                    <p style="font-size:16px;color:rgba(3,54,49,0.65);margin-bottom:24px;">Includes Bed Tea, Breakfast, Lunch, Hi Tea &amp; Dinner</p>
+                    <div class="fd-trust-strip">
+                        <span class="fd-trust-pill"><i class="fa-solid fa-check"></i> Fresh Ingredients</span>
+                        <span class="fd-trust-pill"><i class="fa-solid fa-check"></i> Hygienic Kitchen</span>
+                        <span class="fd-trust-pill"><i class="fa-solid fa-check"></i> Locally Inspired</span>
+                        <span class="fd-trust-pill"><i class="fa-solid fa-check"></i> Customisable Menus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DINING OPTIONS -->
+        <section class="fd-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="fd-label wow fadeInUp" data-wow-delay=".1s">Dining Options</span>
+                        <h2 class="fd-heading wow fadeInUp" data-wow-delay=".2s">Three Ways to <em>Dine With Us</em></h2>
+                        <div class="fd-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="fd-body wow fadeInUp" data-wow-delay=".4s">Whether you prefer the comfort of tradition, the variety of a buffet, or a menu tailored precisely to your group — we have you covered.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="fd-option-card">
+                            <div class="fd-option-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                            <h4 class="fd-option-title">Traditional Meals</h4>
+                            <p class="fd-option-text">Authentic home-style cooking inspired by Madhya Pradesh's rich culinary heritage — earthy, wholesome and full of flavour. Dal, sabzi, roti, rice and seasonal vegetables, prepared fresh daily.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="fd-option-card">
+                            <div class="fd-option-icon"><i class="fa-solid fa-plate-wheat"></i></div>
+                            <h4 class="fd-option-title">Multi-Cuisine Buffet</h4>
+                            <p class="fd-option-text">A spread of North Indian, South Indian and continental options — perfect for larger groups, corporate retreats and family stays where everyone has different tastes.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="fd-option-card">
+                            <div class="fd-option-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                            <h4 class="fd-option-title">Customised Menus</h4>
+                            <p class="fd-option-text">Planning a corporate event, wedding function or large group visit? We'll work with you to design a menu that fits your occasion, dietary requirements and preferences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MEAL SCHEDULE -->
+        <section class="fd-section fd-section-alt" id="menu">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="fd-label wow fadeInUp" data-wow-delay=".1s">Daily Menu</span>
+                        <h2 class="fd-heading wow fadeInUp" data-wow-delay=".2s">From Sunrise to <em>Sunset</em></h2>
+                        <div class="fd-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                        <p class="fd-body wow fadeInUp" data-wow-delay=".4s">A full day of authentic flavours — every meal crafted with fresh, locally sourced ingredients.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <!-- Bed Tea -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="fd-meal-card">
+                            <div class="fd-meal-card-img">
+                                <img src="assets/images/about/45.jpeg" alt="Bed Tea">
+                            </div>
+                            <div class="fd-meal-card-body">
+                                <span class="fd-meal-time"><i class="fa-solid fa-mug-hot"></i> Early Morning</span>
+                                <h4 class="fd-meal-title">Bed Tea</h4>
+                                <p class="fd-meal-text">Start your forest morning the traditional way — a warm cup of chai served to your room as the forest wakes around you.</p>
+                                <ul class="fd-meal-items">
+                                    <li><i class="fa-solid fa-circle"></i> Fresh masala chai / green tea</li>
+                                    <li><i class="fa-solid fa-circle"></i> Light biscuits or dry snack</li>
+                                    <li><i class="fa-solid fa-circle"></i> Served at your room / cottage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breakfast -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="fd-meal-card">
+                            <div class="fd-meal-card-img">
+                                <img src="assets/images/about/46.jpeg" alt="Breakfast">
+                            </div>
+                            <div class="fd-meal-card-body">
+                                <span class="fd-meal-time"><i class="fa-solid fa-sun"></i> Morning</span>
+                                <h4 class="fd-meal-title">Breakfast</h4>
+                                <p class="fd-meal-text">A nourishing morning spread to fuel your day of nature adventures, treks and activities.</p>
+                                <ul class="fd-meal-items">
+                                    <li><i class="fa-solid fa-circle"></i> Poha / upma / paratha options</li>
+                                    <li><i class="fa-solid fa-circle"></i> Fresh fruit &amp; seasonal items</li>
+                                    <li><i class="fa-solid fa-circle"></i> Chai, coffee &amp; fresh juice</li>
+                                    <li><i class="fa-solid fa-circle"></i> Continental items on request</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lunch -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="fd-meal-card">
+                            <div class="fd-meal-card-img">
+                                <img src="assets/images/about/47.jpeg" alt="Lunch">
+                            </div>
+                            <div class="fd-meal-card-body">
+                                <span class="fd-meal-time"><i class="fa-solid fa-cloud-sun"></i> Afternoon</span>
+                                <h4 class="fd-meal-title">Lunch</h4>
+                                <p class="fd-meal-text">A hearty traditional thali that brings the authentic flavours of Madhya Pradesh to your plate.</p>
+                                <ul class="fd-meal-items">
+                                    <li><i class="fa-solid fa-circle"></i> Dal, sabzi, roti &amp; rice</li>
+                                    <li><i class="fa-solid fa-circle"></i> Seasonal vegetable preparations</li>
+                                    <li><i class="fa-solid fa-circle"></i> Salad, raita &amp; pickle</li>
+                                    <li><i class="fa-solid fa-circle"></i> Dessert on special occasions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hi Tea -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div class="fd-meal-card">
+                            <div class="fd-meal-card-img">
+                                <img src="assets/images/about/48.jpeg" alt="Hi Tea">
+                            </div>
+                            <div class="fd-meal-card-body">
+                                <span class="fd-meal-time"><i class="fa-solid fa-leaf"></i> Evening</span>
+                                <h4 class="fd-meal-title">Hi Tea</h4>
+                                <p class="fd-meal-text">Relax after a day of activities with a forest-side evening tea and light snacks as the sun dips below the canopy.</p>
+                                <ul class="fd-meal-items">
+                                    <li><i class="fa-solid fa-circle"></i> Masala chai or herbal teas</li>
+                                    <li><i class="fa-solid fa-circle"></i> Samosa, pakora or local snacks</li>
+                                    <li><i class="fa-solid fa-circle"></i> Served in the open garden area</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinner -->
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="fd-meal-card" style="flex-direction:row;display:flex;height:100%;">
+                            <div class="fd-meal-card-img" style="height:auto;min-width:260px;max-width:260px;">
+                                <img src="assets/images/about/49.jpeg" alt="Dinner" style="height:100%;width:100%;object-fit:cover;">
+                            </div>
+                            <div class="fd-meal-card-body" style="flex:1;">
+                                <span class="fd-meal-time"><i class="fa-solid fa-moon"></i> Night</span>
+                                <h4 class="fd-meal-title">Dinner</h4>
+                                <p class="fd-meal-text">End your forest day with a memorable dinner — warm, freshly cooked and served under the stars with the sounds of the forest as your backdrop.</p>
+                                <ul class="fd-meal-items">
+                                    <li><i class="fa-solid fa-circle"></i> Full traditional meal spread</li>
+                                    <li><i class="fa-solid fa-circle"></i> Rotis, rice, dal &amp; sabzi</li>
+                                    <li><i class="fa-solid fa-circle"></i> Special non-veg options on request</li>
+                                    <li><i class="fa-solid fa-circle"></i> Bonfire dining experience available</li>
+                                    <li><i class="fa-solid fa-circle"></i> Group / buffet format for events</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Responsive dinner card fix on mobile -->
+                <style>
+                    @media (max-width: 767px) {
+                        .fd-meal-card[style*="flex-direction:row"] { flex-direction: column !important; }
+                        .fd-meal-card[style*="flex-direction:row"] .fd-meal-card-img { min-width: unset !important; max-width: 100% !important; height: 200px !important; }
+                    }
+                </style>
+            </div>
+        </section>
+
+
+        <!-- CUSTOM MENU + IMAGE SPLIT -->
+        <section class="fd-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
+                        <div style="border-radius:20px;overflow:hidden;height:460px;position:relative;">
+                            <img src="assets/images/about/50.jpeg" alt="Custom Dining Mahua House" style="width:100%;height:100%;object-fit:cover;">
+                            <div style="position:absolute;bottom:24px;left:24px;right:24px;background:rgba(3,54,49,0.92);backdrop-filter:blur(8px);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;">
+                                <div style="width:44px;height:44px;border-radius:50%;background:#DAA520;display:flex;align-items:center;justify-content:center;font-size:18px;color:#033631;flex-shrink:0;">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <p style="font-size:15px;font-weight:700;color:#fff;margin:0;">Fresh &amp; Locally Inspired</p>
+                                    <p style="font-size:13px;color:rgba(255,255,255,0.55);margin:4px 0 0;">Farm-fresh ingredients, hygienic kitchen, authentic flavours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay=".3s">
+                        <span class="fd-label">Group &amp; Event Catering</span>
+                        <h2 class="fd-heading">Custom Menus for <em>Every Occasion</em></h2>
+                        <div class="fd-divider"><span></span><i class="fa-solid fa-utensils"></i><span></span></div>
+                        <p class="fd-body mb-4">Planning a large group visit, corporate retreat, wedding function or educational tour? Our kitchen team will design a menu tailored to your group size, dietary preferences and occasion.</p>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-sm-6">
+                                <div style="background:#faf8f3;border-radius:14px;padding:18px;border:1px solid rgba(3,54,49,0.08);">
+                                    <i class="fa-solid fa-briefcase" style="color:#DAA520;font-size:20px;margin-bottom:8px;display:block;"></i>
+                                    <p style="font-size:15px;font-weight:700;color:#033631;margin:0 0 4px;">Corporate Groups</p>
+                                    <p style="font-size:13px;color:rgba(3,54,49,0.55);margin:0;">Buffet spreads, working lunches &amp; tea breaks</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div style="background:#faf8f3;border-radius:14px;padding:18px;border:1px solid rgba(3,54,49,0.08);">
+                                    <i class="fa-solid fa-graduation-cap" style="color:#DAA520;font-size:20px;margin-bottom:8px;display:block;"></i>
+                                    <p style="font-size:15px;font-weight:700;color:#033631;margin:0 0 4px;">School &amp; Institutions</p>
+                                    <p style="font-size:13px;color:rgba(3,54,49,0.55);margin:0;">Packed meals, thali service &amp; snack packs</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div style="background:#faf8f3;border-radius:14px;padding:18px;border:1px solid rgba(3,54,49,0.08);">
+                                    <i class="fa-solid fa-champagne-glasses" style="color:#DAA520;font-size:20px;margin-bottom:8px;display:block;"></i>
+                                    <p style="font-size:15px;font-weight:700;color:#033631;margin:0 0 4px;">Weddings &amp; Events</p>
+                                    <p style="font-size:13px;color:rgba(3,54,49,0.55);margin:0;">Elaborate event menus for special celebrations</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div style="background:#faf8f3;border-radius:14px;padding:18px;border:1px solid rgba(3,54,49,0.08);">
+                                    <i class="fa-solid fa-seedling" style="color:#DAA520;font-size:20px;margin-bottom:8px;display:block;"></i>
+                                    <p style="font-size:15px;font-weight:700;color:#033631;margin:0 0 4px;">Dietary Preferences</p>
+                                    <p style="font-size:13px;color:rgba(3,54,49,0.55);margin:0;">Veg, non-veg, Jain &amp; custom requests honoured</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="fd-btn fd-btn-primary"><i class="fa-brands fa-whatsapp me-2"></i>Enquire for Custom Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- QUALITY ASSURANCE (dark) -->
+        <section class="fd-section fd-section-dark">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="fd-label fd-label-light wow fadeInUp" data-wow-delay=".1s">Our Promise</span>
+                        <h2 class="fd-heading fd-heading-light wow fadeInUp" data-wow-delay=".2s">Fresh, Hygienic &amp; <em>Locally Inspired</em></h2>
+                        <div class="fd-divider centered wow fadeInUp" data-wow-delay=".3s"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".1s">
+                        <div style="text-align:center;padding:32px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:18px;height:100%;transition:background 0.3s ease,border-color 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.11)';this.style.borderColor='rgba(218,165,32,0.35)';" onmouseout="this.style.background='rgba(255,255,255,0.07)';this.style.borderColor='rgba(255,255,255,0.1)';">
+                            <div style="width:62px;height:62px;border-radius:50%;background:rgba(218,165,32,0.15);border:1px solid rgba(218,165,32,0.3);display:inline-flex;align-items:center;justify-content:center;color:#DAA520;font-size:24px;margin-bottom:18px;">
+                                <i class="fa-solid fa-carrot"></i>
+                            </div>
+                            <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;">Fresh Ingredients</h4>
+                            <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;margin:0;">Locally sourced seasonal vegetables and ingredients — no artificial additives or preservatives.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div style="text-align:center;padding:32px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:18px;height:100%;">
+                            <div style="width:62px;height:62px;border-radius:50%;background:rgba(218,165,32,0.15);border:1px solid rgba(218,165,32,0.3);display:inline-flex;align-items:center;justify-content:center;color:#DAA520;font-size:24px;margin-bottom:18px;">
+                                <i class="fa-solid fa-hand-sparkles"></i>
+                            </div>
+                            <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;">Hygienic Kitchen</h4>
+                            <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;margin:0;">Our kitchen maintains the highest standards of hygiene — your health and safety is our priority.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div style="text-align:center;padding:32px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:18px;height:100%;">
+                            <div style="width:62px;height:62px;border-radius:50%;background:rgba(218,165,32,0.15);border:1px solid rgba(218,165,32,0.3);display:inline-flex;align-items:center;justify-content:center;color:#DAA520;font-size:24px;margin-bottom:18px;">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;">Locally Inspired</h4>
+                            <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;margin:0;">Recipes rooted in the culinary heritage of Madhya Pradesh, prepared with traditional methods and care.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div style="text-align:center;padding:32px 20px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:18px;height:100%;">
+                            <div style="width:62px;height:62px;border-radius:50%;background:rgba(218,165,32,0.15);border:1px solid rgba(218,165,32,0.3);display:inline-flex;align-items:center;justify-content:center;color:#DAA520;font-size:24px;margin-bottom:18px;">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+                            <h4 style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;">Great Value</h4>
+                            <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;margin:0;">A full day's meals — bed tea, breakfast, lunch, hi tea and dinner — for just &#8377;1,000 per person.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA -->
+        <section class="fd-section">
+            <div class="container">
+                <div class="fd-cta-box wow fadeInUp" data-wow-delay=".2s">
+                    <div style="position:relative;z-index:1;">
+                        <span class="fd-label fd-label-light">Dine With Us</span>
+                        <h2 class="fd-heading fd-heading-light" style="margin-bottom:14px;">
+                            Authentic Flavours in a <em>Forest Setting</em>
+                        </h2>
+                        <p class="fd-body fd-body-light" style="max-width:520px;margin:0 auto 36px;">
+                            Contact Sushma Kalambe to arrange dining for your group, request a custom menu or ask about our meal packages alongside accommodation.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="https://wa.me/919425651754" target="_blank" rel="noopener" class="fd-btn fd-btn-gold"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp Enquiry</a>
+                            <a href="accommodation.html" class="fd-btn fd-btn-outline"><i class="fa-solid fa-bed me-2"></i>View Accommodation</a>
+                            <a href="tel:+919425651754" class="fd-btn fd-btn-outline"><i class="fa-solid fa-phone me-2"></i>Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer footer-1">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-widget-wrap">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="footer-widget footer-widget-about wow fadeInUp" data-wow-delay=".2s">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><figure><img src="assets/images/logo/Mahua-House-White-1.png" alt="footer logo"></figure></a>
+                                </div>
+                                <p>Nestled in the forests of Bhopal, Mahua House serves fresh, hygienic and locally inspired meals — from a warming bed tea to a full forest dinner experience.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-quick-links wow fadeInUp" data-wow-delay=".3s">
+                                <h3 class="footer-widget-title line-anime">Quick Links</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="about-us.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Events</a></li>
+                                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Book Now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-services wow fadeInUp" data-wow-delay=".4s">
+                                <h3 class="footer-widget-title line-anime">Stay &amp; Dine</h3>
+                                <div class="widget-link">
+                                    <ul class="link">
+                                        <li><a href="accommodation.html"><i class="fa-solid fa-chevron-right"></i> Accommodation</a></li>
+                                        <li><a href="food-dining.html"><i class="fa-solid fa-chevron-right"></i> Food &amp; Dining</a></li>
+                                        <li><a href="rooms.html"><i class="fa-solid fa-chevron-right"></i> Rooms Gallery</a></li>
+                                        <li><a href="day_out_plan.html"><i class="fa-solid fa-chevron-right"></i> Day Out Plan</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="footer-widget footer-widget-contact wow fadeInUp" data-wow-delay=".5s">
+                                <h4 class="footer-widget-title line-anime">Get In Touch</h4>
+                                <div class="widget-contact">
+                                    <ul class="contact-info">
+                                        <li><p><i class="fa-solid fa-location-dot"></i> Adjoining Samardha Reserved Forest Barrier, Haripura, Raisen Bhopal-23</p></li>
+                                        <li><p><i class="fa-solid fa-envelope"></i> mahuahouse17@gmail.com</p></li>
+                                        <li><p><i class="fa-solid fa-phone-volume"></i> +91 9425651754 (Sushma Kalambe)</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-copyright-wrap">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="copyright-text wow fadeInUp" data-wow-delay=".2s">
+                                <p class="m-0">&#169; Copyright 2026 Mahua House All Rights Reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-lg-end">
+                            <ul class="footer-bottom-nav wow fadeInUp" data-wow-delay=".3s">
+                                <li><a class="line-effect" href="#">Terms and Conditions</a></li>
+                                <li><a class="line-effect" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/validate.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
